@@ -1,14 +1,12 @@
 package com.green.greenfirstproject.user;
 
 import com.green.greenfirstproject.auth.principal.PrincipalDetail;
-import com.green.greenfirstproject.auth.principal.PrincipalOauthDetailService;
 import com.green.greenfirstproject.auth.principal.PrincipalUtil;
 import com.green.greenfirstproject.common.EmailService;
 import com.green.greenfirstproject.common.dto.Result;
 import com.green.greenfirstproject.common.dto.ResultDto;
 import com.green.greenfirstproject.common.dto.ResultError;
 import com.green.greenfirstproject.user.dto.UserInsertDto;
-import com.green.greenfirstproject.user.dto.UserLoginData;
 import com.green.greenfirstproject.user.dto.UserUpdateDto;
 import com.green.greenfirstproject.user.model.User;
 import io.swagger.v3.oas.annotations.Operation;
@@ -17,25 +15,9 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.security.oauth2.client.registration.ClientRegistrationRepository;
-import org.springframework.security.oauth2.client.registration.InMemoryReactiveClientRegistrationRepository;
-import org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest;
-import org.springframework.security.oauth2.core.OAuth2AccessToken;
-import org.springframework.security.oauth2.core.OAuth2AuthenticationException;
-import org.springframework.security.oauth2.core.user.OAuth2User;
+import org.springframework.dao.DuplicateKeyException;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.reactive.function.BodyInserters;
-import org.springframework.web.reactive.function.client.WebClient;
-import org.springframework.web.util.UriComponentsBuilder;
-import reactor.core.publisher.Mono;
 
-import javax.lang.model.type.ReferenceType;
-import java.net.URI;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
 import java.util.UUID;
 import java.util.concurrent.TimeoutException;
 
@@ -72,10 +54,21 @@ public class UserRestController {
     @ApiResponse(description =
             "<p>ResponseCode 응답 코드 </p> " +
             "<p>  1 : 정상 </p> " +
-            "<p> -1 : 실패(의도하지 않은 오류)</p>"
+            "<p> -1 : 실패(의도하지 않은 오류)</p>" +
+            "<p> -2 : 이미 가입된 이메일"
     )
     public Result emailCheck(@RequestParam String email)
     {
+        try {
+            User user = service.getUserByEmail(email) ;
+
+            if (user != null) return ResultError.builder().code(-2).message("이미 가입된 이메일 입니다.").build();
+        } catch (NullPointerException ignored) {
+        } catch (Exception e) {
+            log.error("An error occurred: ", e);
+            return ResultError.builder().build();
+        }
+
         String code = UUID.randomUUID().toString() ;
         String title = "[프로젝트 이메일 인증]" ;
         String content = "이메일 인증 코드 : " + code ;
@@ -102,7 +95,8 @@ public class UserRestController {
                     "<p> -3 : 비밀번호 확인 실패</p>" +
                     "<p> -4 : 비밀번호 검증 실패</p>" +
                     "<p> -5 : 토큰 검증 실패</p>" +
-                    "<p> -6 : 토큰 유효기간 초과</p>"
+                    "<p> -6 : 토큰 유효기간 초과</p>" +
+                    "<p> -7 : 아이디 중복 체크 실패</p>"
     )
     public Result postUser(@RequestBody UserInsertDto data)
     {
@@ -132,7 +126,8 @@ public class UserRestController {
         try {
             data.setLoginType(1);
             service.insertUser(data);
-
+        } catch (DuplicateKeyException e) {
+            return ResultError.builder().code(-7).message("중복된 이메일입니다.").build();
         } catch (Exception e) {
             log.error("An error occurred: ", e);
             return ResultError.builder().build();
@@ -171,15 +166,17 @@ public class UserRestController {
                     "<p> -1 : 실패(의도하지 않은 오류)</p>" +
                     "<p> -2 : 세션 체크 실패(로그인 정보 없음)</p>"
     )
-    public Result patchUser(UserUpdateDto data)
+    public Result patchUser(@RequestBody UserUpdateDto data)
     {
         //유효성 검증
-        if (!data.getPw().equals(data.getPwCheck())) return ResultError.builder().code(-3).message("비밀번호 확인이 실패하였습니다.").build();
         PrincipalDetail principal = PrincipalUtil.getPrincipal() ;
         if (principal == null) return ResultError.builder().code(-2).message("세션 정보를 확인해 주세요.").build();
         User user = principal.getUser() ;
 
         try {
+            if(data.getPw() != null)
+                if (!data.getPw().equals(data.getPwCheck())) return ResultError.builder().code(-3).message("비밀번호 확인이 실패하였습니다.").build();
+
             service.updateUser(user,data);
         } catch (Exception e) {
             log.error("An error occurred: ", e);
@@ -191,7 +188,7 @@ public class UserRestController {
 
 
     @GetMapping("duplicated")
-    @Operation(summary = "유저 정보 수정", description = "중복 확인 메소드.")
+    @Operation(summary = "유저 닉네임, 아이디 중복 확인", description = "중복 확인 메소드.")
     @ApiResponse(description =
             "<p>ResponseCode 응답 코드 </p> " +
                     "<p>  1 : 정상. 중복된 코드가 없음(false) </p> " +
@@ -205,7 +202,7 @@ public class UserRestController {
         if (!(type == 1 || type == 2)) return ResultError.builder().code(-2).message("타입값 유효성 체크 실패").build();
         try {
             boolean data = service.duplicatedData(str,type) ;
-            return ResultDto.<Boolean>builder().code(data ? 2 : 1).Data(data).build();
+            return ResultDto.<Boolean>builder().code(data ? 2 : 1).message(data ? "이미 존재하는 문자열 입니다." : "존재하지 않는 문자열 입니다.").Data(data).build();
         } catch (Exception e) {
             log.error("An error occurred: ", e);
             return ResultError.builder().build();

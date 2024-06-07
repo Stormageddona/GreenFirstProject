@@ -11,7 +11,7 @@ import java.util.List;
 public interface UserMapper {
 
     User selectUserById(String id) ;
-
+    User selectUserByEmail(String email) ;
     List<User> selectAllUsers() ;
 
     void insertUserData(User user); ;

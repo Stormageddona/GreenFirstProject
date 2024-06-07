@@ -38,7 +38,9 @@ public class UserService {
 
     public void updateUser(User user, UserUpdateDto dto) throws Exception
     {
-        dto.setPw(passwordEncoder.encode(dto.getPw()));
+        System.out.println(user);
+        System.out.println(dto);
+        if (!(dto.getPw() == null || dto.getPw().isEmpty())) dto.setPw(passwordEncoder.encode(dto.getPw()));
         user.userDataChange(dto);
         mapper.updateUserData(user);
     }
@@ -60,6 +62,13 @@ public class UserService {
     public User getUserById(String id) throws Exception
     {
         User user = mapper.selectUserById(id) ;
+        if (user == null) throw new NullPointerException("유저 정보가 존재하지 않습니다.") ;
+        return user ;
+    }
+
+    public User getUserByEmail(String email) throws Exception
+    {
+        User user = mapper.selectUserByEmail(email) ;
         if (user == null) throw new NullPointerException("유저 정보가 존재하지 않습니다.") ;
         return user ;
     }

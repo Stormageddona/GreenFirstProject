@@ -19,6 +19,10 @@
         select * from user_master where user_id = #{id} ;
     </select>
 
+    <select id="selectUserByEmail" resultMap="UserResultMap">
+        select * from user_master where user_email = #{email} ;
+    </select>
+
     <select id="selectAllUsers" resultMap="UserResultMap">
         select * from user_master
     </select>
@@ -43,7 +47,7 @@
 
     <update id="updateUserData">
         update user_master
-            set user_pw = #{pw}
+            set user_pw = #{pwd}
             , user_name = #{name}
         where user_seq = #{seq}
     </update>
@@ -75,7 +79,7 @@
         )
     </select>
 
-    <select id="countById" resultType="boolean">
+    <select id="existsById" resultType="boolean">
         SELECT EXISTS (
             SELECT 1
             FROM user_master
