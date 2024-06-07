@@ -96,10 +96,15 @@ public class UserRestController {
                     "<p> -4 : 비밀번호 검증 실패</p>" +
                     "<p> -5 : 토큰 검증 실패</p>" +
                     "<p> -6 : 토큰 유효기간 초과</p>" +
-                    "<p> -7 : 아이디 중복 체크 실패</p>"
+                    "<p> -7 : 중복된 이메일</p>" +
+                    "<p> -8 : 중복된 아이디</p>" +
+                    "<p> -9 : 중복된 닉네임</p>"
     )
     public Result postUser(@RequestBody UserInsertDto data)
     {
+        if (service.duplicatedData(data.getId(),1)) return ResultError.builder().code(-8).message("중복된 아이디").build();
+        if (service.duplicatedData(data.getName(),2)) return ResultError.builder().code(-9).message("중복된 닉네임").build();
+
         //비밀번호 확인
         if (!data.getPw().equals(data.getPwCheck()))
             return ResultError.builder().code(-3).message("비밀번호 확인이 실패하였습니다.").build();
@@ -164,11 +169,13 @@ public class UserRestController {
             "<p>ResponseCode 응답 코드 </p> " +
                     "<p>  1 : 정상 </p> " +
                     "<p> -1 : 실패(의도하지 않은 오류)</p>" +
-                    "<p> -2 : 세션 체크 실패(로그인 정보 없음)</p>"
+                    "<p> -2 : 세션 체크 실패(로그인 정보 없음)</p>" +
+                    "<p> -3 : 중복된 닉네임</p>"
     )
     public Result patchUser(@RequestBody UserUpdateDto data)
     {
         //유효성 검증
+        if (service.duplicatedData(data.getName(),2)) return ResultError.builder().code(-3).message("중복된 닉네임").build();
         PrincipalDetail principal = PrincipalUtil.getPrincipal() ;
         if (principal == null) return ResultError.builder().code(-2).message("세션 정보를 확인해 주세요.").build();
         User user = principal.getUser() ;

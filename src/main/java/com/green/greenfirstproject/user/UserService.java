@@ -38,8 +38,6 @@ public class UserService {
 
     public void updateUser(User user, UserUpdateDto dto) throws Exception
     {
-        System.out.println(user);
-        System.out.println(dto);
         if (!(dto.getPw() == null || dto.getPw().isEmpty())) dto.setPw(passwordEncoder.encode(dto.getPw()));
         user.userDataChange(dto);
         mapper.updateUserData(user);
