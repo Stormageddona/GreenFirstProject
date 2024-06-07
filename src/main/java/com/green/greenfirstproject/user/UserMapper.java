@@ -1,27 +1,27 @@
 package com.green.greenfirstproject.user;
 
-import com.green.greenfirstproject.user.dto.UserInsertDto;
-import com.green.greenfirstproject.user.model.EmailToken;
+
 import com.green.greenfirstproject.user.model.User;
+import com.green.greenfirstproject.user.model.UserEmail;
+import com.green.greenfirstproject.user.model.loginUser;
+import com.green.greenfirstproject.user.model.postUser;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
 @Mapper
 public interface UserMapper {
+    int postUser(postUser p);
 
-    User selectUserById(String id) ;
-    User selectUserByEmail(String email) ;
-    List<User> selectAllUsers() ;
+    User loginUser(String p);
 
-    void insertUserData(User user); ;
-    void deleteUserData(Long userId); ;
-    void updateUserData(User user); ;
+    int  countUserId(String p);
 
-    void insertEmailToken(EmailToken data) ;
-    void deleteEmailToken(String email); ;
-    EmailToken selectToken(String token) ;
+    int  countUserNm(String p);
 
-    boolean existsByUserName(String str) ;
-    boolean existsById(String str) ;
+    int insUserEmail(UserEmail p);
+
+    UserEmail selUserEmail(String p);
+
+
 }
