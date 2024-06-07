@@ -1,6 +1,7 @@
 package com.green.greenfirstproject.user;
 
 import com.green.greenfirstproject.user.dto.UserInsertDto;
+import com.green.greenfirstproject.user.dto.UserUpdateDto;
 import com.green.greenfirstproject.user.model.EmailToken;
 import com.green.greenfirstproject.user.model.User;
 import lombok.RequiredArgsConstructor;
@@ -8,6 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.text.BreakIterator;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.concurrent.TimeoutException;
@@ -31,11 +33,23 @@ public class UserService {
     public void deleteUser(Long seq) throws Exception
     {
         mapper.deleteUserData(seq);
+
     }
 
-    public void updateUser(UserInsertDto user) throws Exception
+    public void updateUser(User user, UserUpdateDto dto) throws Exception
     {
+        dto.setPw(passwordEncoder.encode(dto.getPw()));
+        user.userDataChange(dto);
         mapper.updateUserData(user);
+    }
+
+    public boolean duplicatedData(String str, Integer type)
+    {
+        return switch (type) {
+            case 1 -> mapper.existsById(str) ;
+            case 2 -> mapper.existsByUserName(str) ;
+            default -> throw new IllegalStateException("Unexpected value: " + type);
+        } ;
     }
 
     public List<User> getAllUsers() throws Exception

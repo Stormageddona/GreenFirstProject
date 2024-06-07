@@ -1,13 +1,18 @@
 package com.green.greenfirstproject.user;
 
+import com.green.greenfirstproject.auth.principal.PrincipalDetail;
 import com.green.greenfirstproject.auth.principal.PrincipalOauthDetailService;
+import com.green.greenfirstproject.auth.principal.PrincipalUtil;
 import com.green.greenfirstproject.common.EmailService;
 import com.green.greenfirstproject.common.dto.Result;
 import com.green.greenfirstproject.common.dto.ResultDto;
 import com.green.greenfirstproject.common.dto.ResultError;
 import com.green.greenfirstproject.user.dto.UserInsertDto;
 import com.green.greenfirstproject.user.dto.UserLoginData;
+import com.green.greenfirstproject.user.dto.UserUpdateDto;
+import com.green.greenfirstproject.user.model.User;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
@@ -26,6 +31,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.util.UriComponentsBuilder;
 import reactor.core.publisher.Mono;
 
+import javax.lang.model.type.ReferenceType;
 import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
@@ -46,7 +52,7 @@ public class UserRestController {
 
 
     @PostMapping("login")
-    @Operation(summary = "유저 로그인" , description = "유저 로그인을 담당하는 API")
+    @Operation(summary = "유저 로그인" , description = "유저 로그인을 담당하는 API. FormData 형식으로 보내야함.")
     @ApiResponse(description =
             "<p>ResponseCode 응답 코드 </p> " +
                     "<p>  1 : 정상 </p> " +
@@ -134,5 +140,76 @@ public class UserRestController {
         return ResultDto.builder().build();
     }
 
+    @DeleteMapping
+    @Operation(summary = "유저 회원탈퇴", description = "실제 탈퇴되는것은 아니고, 상태값을 3으로 변경. 스케줄러로 6개월뒤의 데이터를 삭제할 예정")
+    @ApiResponse(description =
+            "<p>ResponseCode 응답 코드 </p> " +
+                    "<p>  1 : 정상 </p> " +
+                    "<p> -1 : 실패(의도하지 않은 오류)</p>" +
+                    "<p> -2 : 세션 체크 실패(로그인 정보 없음)</p>"
+    )
+    public Result deleteUser(@RequestParam Long seq)
+    {
+        PrincipalDetail data = PrincipalUtil.getPrincipal() ;
+        if (data == null) return ResultError.builder().code(-2).message("세션 정보를 확인해 주세요.").build();
+        User user = data.getUser() ;
+        try {
+            service.deleteUser(user.getSeq()) ;
+
+        } catch (Exception e) {
+            log.error("An error occurred: ", e);
+            return ResultError.builder().build();
+        }
+        return ResultDto.builder().build();
+    }
+
+    @PatchMapping
+    @Operation(summary = "유저 정보 수정", description = "")
+    @ApiResponse(description =
+            "<p>ResponseCode 응답 코드 </p> " +
+                    "<p>  1 : 정상 </p> " +
+                    "<p> -1 : 실패(의도하지 않은 오류)</p>" +
+                    "<p> -2 : 세션 체크 실패(로그인 정보 없음)</p>"
+    )
+    public Result patchUser(UserUpdateDto data)
+    {
+        //유효성 검증
+        if (!data.getPw().equals(data.getPwCheck())) return ResultError.builder().code(-3).message("비밀번호 확인이 실패하였습니다.").build();
+        PrincipalDetail principal = PrincipalUtil.getPrincipal() ;
+        if (principal == null) return ResultError.builder().code(-2).message("세션 정보를 확인해 주세요.").build();
+        User user = principal.getUser() ;
+
+        try {
+            service.updateUser(user,data);
+        } catch (Exception e) {
+            log.error("An error occurred: ", e);
+            return ResultError.builder().build();
+        }
+
+        return ResultDto.builder().build();
+    }
+
+
+    @GetMapping("duplicated")
+    @Operation(summary = "유저 정보 수정", description = "중복 확인 메소드.")
+    @ApiResponse(description =
+            "<p>ResponseCode 응답 코드 </p> " +
+                    "<p>  1 : 정상. 중복된 코드가 없음(false) </p> " +
+                    "<p>  2 : 정상. 중복된 코드가 있음(true) </p> " +
+                    "<p> -1 : 실패(의도하지 않은 오류)</p>"
+    )
+    public Result duplicatedCheck(
+            @Parameter(description = "중복 검증할 스트링") String str
+            , @Parameter(description = "1 : 아이디 / 2 : 닉네임 ") Integer type)
+    {
+        if (!(type == 1 || type == 2)) return ResultError.builder().code(-2).message("타입값 유효성 체크 실패").build();
+        try {
+            boolean data = service.duplicatedData(str,type) ;
+            return ResultDto.<Boolean>builder().code(data ? 2 : 1).Data(data).build();
+        } catch (Exception e) {
+            log.error("An error occurred: ", e);
+            return ResultError.builder().build();
+        }
+    }
 
 }

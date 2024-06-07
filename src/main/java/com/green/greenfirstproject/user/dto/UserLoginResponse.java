@@ -11,12 +11,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class UserLoginResponse
 {
+    private Long userSeq ;
     private String userId ;
     private String userName ;
     private String loginType ;
 
     public UserLoginResponse(User user)
     {
+        this.userSeq = user.getSeq() ;
         this.userId = user.getId();
         this.userName = user.getName();
         System.out.println(user.getLoginType());

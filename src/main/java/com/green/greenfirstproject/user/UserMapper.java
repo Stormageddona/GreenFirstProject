@@ -16,9 +16,12 @@ public interface UserMapper {
 
     void insertUserData(User user); ;
     void deleteUserData(Long userId); ;
-    void updateUserData(UserInsertDto user); ;
+    void updateUserData(User user); ;
 
     void insertEmailToken(EmailToken data) ;
     void deleteEmailToken(String email); ;
     EmailToken selectToken(String token) ;
+
+    boolean existsByUserName(String str) ;
+    boolean existsById(String str) ;
 }

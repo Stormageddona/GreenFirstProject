@@ -1,10 +1,9 @@
 package com.green.greenfirstproject.user.model;
 
 import com.green.greenfirstproject.user.dto.UserInsertDto;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.green.greenfirstproject.user.dto.UserUpdateDto;
+import lombok.*;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.time.LocalDateTime;
 
@@ -13,6 +12,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 public class User {
+
     private Long seq;
     private String id;
     private String pwd;
@@ -34,6 +34,17 @@ public class User {
         this.role = "ROLE_USER" ;
         this.inputDt = LocalDateTime.now();
         this.updateDt = null ;
-
     }
+
+    public void userDataChange(UserUpdateDto data) {
+        if (data.getPw() != null) {
+            this.pwd = data.getPw();
+        }
+        if (data.getName() != null) {
+            this.name = data.getName();
+        }
+    }
+
+
+
 }
