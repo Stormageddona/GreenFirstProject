@@ -1,7 +1,6 @@
 package com.green.greenfirstproject.user;
 
 import com.green.greenfirstproject.auth.principal.PrincipalUtil;
-import com.green.greenfirstproject.common.dto.Result;
 import com.green.greenfirstproject.common.dto.ResultDto;
 import com.green.greenfirstproject.common.dto.ResultError;
 import com.green.greenfirstproject.user.dto.UserLoginResponse;
@@ -44,7 +43,7 @@ public class SocialLoginController
         PrincipalUtil.refreshPrincipalDetail(user,request);
 
         UserLoginResponse login = new UserLoginResponse(user) ;
-        model.addAttribute("userdata",ResultDto.<UserLoginResponse>builder().Data(login).build()) ;
+        model.addAttribute("userdata",ResultDto.<UserLoginResponse>builder().data(login).build()) ;
         return "close";
     }
 
@@ -64,7 +63,7 @@ public class SocialLoginController
         PrincipalUtil.refreshPrincipalDetail(user,request);
 
         UserLoginResponse login = new UserLoginResponse(user) ;
-        model.addAttribute("userdata",ResultDto.<UserLoginResponse>builder().Data(login).build()) ;
+        model.addAttribute("userdata",ResultDto.<UserLoginResponse>builder().data(login).build()) ;
         return "close";    }
 
     @Hidden
@@ -84,7 +83,7 @@ public class SocialLoginController
         PrincipalUtil.refreshPrincipalDetail(user,request);
 
         UserLoginResponse login = new UserLoginResponse(user) ;
-        model.addAttribute("userdata",ResultDto.<UserLoginResponse>builder().Data(login).build()) ;
+        model.addAttribute("userdata",ResultDto.<UserLoginResponse>builder().data(login).build()) ;
         return "close";
     }
 

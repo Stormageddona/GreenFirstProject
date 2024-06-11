@@ -9,7 +9,6 @@ import java.util.List;
 
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 public class ResultDtoList<T> implements Result
 {
     private Integer code = 1;

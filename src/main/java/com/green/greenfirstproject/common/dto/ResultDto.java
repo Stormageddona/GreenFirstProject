@@ -13,7 +13,7 @@ public class ResultDto<T> implements Result {
     @Builder.Default
     private Integer code = 1 ;
     @Builder.Default
-    private String message = "정상처리 되었습니다." ;
+    private String msg = "정상처리 되었습니다." ;
 
-    private T Data ;
+    private T data;
 }

@@ -17,7 +17,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.*;
 import java.util.List;
 
 @RestController
@@ -74,7 +73,7 @@ public class BoardRestController
 
             Long seq = service.insertBoardData(data) ;
 
-            return ResultDto.<Long>builder().Data(seq).build();
+            return ResultDto.<Long>builder().data(seq).build();
         } catch (Exception e) {
             log.error("An error occurred: ", e);
             return ResultError.builder().build();
