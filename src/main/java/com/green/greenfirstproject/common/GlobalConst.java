@@ -11,4 +11,5 @@ public class GlobalConst {
     public final static  int PAGING_SIZE = 15;
 
     public final static int PAGING_LIST = 0;
+
 }

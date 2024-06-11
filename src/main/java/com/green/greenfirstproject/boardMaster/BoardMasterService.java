@@ -4,11 +4,9 @@ import com.green.greenfirstproject.boardMaster.model.*;
 import com.green.greenfirstproject.common.model.CustomException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.tuple.Pair;
 import org.springframework.stereotype.Service;
 
-import javax.lang.model.util.Elements;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import static com.green.greenfirstproject.common.GlobalConst.PAGING_SIZE;
@@ -43,12 +41,14 @@ public class BoardMasterService {
         return res;
     }
 
-    public List<BoardGetRes> getCommunityList(BoardGetReq p) {
-    List<BoardGetRes> res = mapper.getCommunityList(p);
-        return res;
+    public Pair<List<BoardGetRes>,Long> getCommunityList(BoardGetReq p) {
+        List<BoardGetRes> res1 = mapper.getCommunityList(p);
+        Long totalElements = mapper.totalCount(p.getKeyword()) ;
+        return Pair.of(res1,totalElements);
     }
 
     public BoardGetRes getCommunityData(long boardSeq) {
+
         BoardGetRes res = mapper.getCommunityData(boardSeq);
         if(res != null){
             mapper.patchBoardHits(res.getBoardSeq());

@@ -21,6 +21,7 @@ public class BoardGetReq extends Paging {
 
 
 
+
     public BoardGetReq(String keyword, Integer page, Integer size){
         super(page , size);
         this.keyword = keyword ==  null? "" : keyword;

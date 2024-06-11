@@ -8,6 +8,7 @@ import io.swagger.v3.oas.models.security.SecurityScheme;
 import jakarta.annotation.Nullable;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.tuple.Pair;
 import org.apache.ibatis.annotations.Delete;
 import org.springdoc.core.annotations.ParameterObject;
 import org.springframework.http.HttpStatus;
@@ -64,7 +65,10 @@ public class BoardMasterController {
     @Operation(summary =  "게시글 리스트")
     public ResultDto<List<BoardGetRes>>getCommunityList(@ParameterObject @ModelAttribute BoardGetReq p){
         try {
-            List<BoardGetRes> list = service.getCommunityList(p);
+            Pair<List<BoardGetRes>,Long> data = service.getCommunityList(p);
+            List<BoardGetRes> list = data.getLeft() ;
+            Long totalElements = data.getRight();
+            Long totalPage = (totalElements + PAGING_SIZE - 1) / PAGING_SIZE ;
             return  ResultDto.resultDto(SUCCESS_CODE,"페이징성공",list);
         }catch (Exception e){
             e.printStackTrace();

@@ -19,5 +19,4 @@ public class BoardGetRes {
     private  LocalDate inputDt;
     private  int fav;
     private int hit;
-
 }
