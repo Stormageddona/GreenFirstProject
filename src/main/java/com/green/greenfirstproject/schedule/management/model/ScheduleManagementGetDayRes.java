@@ -1,7 +1,7 @@
 package com.green.greenfirstproject.schedule.management.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.green.todolist1.common.model.Paging;
+import com.green.greenfirstproject.common.Paging;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import lombok.Setter;

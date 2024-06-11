@@ -1,6 +1,6 @@
 package com.green.greenfirstproject.schedule.plant.model;
 
-import com.green.todolist1.common.model.Paging;
+import com.green.greenfirstproject.common.Paging;
 import lombok.Getter;
 import lombok.Setter;
 

@@ -1,6 +1,6 @@
 package com.green.greenfirstproject.schedule.plant;
 
-import com.green.todolist1.schedule.plant.model.*;
+import com.green.greenfirstproject.schedule.plant.model.*;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
