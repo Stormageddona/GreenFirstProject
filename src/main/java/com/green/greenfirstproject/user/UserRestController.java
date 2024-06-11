@@ -18,6 +18,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.UUID;
 import java.util.concurrent.TimeoutException;
 
@@ -104,7 +105,6 @@ public class UserRestController {
     {
         if (service.duplicatedData(data.getId(),1)) return ResultError.builder().code(-8).message("중복된 아이디").build();
         if (service.duplicatedData(data.getName(),2)) return ResultError.builder().code(-9).message("중복된 닉네임").build();
-
         //비밀번호 확인
         if (!data.getPw().equals(data.getPwCheck()))
             return ResultError.builder().code(-3).message("비밀번호 확인이 실패하였습니다.").build();

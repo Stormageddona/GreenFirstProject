@@ -6,10 +6,10 @@
         <result property="seq" column="user_seq"/>
         <result property="id" column="user_id"/>
         <result property="pwd" column="user_pw"/>
-        <result property="name" column="user_name"/>
+        <result property="name" column="user_nickname"/>
         <result property="email" column="user_email"/>
         <result property="gb" column="user_gb"/>
-        <result property="loginType" column="user_login_type"/>
+        <result property="loginType" column="user_login_gb"/>
         <result property="role" column="user_role"/>
         <result property="inputDt" column="input_dt"/>
         <result property="updateDt" column="update_dt"/>
@@ -31,10 +31,10 @@
         insert into user_master
             set user_id = #{id}
             , user_pw = #{pwd}
-            , user_name = #{name}
+            , user_nickname = #{name}
             , user_email = #{email}
             , user_gb = #{gb}
-            , user_login_type = #{loginType}
+            , user_login_gb = #{loginType}
     </insert>
 
     <delete id="deleteUserData">
@@ -48,7 +48,7 @@
     <update id="updateUserData">
         update user_master
             set user_pw = #{pwd}
-            , user_name = #{name}
+            , user_nickname = #{name}
         where user_seq = #{seq}
     </update>
 
@@ -75,7 +75,7 @@
         SELECT EXISTS (
             SELECT 1
             FROM user_master
-            WHERE user_name = #{str}
+            WHERE user_nickname = #{str}
         )
     </select>
 
