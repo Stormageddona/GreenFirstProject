@@ -1,13 +1,11 @@
 package com.green.greenfirstproject.boardMaster;
 
-import com.green.greenfirstproject.boardMaster.model.BoardDel;
-import com.green.greenfirstproject.boardMaster.model.BoardReq;
-import com.green.greenfirstproject.boardMaster.model.BoardRes;
-import com.green.greenfirstproject.boardMaster.model.BoardUpd;
+import com.green.greenfirstproject.boardMaster.model.*;
 import com.green.greenfirstproject.common.ResultDto;
 import com.green.greenfirstproject.common.model.CustomException;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.models.security.SecurityScheme;
+import jakarta.annotation.Nullable;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.annotations.Delete;
@@ -50,11 +48,10 @@ public class BoardMasterController {
 
     @PatchMapping
     @Operation(summary = "게시글 업데이트")
-    @PutMapping
     public ResultDto<Integer> patchCommunity(@RequestBody BoardUpd p){
         try{
             int res = service.patchCommunity(p);
-            return ResultDto.resultDto1(SUCCESS_CODE,"게시글 수정 성공 ");
+            return ResultDto.resultDto(SUCCESS_CODE,"게시글 수정 성공 ",res);
         }catch (CustomException e){
             e.printStackTrace();
             return ResultDto.resultDto1(ERROR_CODE,"게시글 수정 실패 ");
@@ -62,8 +59,28 @@ public class BoardMasterController {
             e.printStackTrace();
             return ResultDto.resultDto1(ALL_ERROR,"알 수 없는 오류 ");
         }
-
-
+    }
+    @GetMapping("list")
+    @Operation(summary =  "게시글 리스트")
+    public ResultDto<List<BoardGetRes>>getCommunityList(@ParameterObject @ModelAttribute BoardGetReq p){
+        try {
+            List<BoardGetRes> list = service.getCommunityList(p);
+            return  ResultDto.resultDto(SUCCESS_CODE,"페이징성공",list);
+        }catch (Exception e){
+            e.printStackTrace();
+            return ResultDto.resultDto1(ERROR_CODE,"페이징실패");
+        }
+    }
+    @GetMapping("detail")
+    @Operation(summary = "게시글 디테일 ")
+    public ResultDto<BoardGetRes> getCommunityData(@RequestParam(name= "boardSeq") long boardSeq){
+        try {
+            BoardGetRes list = service.getCommunityData(boardSeq);
+            return ResultDto.resultDto(SUCCESS_CODE, "게시글 불러오기 성공",list);
+        }catch (Exception e){
+            return ResultDto.resultDto1(ERROR_CODE , "알수없는오류");
+        }
 
     }
+
 }

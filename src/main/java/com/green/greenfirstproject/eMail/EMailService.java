@@ -1,16 +1,20 @@
 package com.green.greenfirstproject.eMail;
 
 import jakarta.mail.Authenticator;
+import jakarta.mail.internet.*;
 import jakarta.mail.MessagingException;
 import jakarta.mail.PasswordAuthentication;
 import jakarta.mail.Session;
 import jakarta.mail.internet.MimeMessage;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.mail.javamail.JavaMailSenderImpl;
+import jakarta.mail.*;
+
+import org.springframework.mail.javamail.*;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +25,7 @@ import java.util.Properties;
 @Slf4j
 
 @Configuration
-public class EMailService {
+public class EMailService  {
     @Value("${spring.mail.password}") String password;
     @Value("${spring.mail.username}") String from;
     @Value("${spring.mail.host}") String host;

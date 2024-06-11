@@ -1,9 +1,9 @@
 package com.green.greenfirstproject.boardMaster;
 
-import com.green.greenfirstproject.boardMaster.model.BoardDel;
-import com.green.greenfirstproject.boardMaster.model.BoardReq;
-import com.green.greenfirstproject.boardMaster.model.BoardUpd;
+import com.green.greenfirstproject.boardMaster.model.*;
 import org.apache.ibatis.annotations.Mapper;
+
+import java.util.List;
 
 @Mapper
 public interface BoardMasterMapper {
@@ -13,7 +13,15 @@ public interface BoardMasterMapper {
 
     int patchCommunity(BoardUpd p);
 
+    List<BoardGetRes> getCommunityList(BoardGetReq p);
 
+    BoardGetRes getCommunityData(long boardSeq);
 
+    int patchBoardHits(long boardSeq);
 
+//    List<BoardGetRes> getCommunityListTitle(BoardGetReq p);
+//
+//    List<BoardGetRes> getCommunityListContent(BoardGetReq p);
+//
+//    List<BoardGetRes> getCommunityListWriter(BoardGetReq p);
 }

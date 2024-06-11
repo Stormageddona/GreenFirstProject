@@ -6,6 +6,9 @@ import lombok.Setter;
 
 import java.beans.ConstructorProperties;
 
+import static com.green.greenfirstproject.common.GlobalConst.PAGING_LIST;
+import static com.green.greenfirstproject.common.GlobalConst.PAGING_SIZE;
+
 @Getter
 @Setter
 public class Paging {
@@ -17,8 +20,8 @@ public class Paging {
     @ConstructorProperties({"page", "size"})
     public Paging(Integer page,Integer size ){
         System.out.println(size);
-        this.page = page == null ||  page == 0 ? 1 : page;
-        this.size = size == null ||  size == 0 ? 10 : size;
-        this.startIdx = this.page -1  < 0 ? 0: (this.page - 1) * this.size ;
+        this.page = page == null ||  page < 1 ? PAGING_LIST : page;
+        this.size = size == null ||  size < 1 ? PAGING_SIZE : size;
+        this.startIdx =this.page;
     }
 }

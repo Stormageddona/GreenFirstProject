@@ -16,5 +16,5 @@ public class BoardUpd {
 
     private String title;
     private String content;
-    private String contents;
+
 }

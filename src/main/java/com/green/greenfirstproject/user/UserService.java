@@ -9,11 +9,12 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 
-
+import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.dao.DuplicateKeyException;
 
 
-import org.springframework.security.crypto.bcrypt.BCrypt;
+import org.springframework.mail.javamail.JavaMailSenderImpl;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -21,11 +22,11 @@ import org.springframework.transaction.annotation.Transactional;
 @Slf4j
 @RequiredArgsConstructor
 public class UserService {
-    private  final JavaMailSenderImpl mss;
+//    private  final JavaMailSenderImpl mss;
     private final UserMapper mapper;
     private final CustomFileUtils customFileUtils;
 
-    private JaVaMailSenderImpl emailSender;
+    private JavaMailSenderImpl emailSender;
 
     @Transactional
     @Operation(summary = "회원가입을 할 수 있습니다 ", description = "회원가입을 할 수 있다.")
