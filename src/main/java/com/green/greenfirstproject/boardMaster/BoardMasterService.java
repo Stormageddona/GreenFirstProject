@@ -51,7 +51,7 @@ public class BoardMasterService {
     public BoardGetRes getCommunityData(long boardSeq) {
         BoardGetRes res = mapper.getCommunityData(boardSeq);
         if(res != null){
-            mapper. patchBoardHits(boardSeq);
+            mapper.patchBoardHits(res.getBoardSeq());
         }
         return res;
     }

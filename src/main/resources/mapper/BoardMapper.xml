@@ -24,28 +24,28 @@
         SELECT
         board_seq AS boardSeq
         ,board_title AS title
-        ,user_nickname AS nickname
+        ,user_nickname AS writerName
         ,input_dt AS inputDt
         ,like_count AS fav
         ,board_hit AS hit
         FROM board_detail_view
         <where>
-            <if test="aaa == 1">
+            <if test="search == 1">
                 TRIM(board_title) LIKE '%${keyword}%'
             </if>
-            <if test="aaa == 2">
-                 TRIM(board_text) LIKE '%${keyword}%' OR title LIKE '%${keyword}%'
+            <if test="search == 2">
+                 TRIM(board_text) LIKE '%${keyword}%' OR  TRIM(board_title) LIKE '%${keyword}%'
             </if>
-            <if test="aaa == 3">
-                 TRIM(user_nickname) LIKE '%${keyword}%''
+            <if test="search == 3">
+                 TRIM(user_nickname) LIKE '%${keyword}%'
             </if>
-            <if test="bbb == 1">
+            <if test="order == 1">
                 ORDER BY like_count DESC
             </if>
-            <if test="bbb == 2">
+            <if test="order == 2">
                 ORDER BY like_count ASC
             </if>
-            <if test="bbb == 3">
+            <if test="order == 3">
                 ORDER BY board_seq DESC
             </if>
         </where>

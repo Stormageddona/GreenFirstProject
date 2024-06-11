@@ -15,7 +15,7 @@ import java.util.List;
 public class BoardGetRes {
     private  int boardSeq;
     private String title;
-    private  String nickname;
+    private  String writerName;
     private  LocalDate inputDt;
     private  int fav;
     private int hit;
