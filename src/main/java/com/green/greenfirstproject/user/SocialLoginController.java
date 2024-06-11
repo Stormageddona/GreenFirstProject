@@ -44,7 +44,7 @@ public class SocialLoginController
         PrincipalUtil.refreshPrincipalDetail(user,request);
 
         UserLoginResponse login = new UserLoginResponse(user) ;
-        model.addAttribute("userdata",ResultDto.<UserLoginResponse>builder().Data(login).build()) ;
+        model.addAttribute("userdata",ResultDto.<UserLoginResponse>builder().data(login).build()) ;
         return "close";
     }
 
@@ -64,7 +64,7 @@ public class SocialLoginController
         PrincipalUtil.refreshPrincipalDetail(user,request);
 
         UserLoginResponse login = new UserLoginResponse(user) ;
-        model.addAttribute("userdata",ResultDto.<UserLoginResponse>builder().Data(login).build()) ;
+        model.addAttribute("userdata",ResultDto.<UserLoginResponse>builder().data(login).build()) ;
         return "close";    }
 
     @Hidden
@@ -84,7 +84,7 @@ public class SocialLoginController
         PrincipalUtil.refreshPrincipalDetail(user,request);
 
         UserLoginResponse login = new UserLoginResponse(user) ;
-        model.addAttribute("userdata",ResultDto.<UserLoginResponse>builder().Data(login).build()) ;
+        model.addAttribute("userdata",ResultDto.<UserLoginResponse>builder().data(login).build()) ;
         return "close";
     }
 

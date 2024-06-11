@@ -209,7 +209,7 @@ public class UserRestController {
         if (!(type == 1 || type == 2)) return ResultError.builder().code(-2).message("타입값 유효성 체크 실패").build();
         try {
             boolean data = service.duplicatedData(str,type) ;
-            return ResultDto.<Boolean>builder().code(data ? 2 : 1).message(data ? "이미 존재하는 문자열 입니다." : "존재하지 않는 문자열 입니다.").Data(data).build();
+            return ResultDto.<Boolean>builder().code(data ? 2 : 1).message(data ? "이미 존재하는 문자열 입니다." : "존재하지 않는 문자열 입니다.").data(data).build();
         } catch (Exception e) {
             log.error("An error occurred: ", e);
             return ResultError.builder().build();
