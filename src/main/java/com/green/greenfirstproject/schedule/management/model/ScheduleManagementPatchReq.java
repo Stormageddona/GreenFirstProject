@@ -7,5 +7,5 @@ public class ScheduleManagementPatchReq {
     private long plantSeq;
     private long plantManagementSeq;
     private int gardening;
-    private String content;
+    private String contents;
 }

@@ -20,7 +20,7 @@ import java.util.List;
 public class SchedulePlantController {
     private final SchedulePlantService service;
 
-    @PostMapping()
+    @PostMapping
     @Operation(summary = "식물등록", description = "식물등록관련 Post")
     public ResultDto<Integer> insSchedulePlant(@RequestBody SchedulePlantPostReq p){
         try {

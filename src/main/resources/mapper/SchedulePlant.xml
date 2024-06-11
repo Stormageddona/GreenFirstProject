@@ -56,7 +56,7 @@
         INNER JOIN opendata B
         ON A.plant_odata_seq = B.odata_seq
         WHERE A.plant_user_seq = #{userSeq}
-          AND B.plant_seq = #{plantSeq}
+          AND A.plant_seq = #{plantSeq}
     </select>
 
 </mapper>
