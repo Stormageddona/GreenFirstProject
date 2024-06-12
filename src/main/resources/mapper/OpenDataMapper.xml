@@ -22,6 +22,7 @@
         <if test="keyword != null and keyword != ''">
             WHERE trim(odata_name) LIKE CONCAT('%',#{keyword},'%')
         </if>
+        ORDER BY odata_name
         LIMIT #{startIdx}, #{size}
     </select>
 </mapper>
