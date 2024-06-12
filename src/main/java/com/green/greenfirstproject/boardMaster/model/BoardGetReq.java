@@ -1,6 +1,5 @@
 package com.green.greenfirstproject.boardMaster.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.green.greenfirstproject.common.GlobalConst;
 import com.green.greenfirstproject.common.model.Paging;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -18,7 +17,6 @@ public class BoardGetReq extends Paging {
     private Integer search;
 
     private String keyword;
-
 
 
 

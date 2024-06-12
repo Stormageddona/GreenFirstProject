@@ -16,15 +16,12 @@
         var redirectUri = 'http://localhost:8080/api/auth/google';
 
         var encodedRedirectUri = encodeURIComponent(redirectUri);
-
         // URL 구성 부분 분리
         var baseUrl = "https://accounts.google.com/o/oauth2/v2/auth";
         var responseType = "code";
         var clientId = "873909366016-aj06hqodpd0co5f520qo6knns44j6i4b.apps.googleusercontent.com";
         var scope = "email";
-
         var link = baseUrl + "?response_type=" + responseType + "&client_id=" + clientId + "&redirect_uri=" + encodedRedirectUri + "&scope=" + scope;
-
 
         // 이동
         window.open(link)
