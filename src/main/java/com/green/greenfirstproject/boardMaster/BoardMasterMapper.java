@@ -19,7 +19,7 @@ public interface BoardMasterMapper {
 
     int patchBoardHits(long boardSeq);
 
-    Long totalCount(String keyword);
+    Integer totalCount(String keyword);
 
 //    List<BoardGetRes> getCommunityListTitle(BoardGetReq p);
 //

@@ -41,10 +41,13 @@ public class BoardMasterService {
         return res;
     }
 
-    public Pair<List<BoardGetRes>,Long> getCommunityList(BoardGetReq p) {
+    public Pair<BoardGetPage,Integer> getCommunityList(BoardGetReq p) {
         List<BoardGetRes> res1 = mapper.getCommunityList(p);
-        Long totalElements = mapper.totalCount(p.getKeyword()) ;
-        return Pair.of(res1,totalElements);
+        BoardGetPage res2 = new BoardGetPage();
+        res2.setList(res1);
+        Integer totalElements = mapper.totalCount(p.getKeyword()) ;
+
+        return Pair.of(res2,totalElements);
     }
 
     public BoardGetRes getCommunityData(long boardSeq) {

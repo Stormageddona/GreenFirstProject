@@ -1,5 +1,6 @@
 package com.green.greenfirstproject.boardMaster.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.green.greenfirstproject.common.GlobalConst;
 import com.green.greenfirstproject.common.model.Paging;
 import io.swagger.v3.oas.annotations.media.Schema;

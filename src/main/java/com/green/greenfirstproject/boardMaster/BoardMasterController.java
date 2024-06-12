@@ -63,12 +63,16 @@ public class BoardMasterController {
     }
     @GetMapping("list")
     @Operation(summary =  "게시글 리스트")
-    public ResultDto<List<BoardGetRes>>getCommunityList(@ParameterObject @ModelAttribute BoardGetReq p){
+    public ResultDto<BoardGetPage>getCommunityList(@ParameterObject @ModelAttribute BoardGetReq p){
         try {
-            Pair<List<BoardGetRes>,Long> data = service.getCommunityList(p);
-            List<BoardGetRes> list = data.getLeft() ;
-            Long totalElements = data.getRight();
-            Long totalPage = (totalElements + PAGING_SIZE - 1) / PAGING_SIZE ;
+            Pair<BoardGetPage,Integer> data = service.getCommunityList(p);
+            BoardGetPage list = data.getLeft() ;
+            Integer totalElements = data.getRight();
+            Integer totalPage = (totalElements + PAGING_SIZE - 1) / PAGING_SIZE ;
+            list.setTotalPage(totalPage);
+            list.setTotalElements(totalElements);
+
+            
             return  ResultDto.resultDto(SUCCESS_CODE,"페이징성공",list);
         }catch (Exception e){
             e.printStackTrace();
