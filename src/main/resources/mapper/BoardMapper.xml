@@ -1,99 +1,88 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.green.greenfirstproject.board.BoardMapper">
-
-    <insert id="insertBoardData" useGeneratedKeys="true" keyProperty="seq">
-        insert into board_master
-            set
-                board_user_seq = #{userSeq}
-                , board_title = #{title}
-                , board_text = #{text}
-                , board_hit = #{hits}
+<mapper namespace="com.green.greenfirstproject.boardMaster.BoardMasterMapper">
+    <insert id="postCommunity" keyProperty="boardSeq" useGeneratedKeys="true">
+        INSERT INTO board_master
+        SET board_user_seq = #{writerSeq}
+        ,board_title = #{title}
+        ,board_text = #{content}
     </insert>
 
-    <delete id="deleteBoardData">
-        update board_master
-            set board_gb = 2
-        where board_seq = #{seq}
+    <delete id="deleteCommunity" >
+        DELETE FROM board_master
+        WHERE board_seq = #{boardSeq}
     </delete>
 
-    <update id="updateBoardData">
-        update board_master
-            set board_title = #{title}
-                , board_text = #{text}
+    <update id="patchCommunity">
+        UPDATE board_master
+        SET board_title = #{title}
+        ,board_text = #{content}
+        WHERE board_seq = #{boardSeq} AND board_user_seq = #{writerSeq}
     </update>
-
-    <update id="addBoardHits">
-        update board_master
-            set board_hit = board_hit + 1
-    </update>
-
-    <select id="selectBoardListByTitle">
-        select
-            board_seq as seq ,
-            board_title as title ,
-            board_hit as hits ,
-            comment_count as commentCount ,
-            user_name as userName ,
-            input_dt as inputDt ,
-            like_count as likeCount,
-            dislike_count as dislikeCount
-        from board_list_view
-        where board_title like concat('%',#{keyword},'%')
-        limit #{startIdx}, #{size}
-    </select>
-
-    <select id="selectBoardListByContent">
-        select
-            board_seq as boardSeq ,
-            board_title as title ,
-            board_hit as hit ,
-            user_name as writerName ,
-            input_dt as inputDt ,
-            like_count as fav,
-            comment_count as commentCount
-        from board_list_view
-        where board_contents like concat('%',#{keyword},'%')
-        limit #{startIdx}, #{size}
-    </select>
-
-    <select id="selectBoardDetail">
-        select
-            board_seq as boardSeq
-            , board_title as title
-            , board_text as text
-            , board_hit as hit
-            , input_dt as inputDt
-            , user_name as writerName
-            , like_count as fav
-        from board_detail_view
-        where board_seq = #{seq}
-    </select>
-
-    <select id="countByTotalElements" resultType="int">
-        select count(*) from board_list_view
+    
+    <select id="getCommunityList">
+        SELECT
+        board_seq AS boardSeq
+        ,board_title AS title
+        ,user_nickname AS writerName
+        ,input_dt AS inputDt
+        ,like_count AS fav
+        ,board_hit AS hit
+        FROM board_detail_view
         <where>
-            <if test="type == 1">
-                board_title like CONCAT('%', #{keyword}, '%')
+            <if test="search == 1">
+                TRIM(board_title) LIKE '%${keyword}%'
             </if>
-            <if test="type == 2">
-                board_contents like CONCAT('%', #{keyword}, '%')
+            <if test="search == 2">
+                 TRIM(board_text) LIKE '%${keyword}%' OR  TRIM(board_title) LIKE '%${keyword}%'
             </if>
-            <if test="type == 3">
-                board_title like CONCAT('%', #{keyword}, '%') or board_contents like CONCAT('%', #{keyword}, '%')
+            <if test="search == 3">
+                 TRIM(user_nickname) LIKE '%${keyword}%'
             </if>
-            <if test="type == 4">
-                user_nickname like concat('%', #{keyword}, '%')
+        </where>
+        <if test="order == 1">
+            ORDER BY like_count DESC
+        </if>
+        <if test="order == 2">
+            ORDER BY like_count ASC
+        </if>
+        <if test="order == 3">
+            ORDER BY board_seq DESC
+        </if>
+        LIMIT #{startIdx}, #{size}
+    </select>
+
+    <select id="totalCount" resultType="int">
+        SELECT COUNT(*)
+        FROM board_detail_view
+        <where>
+            <if test="search == 1">
+                TRIM(board_title) LIKE '%${keyword}%'
+            </if>
+            <if test="search == 2">
+                TRIM(board_text) LIKE '%${keyword}%' OR  TRIM(board_title) LIKE '%${keyword}%'
+            </if>
+            <if test="search == 3">
+                TRIM(user_nickname) LIKE '%${keyword}%'
             </if>
         </where>
     </select>
+    
+    <select id="getCommunityData">
+        SELECT
+        board_seq AS boardSeq
+        ,board_title AS title
+        ,user_nickname AS nickname
+        ,input_dt AS inputDt
+        ,like_count AS fav
+        ,board_hit AS hit
+        FROM board_detail_view
+        WHERE board_seq = #{boardSeq}
+    </select>
 
-<!--    <insert id="insertBoardData" keyProperty="seq" useGeneratedKeys="true">-->
-<!--        insert into board_master-->
-<!--            set board_user_seq = #{writer}-->
-<!--                , board_title = #{title}-->
-<!--                , board_text = #{contents}-->
-<!--    </insert>-->
-
-
+    <update id="patchBoardHits">
+        UPDATE board_master
+        SET board_hit = board_hit +1
+        WHERE board_seq =#{boardSeq}
+    </update>
 </mapper>

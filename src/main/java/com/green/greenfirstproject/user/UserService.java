@@ -1,111 +1,68 @@
 package com.green.greenfirstproject.user;
 
-import com.green.greenfirstproject.user.dto.UserInsertDto;
-import com.green.greenfirstproject.user.dto.UserUpdateDto;
-import com.green.greenfirstproject.user.model.EmailToken;
-import com.green.greenfirstproject.user.model.User;
+import com.green.greenfirstproject.common.CustomFileUtils;
+import com.green.greenfirstproject.common.model.CustomException;
+import com.green.greenfirstproject.user.model.*;
+import io.swagger.v3.oas.annotations.Operation;
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.security.crypto.password.PasswordEncoder;
+
+
+import org.mindrot.jbcrypt.BCrypt;
+import org.springframework.dao.DuplicateKeyException;
+
+
+import org.springframework.mail.javamail.JavaMailSenderImpl;
+
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.text.BreakIterator;
-import java.time.LocalDateTime;
-import java.util.List;
-import java.util.concurrent.TimeoutException;
-
+@Service
 @Slf4j
 @RequiredArgsConstructor
-@Service
 public class UserService {
+//    private  final JavaMailSenderImpl mss;
+    private final UserMapper mapper;
+    private final CustomFileUtils customFileUtils;
 
-    private final UserMapper mapper ;
-    private final PasswordEncoder passwordEncoder;
+    private JavaMailSenderImpl emailSender;
 
-    public User insertUser(UserInsertDto data) throws Exception
-    {
-        data.setPw(passwordEncoder.encode(data.getPw())) ;
-        User user = new User(data) ;
-        mapper.insertUserData(user) ;
-        return user ;
+    @Transactional
+    @Operation(summary = "회원가입을 할 수 있습니다 ", description = "회원가입을 할 수 있다.")
+    public int postUser(postUser p){
+        String password = BCrypt.hashpw(p.getUserPw(),BCrypt.gensalt());
+        p.setUserPw(password);
+        User userinfo = new User();
+        int userIdCheck = mapper.countUserId(p.getUserId());
+        int userNameCheck = mapper.countUserNm(p.getUserNm());
+        if(userIdCheck >= 1 ){
+            throw new DuplicateKeyException("아이디 중복 ");
+        }else if(userNameCheck >= 1){
+            throw new CustomException("닉네임 중복");
+        }
+        return mapper.postUser(p);
+    }
+    @Transactional
+    public SignInUserRes loginUser( loginUser p){
+        User user =mapper.loginUser(p.getUserId());
+
+        if(user == null){
+         throw new DuplicateKeyException("아이디혹은 비밀번호 확인");
+        }else if(!BCrypt.checkpw(p.getUserPw(),user.getUserPw())){
+            throw new DuplicateKeyException("아이디혹은 비밀번호 확인");
+        }
+        return SignInUserRes.builder()
+                .userId(user.getUserId())
+                .userNm(user.getUser_nm())
+                .user_seq(user.getUser_seq()).
+                build();
     }
 
-    public void deleteUser(Long seq) throws Exception
-    {
-        mapper.deleteUserData(seq);
-
+    public int insUserEmail(UserEmail p){
+        return mapper.insUserEmail(p);
     }
-
-    public void updateUser(User user, UserUpdateDto dto) throws Exception
-    {
-        if (!(dto.getPw() == null || dto.getPw().isEmpty())) dto.setPw(passwordEncoder.encode(dto.getPw()));
-        user.userDataChange(dto);
-        mapper.updateUserData(user);
+    public UserEmail selUserEmail(String p){
+        return mapper.selUserEmail(p);
     }
-
-    public boolean duplicatedData(String str, Integer type)
-    {
-        return switch (type) {
-            case 1 -> mapper.existsById(str) ;
-            case 2 -> mapper.existsByUserName(str) ;
-            default -> throw new IllegalStateException("Unexpected value: " + type);
-        } ;
-    }
-
-    public List<User> getAllUsers() throws Exception
-    {
-        return mapper.selectAllUsers() ;
-    }
-
-    public User getUserById(String id) throws Exception
-    {
-        User user = mapper.selectUserById(id) ;
-        if (user == null) throw new NullPointerException("유저 정보가 존재하지 않습니다.") ;
-        return user ;
-    }
-
-    public User getUserByEmail(String email) throws Exception
-    {
-        User user = mapper.selectUserByEmail(email) ;
-        if (user == null) throw new NullPointerException("유저 정보가 존재하지 않습니다.") ;
-        return user ;
-    }
-
-    public void insertEmailToken(String email, String code) throws Exception
-    {
-        EmailToken emailToken = new EmailToken(email, code) ;
-        mapper.insertEmailToken(emailToken);
-    }
-
-    public void deleteEmailToken(String email) throws  Exception
-    {
-        mapper.deleteEmailToken(email) ;
-    }
-
-    public String checkEmailToken(String code) throws Exception
-    {
-        EmailToken token = mapper.selectToken(code) ;
-        LocalDateTime now = LocalDateTime.now() ;
-        if (token == null)
-            throw new NullPointerException() ;
-        if (now.isAfter(token.getEndDt()))
-            throw new TimeoutException() ;
-        return token.getEmail() ;
-    }
-
-    public User socialUserJoin(String id, Integer type) throws Exception
-    {
-        UserInsertDto dto = new UserInsertDto() ;
-        dto.setId(id) ;
-        dto.setName(id);
-        dto.setPw(passwordEncoder.encode("test")) ;
-        dto.setEmail(id);
-        dto.setLoginType(type);
-
-        return insertUser(dto) ;
-
-
-
-    }
-
 }
