@@ -8,7 +8,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@EqualsAndHashCode
+@EqualsAndHashCode(callSuper = false)
 public class ScheduleManagementGetDayReq extends Paging {
     private long plantManagementSeq;
     @Schema(description = "해당 년월일")
