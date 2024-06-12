@@ -1,11 +1,15 @@
 package com.green.greenfirstproject.schedule.management;
 
+import com.green.greenfirstproject.common.GlobalConst;
 import com.green.greenfirstproject.common.dto.ResultDto;
 import com.green.greenfirstproject.common.exception.DataNotFoundException;
+import com.green.greenfirstproject.common.page.ResponseDTO;
+import com.green.greenfirstproject.common.page.ResponseDTO2;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.tuple.Pair;
 import org.springdoc.core.annotations.ParameterObject;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -27,15 +31,15 @@ public class ScheduleManagementController {
             int result = service.insScheduleManagement(p);
             return ResultDto.<Integer>builder().
                     code(1).
-                    msg("등록에 성공했습니다.").
+                    message("등록에 성공했습니다.").
                     data(result).
                     build();
         } catch (DataNotFoundException e){
             e.printStackTrace();
-            return ResultDto.<Integer>builder().code(-1).msg("등록에 실패했습니다").build();
+            return ResultDto.<Integer>builder().code(-1).message("등록에 실패했습니다").build();
         } catch (Exception e) {
             e.printStackTrace();
-            return ResultDto.<Integer>builder().code(-2).msg("오류").build();
+            return ResultDto.<Integer>builder().code(-2).message("오류").build();
         }
     }
 
@@ -46,15 +50,15 @@ public class ScheduleManagementController {
             int result = service.delScheduleManagement(p);
             return ResultDto.<Integer>builder().
                     code(1).
-                    msg("삭제에 성공했습니다." ).
+                    message("삭제에 성공했습니다." ).
                     data(result).
                     build();
         } catch (DataNotFoundException e){
             e.printStackTrace();
-            return ResultDto.<Integer>builder().code(-1).msg("삭제에 실패했습니다").build();
+            return ResultDto.<Integer>builder().code(-1).message("삭제에 실패했습니다").build();
         } catch (Exception e) {
             e.printStackTrace();
-            return ResultDto.<Integer>builder().code(-2).msg("오류").build();
+            return ResultDto.<Integer>builder().code(-2).message("오류").build();
         }
     }
 
@@ -65,15 +69,15 @@ public class ScheduleManagementController {
             int result = service.updateScheduleManagement(p);
             return ResultDto.<Integer>builder().
                     code(1).
-                    msg("수정에 성공했습니다.").
+                    message("수정에 성공했습니다.").
                     data(result).
                     build();
         } catch (DataNotFoundException e){
             e.printStackTrace();
-            return ResultDto.<Integer>builder().code(-1).msg("수정에 실패했습니다").build();
+            return ResultDto.<Integer>builder().code(-1).message("수정에 실패했습니다").build();
         } catch (Exception e) {
             e.printStackTrace();
-            return ResultDto.<Integer>builder().code(-1).msg("오류").build();
+            return ResultDto.<Integer>builder().code(-1).message("오류").build();
         }
     }
 
@@ -86,28 +90,29 @@ public class ScheduleManagementController {
 
             return ResultDto.<List<ScheduleManagementGetMonthRes>>builder().
                     code(1).
-                    msg(HttpStatus.OK.toString()).
+                    message(HttpStatus.OK.toString()).
                     data(result).
                     build();
         } catch (Exception e){
             e.printStackTrace();
-            return ResultDto.<List<ScheduleManagementGetMonthRes>>builder().code(-1).msg("조회 오류").build();
+            return ResultDto.<List<ScheduleManagementGetMonthRes>>builder().code(-1).message("조회 오류").build();
         }
     }
     @GetMapping("/day")
     @Operation(summary = "식물일정 일 단위 조회", description = "식물일정조회 DayGet")
-    public ResultDto<List<ScheduleManagementGetDayRes>> selScheduleManagementDay(@ParameterObject @ModelAttribute ScheduleManagementGetDayReq p){
+    public ResultDto<ResponseDTO2> selScheduleManagementDay(@ParameterObject @ModelAttribute ScheduleManagementGetDayReq p){
         try {
-            List<ScheduleManagementGetDayRes> result = service.selScheduleManagementDay(p);
+            log.info("p: {}", p.getManagementDate());
+            ResponseDTO2 dto = service.selScheduleManagementDay(p);
 
-            return ResultDto.<List<ScheduleManagementGetDayRes>>builder().
+            return ResultDto.<ResponseDTO2>builder().
                     code(1).
-                    msg(HttpStatus.OK.toString()).
-                    data(result).
+                    message(HttpStatus.OK.toString()).
+                    data(dto).
                     build();
         } catch (Exception e){
             e.printStackTrace();
-            return ResultDto.<List<ScheduleManagementGetDayRes>>builder().code(-1).msg("조회 오류").build();
+            return ResultDto.<ResponseDTO2>builder().code(-1).message("조회 오류").build();
         }
     }
 
@@ -119,12 +124,12 @@ public class ScheduleManagementController {
 
             return ResultDto.<ScheduleManagementGetDayDetailRes>builder().
                     code(1).
-                    msg(HttpStatus.OK.toString()).
+                    message(HttpStatus.OK.toString()).
                     data(result).
                     build();
         } catch (Exception e){
             e.printStackTrace();
-            return ResultDto.<ScheduleManagementGetDayDetailRes>builder().code(-1).msg("조회 오류").build();
+            return ResultDto.<ScheduleManagementGetDayDetailRes>builder().code(-1).message("조회 오류").build();
         }
     }
 }

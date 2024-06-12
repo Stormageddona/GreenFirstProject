@@ -1,12 +1,15 @@
 package com.green.greenfirstproject.schedule.plant;
 
+import com.green.greenfirstproject.common.GlobalConst;
 import com.green.greenfirstproject.common.dto.ResultDto;
 import com.green.greenfirstproject.common.exception.DataNotFoundException;
+import com.green.greenfirstproject.common.page.ResponseDTO;
 import com.green.greenfirstproject.schedule.plant.model.*;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.tuple.Pair;
 import org.springdoc.core.annotations.ParameterObject;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -29,15 +32,15 @@ public class SchedulePlantController {
 
             return ResultDto.<Integer>builder().
                     code(1).
-                    msg("정상적으로 등록되었습니다.").
+                    message("정상적으로 등록되었습니다.").
                     data(result).
                     build();
         } catch (DataNotFoundException e){
             e.printStackTrace();
-            return ResultDto.<Integer>builder().code(-1).msg("등록실패").build();
+            return ResultDto.<Integer>builder().code(-1).message("등록실패").build();
         } catch (Exception e){
             e.printStackTrace();
-            return ResultDto.<Integer>builder().code(-2).msg("오류발생").build();
+            return ResultDto.<Integer>builder().code(-2).message("오류발생").build();
         }
     }
 
@@ -49,15 +52,15 @@ public class SchedulePlantController {
 
             return ResultDto.<Integer>builder().
                     code(1).
-                    msg("정상적으로 수정되었습니다.").
+                    message("정상적으로 수정되었습니다.").
                     data(result).
                     build();
         } catch (DataNotFoundException e){
             e.printStackTrace();
-            return ResultDto.<Integer>builder().code(-1).msg("수정실패").build();
+            return ResultDto.<Integer>builder().code(-1).message("수정실패").build();
         } catch (Exception e){
             e.printStackTrace();
-            return ResultDto.<Integer>builder().code(-2).msg("오류발생").build();
+            return ResultDto.<Integer>builder().code(-2).message("오류발생").build();
         }
 
     }
@@ -69,32 +72,37 @@ public class SchedulePlantController {
 
             return ResultDto.<Integer>builder().
                     code(1).
-                    msg("정상적으로 삭제되었습니다.").
+                    message("정상적으로 삭제되었습니다.").
                     data(result).
                     build();
         } catch (DataNotFoundException e){
             e.printStackTrace();
-            return ResultDto.<Integer>builder().code(-1).msg("삭제실패").build();
+            return ResultDto.<Integer>builder().code(-1).message("삭제실패").build();
         } catch (Exception e){
             e.printStackTrace();
-            return ResultDto.<Integer>builder().code(-2).msg("오류발생").build();
+            return ResultDto.<Integer>builder().code(-2).message("오류발생").build();
         }
     }
 
     @GetMapping("/list")
     @Operation(summary = "식물등록리스트 조회", description = "식물등록관련 ListGet")
-    public ResultDto<List<SchedulePlantGetListRes>> selSchedulePlantList(@ParameterObject @ModelAttribute SchedulePlantGetListReq p) {
+    public ResultDto<ResponseDTO> selSchedulePlantList(@ParameterObject
+                                                           @ModelAttribute SchedulePlantGetListReq p) {
         try {
-            List<SchedulePlantGetListRes> result = service.selSchedulePlantList(p);
-
-            return ResultDto.<List<SchedulePlantGetListRes>>builder().
+            Pair<ResponseDTO, Integer> dto = service.selSchedulePlantList(p);
+            ResponseDTO list = dto.getLeft();
+            Integer totalElements = dto.getRight();
+            Integer totalPages = (totalElements + GlobalConst.SIZE_NUM - 1) / GlobalConst.SIZE_NUM;
+            list.setTotalPage(totalPages);
+            list.setTotalElement(totalElements);
+            return ResultDto.<ResponseDTO>builder().
                     code(1).
-                    msg(HttpStatus.OK.toString()).
-                    data(result).
+                    message(HttpStatus.OK.toString()).
+                    data(list).
                     build();
         } catch (Exception e){
             e.printStackTrace();
-            return ResultDto.<List<SchedulePlantGetListRes>>builder().code(-1).msg("오류발생").build();
+            return ResultDto.<ResponseDTO>builder().code(-1).message("오류발생").build();
         }
     }
 
@@ -106,12 +114,12 @@ public class SchedulePlantController {
 
             return ResultDto.<SchedulePlantGetDetailRes>builder().
                     code(1).
-                    msg(HttpStatus.OK.toString()).
+                    message(HttpStatus.OK.toString()).
                     data(result).
                     build();
         } catch (Exception e){
             e.printStackTrace();
-            return ResultDto.<SchedulePlantGetDetailRes>builder().code(-1).msg("오류발생").build();
+            return ResultDto.<SchedulePlantGetDetailRes>builder().code(-1).message("오류발생").build();
         }
     }
 }

@@ -13,4 +13,6 @@ public interface ScheduleManagementMapper {
     List<ScheduleManagementGetMonthRes> selScheduleManagementMonth(ScheduleManagementGetMonthReq p);
     List<ScheduleManagementGetDayRes> selScheduleManagementDay(ScheduleManagementGetDayReq p);
     ScheduleManagementGetDayDetailRes selScheduleManagementDetail(ScheduleManagementGetDayDetailReq p);
+    Integer findPageInfo(long p);
+    int getTotalElement(ScheduleManagementGetDayReq p);
 }
