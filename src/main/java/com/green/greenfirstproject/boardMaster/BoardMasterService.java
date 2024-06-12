@@ -9,8 +9,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-import static com.green.greenfirstproject.common.GlobalConst.PAGING_SIZE;
-
 @Service
 @Slf4j
 @RequiredArgsConstructor
