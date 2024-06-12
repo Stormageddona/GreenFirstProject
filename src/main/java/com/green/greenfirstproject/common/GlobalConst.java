@@ -6,6 +6,8 @@ public class GlobalConst {
     public final static int COMMENT_SIZE_PER_FEED  = 4;
     public final static int SUCCESS_CODE = 1;
     public final static int ERROR_CODE = -1;
+
+
     public final static int ALL_ERROR = -2;
 
     public final static  int PAGING_SIZE = 15;
