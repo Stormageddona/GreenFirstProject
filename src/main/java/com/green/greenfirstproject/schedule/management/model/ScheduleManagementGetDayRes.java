@@ -23,7 +23,7 @@ public class ScheduleManagementGetDayRes extends Paging {
     }
     @JsonIgnore
     private Integer startIdx;
-    private int isMoreComment;
+    private int isMorePaging;
     @Schema(description = "총 페이지 수")
     private int totalPage;
     @Schema(description = "총 등록된 일정 수")
