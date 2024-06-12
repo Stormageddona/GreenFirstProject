@@ -71,8 +71,6 @@ public class BoardMasterController {
             Integer totalPage = (totalElements + PAGING_SIZE - 1) / PAGING_SIZE ;
             list.setTotalPage(totalPage);
             list.setTotalElements(totalElements);
-
-            
             return  ResultDto.resultDto(SUCCESS_CODE,"페이징성공",list);
         }catch (Exception e){
             e.printStackTrace();

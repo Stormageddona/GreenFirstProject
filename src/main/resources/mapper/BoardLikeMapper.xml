@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.green.greenfirstproject.boardLike.BoardLikeMapper">
+    <delete id="delFeedLike">
+        DELETE FROM board_like
+        WHERE like_board_seq = #{boardSeq} AND like_user_seq = #{writer}
+    </delete>
+
+    <insert id="postFeedLike">
+        INSERT INTO board_like (like_board_seq , like_user_seq,like_gb)
+        VALUES
+        (#{boardSeq},#{writer},1)
+    </insert>
+
+    <select id="postCommunityFavorite">
+        SELECT like_board_seq AS boardSeq
+        ,    like_user_seq AS writer
+        ,   input_dt AS inputDt
+        FROM board_like
+        <where>
+            <if test="feedId > 0">
+                feed_id = #{feedId}
+            </if>
+            <if test="userId > 0">
+                AND user_id = #{userId}
+            </if>
+            ORDER BY feed_id, user_id
+        </where>
+    </select>
+
+</mapper>
