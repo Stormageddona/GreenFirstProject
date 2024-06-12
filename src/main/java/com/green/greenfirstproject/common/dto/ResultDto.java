@@ -1,5 +1,6 @@
 package com.green.greenfirstproject.common.dto;
 
+import com.green.greenfirstproject.common.page.PageInfoDTO;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

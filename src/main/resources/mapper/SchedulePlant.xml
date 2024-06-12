@@ -37,8 +37,6 @@
         SELECT A.plant_nickname AS plantNickName
                 , B.odata_image AS plantPic
                 , B.odata_name AS plantName
-                , CEIL(COUNT(*) OVER() / #{size}) AS totalPage
-                , COUNT(*) OVER() AS totalElement
         FROM plant_master A
         INNER JOIN opendata B
         ON A.plant_odata_seq = B.odata_seq
@@ -57,6 +55,13 @@
         ON A.plant_odata_seq = B.odata_seq
         WHERE A.plant_user_seq = #{userSeq}
         AND A.plant_seq = #{plantSeq}
+    </select>
+
+    <select id="findPageInfo">
+        SELECT CEIL(COUNT(*) / #{size}) AS totalPage
+                , COUNT(*) AS totalElement
+        FROM plant_master A
+        WHERE plant_user_seq = #{userSeq};
     </select>
 
 </mapper>

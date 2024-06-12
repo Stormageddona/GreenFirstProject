@@ -1,9 +1,9 @@
-package com.green.greenfirstproject.common;
+package com.green.greenfirstproject.common.page;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.green.greenfirstproject.common.GlobalConst;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
-import lombok.Setter;
 
 @Data
 public class Paging {

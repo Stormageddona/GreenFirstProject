@@ -1,9 +1,12 @@
 package com.green.greenfirstproject.schedule.management;
 
 import com.green.greenfirstproject.common.exception.DataNotFoundException;
+import com.green.greenfirstproject.common.page.ResponseDTO;
+import com.green.greenfirstproject.common.page.ResponseDTO2;
 import com.green.greenfirstproject.schedule.management.model.*;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.tuple.Pair;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -36,25 +39,11 @@ public class ScheduleManagementService {
         return mapper.selScheduleManagementMonth(p);
     }
 
-    public List<ScheduleManagementGetDayRes> selScheduleManagementDay(ScheduleManagementGetDayReq p){
-        List<ScheduleManagementGetDayRes> res = mapper.selScheduleManagementDay(p);
-        int pageSize = p.getSize();
-        int currentPage = p.getPage();
-        int totalElements = res.size();
-        int totalPages = (int) Math.ceil((double) totalElements / pageSize);
+    public ResponseDTO2 selScheduleManagementDay(ScheduleManagementGetDayReq p){
+        List<ScheduleManagementGetDayRes> list = mapper.selScheduleManagementDay(p);
+        ResponseDTO2 dto = new ResponseDTO2(list, p.getSize(), mapper.getTotalElement(p));
 
-        for (ScheduleManagementGetDayRes list : res) {
-            boolean hasMoreList = currentPage % 5 == 0 && currentPage < totalPages;
-            list.setIsMorePaging(hasMoreList ? 1 : 0);
-        }
-
-        if (!res.isEmpty()) {
-            ScheduleManagementGetDayRes lastElement = res.get(res.size() - 1);
-            lastElement.setTotalPage(totalPages);
-            lastElement.setTotalElement(totalElements);
-        }
-
-        return res;
+        return dto;
     }
 
     public ScheduleManagementGetDayDetailRes selScheduleManagementDetail(ScheduleManagementGetDayDetailReq p){

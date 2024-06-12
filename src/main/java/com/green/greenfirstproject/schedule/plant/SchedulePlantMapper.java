@@ -12,4 +12,6 @@ public interface SchedulePlantMapper {
     int deleteSchedule(SchedulePlantDeleteReq p);
     List<SchedulePlantGetListRes> getSchedulePlantsList(SchedulePlantGetListReq p);
     SchedulePlantGetDetailRes getSchedulePlantDetail(SchedulePlantGetDetailReq p);
+
+    Integer findPageInfo(long p);
 }

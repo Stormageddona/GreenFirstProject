@@ -30,36 +30,36 @@
         SELECT garden_dt AS managementDate
                 , garden_gb AS gardening
         FROM garden_master AS gm1
-        WHERE garden_seq = #{plantManagementSeq}
-        AND MONTH(garden_dt) = #{managementDate}
+        WHERE YEAR(garden_dt) = YEAR(STR_TO_DATE(#{managementDate}, '%Y%m%d'))
+        AND MONTH(garden_dt) = MONTH(STR_TO_DATE(#{managementDate}, '%Y%m%d'))
         AND garden_dt = (
             SELECT MIN(garden_dt)
             FROM garden_master AS gm2
             WHERE gm2.garden_seq = gm1.garden_seq
             AND DATE(gm2.garden_dt) = DATE(gm1.garden_dt)
         )
+        GROUP BY garden_dt
         ORDER BY garden_dt;
     </select>
 
     <select id="selScheduleManagementDay">
-        SELECT A.garden_dt AS managementDate
-                , A.garden_gb AS gardening
+        SELECT A.garden_gb AS gardening
                 , B.plantPic
                 , plantName
-                , CEIL(COUNT(*) OVER() / 10) AS totalPage
-                , COUNT(*) OVER() AS totalElement
+                , DATE_FORMAT(A.garden_dt, '%Y-%m-%d') AS managementDate
         FROM garden_master A
         INNER JOIN (
             SELECT A.plant_seq AS plant_seq
                     , B.odata_image AS plantPic
                     , B.odata_name AS plantName
+                    , A.plant_user_seq AS userSeq
             FROM plant_master A
             LEFT JOIN opendata B
             ON A.plant_odata_seq = B.odata_seq
         ) B
         ON A.garden_plant_seq = B.plant_seq
-        WHERE garden_seq = #{plantManagementSeq}
-        AND DAY(garden_dt) = #{managementDate}
+        WHERE DATE(garden_dt) = #{managementDate}
+        AND B.userSeq = #{userSeq}
         ORDER BY A.garden_dt
     </select>
 
@@ -81,6 +81,15 @@
         ON A.garden_plant_seq = B.plant_seq
         WHERE A.garden_seq = #{plantManagementSeq}
         AND DATE(garden_dt) = #{managementDate}
+    </select>
+
+    <select id="getTotalElement">
+        SELECT COUNT(*) AS totalElement
+        FROM garden_master A
+        INNER JOIN plant_master B
+        ON A.garden_plant_seq = B.plant_seq
+        WHERE B.plant_user_seq = #{userSeq}
+        AND A.garden_dt = STR_TO_DATE(#{managementDate}, '%Y%m%d')
     </select>
 
 </mapper>

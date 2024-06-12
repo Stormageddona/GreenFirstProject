@@ -1,10 +1,12 @@
 package com.green.greenfirstproject.schedule.plant;
 
 import com.green.greenfirstproject.common.exception.DataNotFoundException;
+import com.green.greenfirstproject.common.page.ResponseDTO;
 import com.green.greenfirstproject.schedule.management.model.ScheduleManagementGetDayRes;
 import com.green.greenfirstproject.schedule.plant.model.*;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.tuple.Pair;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -30,24 +32,15 @@ public class SchedulePlantService {
         if(result == 0) throw new DataNotFoundException();
         return result;
     }
-    public List<SchedulePlantGetListRes> selSchedulePlantList(SchedulePlantGetListReq p){
+    public Pair<ResponseDTO, Integer> selSchedulePlantList(SchedulePlantGetListReq p){
         List<SchedulePlantGetListRes> list = mapper.getSchedulePlantsList(p);
-        int pageSize = p.getSize();
-        int currentPage = p.getPage();
-        int totalElements = list.size();
-        int totalPages = (int) Math.ceil((double) totalElements / pageSize);
+        ResponseDTO dto = new ResponseDTO();
+        dto.setList(list);
 
-        for (SchedulePlantGetListRes res : list) {
-            boolean hasMoreList = currentPage % 5 == 0 && currentPage < totalPages;
-            res.setIsMorePage(hasMoreList ? 1 : 0);
-        }
+        Integer totalElements = mapper.findPageInfo(p.getUserSeq());
 
-        if (!list.isEmpty()) {
-            SchedulePlantGetListRes lastElement = list.get(list.size() - 1);
-            lastElement.setTotalPage(totalPages);
-            lastElement.setTotalElement(totalElements);
-        }
-        return list;
+
+        return Pair.of(dto, totalElements);
     }
     public SchedulePlantGetDetailRes selSchedulePlant(SchedulePlantGetDetailReq p){
         return mapper.getSchedulePlantDetail(p);

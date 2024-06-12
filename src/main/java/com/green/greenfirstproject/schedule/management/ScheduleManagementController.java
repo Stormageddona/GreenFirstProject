@@ -1,11 +1,15 @@
 package com.green.greenfirstproject.schedule.management;
 
+import com.green.greenfirstproject.common.GlobalConst;
 import com.green.greenfirstproject.common.dto.ResultDto;
 import com.green.greenfirstproject.common.exception.DataNotFoundException;
+import com.green.greenfirstproject.common.page.ResponseDTO;
+import com.green.greenfirstproject.common.page.ResponseDTO2;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.tuple.Pair;
 import org.springdoc.core.annotations.ParameterObject;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -96,18 +100,19 @@ public class ScheduleManagementController {
     }
     @GetMapping("/day")
     @Operation(summary = "식물일정 일 단위 조회", description = "식물일정조회 DayGet")
-    public ResultDto<List<ScheduleManagementGetDayRes>> selScheduleManagementDay(@ParameterObject @ModelAttribute ScheduleManagementGetDayReq p){
+    public ResultDto<ResponseDTO2> selScheduleManagementDay(@ParameterObject @ModelAttribute ScheduleManagementGetDayReq p){
         try {
-            List<ScheduleManagementGetDayRes> result = service.selScheduleManagementDay(p);
+            log.info("p: {}", p.getManagementDate());
+            ResponseDTO2 dto = service.selScheduleManagementDay(p);
 
-            return ResultDto.<List<ScheduleManagementGetDayRes>>builder().
+            return ResultDto.<ResponseDTO2>builder().
                     code(1).
                     message(HttpStatus.OK.toString()).
-                    data(result).
+                    data(dto).
                     build();
         } catch (Exception e){
             e.printStackTrace();
-            return ResultDto.<List<ScheduleManagementGetDayRes>>builder().code(-1).message("조회 오류").build();
+            return ResultDto.<ResponseDTO2>builder().code(-1).message("조회 오류").build();
         }
     }
 

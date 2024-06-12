@@ -1,6 +1,6 @@
 package com.green.greenfirstproject.schedule.plant.model;
 
-import com.green.greenfirstproject.common.Paging;
+import com.green.greenfirstproject.common.page.Paging;
 import lombok.Getter;
 import lombok.Setter;
 
