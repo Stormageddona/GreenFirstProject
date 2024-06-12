@@ -1,6 +1,7 @@
 package com.green.greenfirstproject.schedule.plant;
 
 import com.green.greenfirstproject.common.dto.ResultDto;
+import com.green.greenfirstproject.common.exception.DataNotFoundException;
 import com.green.greenfirstproject.schedule.plant.model.*;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -31,9 +32,12 @@ public class SchedulePlantController {
                     message("정상적으로 등록되었습니다.").
                     data(result).
                     build();
+        } catch (DataNotFoundException e){
+            e.printStackTrace();
+            return ResultDto.<Integer>builder().code(-1).message("등록실패").build();
         } catch (Exception e){
             e.printStackTrace();
-            return ResultDto.<Integer>builder().code(-1).message("오류발생").build();
+            return ResultDto.<Integer>builder().code(-2).message("오류발생").build();
         }
     }
 
@@ -45,12 +49,15 @@ public class SchedulePlantController {
 
             return ResultDto.<Integer>builder().
                     code(1).
-                    message(result == 1 ? "정상적으로 수정되었습니다." : "수정에 실패했습니다.").
+                    message("정상적으로 수정되었습니다.").
                     data(result).
                     build();
+        } catch (DataNotFoundException e){
+            e.printStackTrace();
+            return ResultDto.<Integer>builder().code(-1).message("수정실패").build();
         } catch (Exception e){
             e.printStackTrace();
-            return ResultDto.<Integer>builder().code(-1).message("오류발생").build();
+            return ResultDto.<Integer>builder().code(-2).message("오류발생").build();
         }
 
     }
@@ -62,12 +69,15 @@ public class SchedulePlantController {
 
             return ResultDto.<Integer>builder().
                     code(1).
-                    message(result == 1 ? "정상적으로 삭제되었습니다." : "삭제에 실패했습니다.").
+                    message("정상적으로 삭제되었습니다.").
                     data(result).
                     build();
+        } catch (DataNotFoundException e){
+            e.printStackTrace();
+            return ResultDto.<Integer>builder().code(-1).message("삭제실패").build();
         } catch (Exception e){
             e.printStackTrace();
-            return ResultDto.<Integer>builder().code(-1).message("오류발생").build();
+            return ResultDto.<Integer>builder().code(-2).message("오류발생").build();
         }
     }
 

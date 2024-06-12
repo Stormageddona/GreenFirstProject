@@ -1,6 +1,7 @@
 package com.green.greenfirstproject.schedule.management;
 
 import com.green.greenfirstproject.common.dto.ResultDto;
+import com.green.greenfirstproject.common.exception.DataNotFoundException;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
@@ -26,12 +27,15 @@ public class ScheduleManagementController {
             int result = service.insScheduleManagement(p);
             return ResultDto.<Integer>builder().
                     code(1).
-                    message(result == 1 ? "등록에 성공했습니다." : "등록에 실패했습니다.").
+                    message("등록에 성공했습니다.").
                     data(result).
                     build();
+        } catch (DataNotFoundException e){
+            e.printStackTrace();
+            return ResultDto.<Integer>builder().code(-1).message("등록에 실패했습니다").build();
         } catch (Exception e) {
             e.printStackTrace();
-            return ResultDto.<Integer>builder().code(-1).message("오류").build();
+            return ResultDto.<Integer>builder().code(-2).message("오류").build();
         }
     }
 
@@ -42,12 +46,15 @@ public class ScheduleManagementController {
             int result = service.delScheduleManagement(p);
             return ResultDto.<Integer>builder().
                     code(1).
-                    message(result == 1 ? "삭제에 성공했습니다." : "삭제에 실패했습니다.").
+                    message("삭제에 성공했습니다." ).
                     data(result).
                     build();
+        } catch (DataNotFoundException e){
+            e.printStackTrace();
+            return ResultDto.<Integer>builder().code(-1).message("삭제에 실패했습니다").build();
         } catch (Exception e) {
             e.printStackTrace();
-            return ResultDto.<Integer>builder().code(-1).message("오류").build();
+            return ResultDto.<Integer>builder().code(-2).message("오류").build();
         }
     }
 
@@ -58,9 +65,12 @@ public class ScheduleManagementController {
             int result = service.updateScheduleManagement(p);
             return ResultDto.<Integer>builder().
                     code(1).
-                    message(result == 1 ? "수정에 성공했습니다." : "수정에 실패했습니다.").
+                    message("수정에 성공했습니다.").
                     data(result).
                     build();
+        } catch (DataNotFoundException e){
+            e.printStackTrace();
+            return ResultDto.<Integer>builder().code(-1).message("수정에 실패했습니다").build();
         } catch (Exception e) {
             e.printStackTrace();
             return ResultDto.<Integer>builder().code(-1).message("오류").build();

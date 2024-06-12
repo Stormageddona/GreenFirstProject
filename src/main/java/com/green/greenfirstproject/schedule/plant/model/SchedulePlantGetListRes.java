@@ -12,6 +12,7 @@ public class SchedulePlantGetListRes {
     private String plantPic;
     private String plantName;
 
+    private int isMorePage;
     @Schema(description = "총 페이지 수")
     private int totalPage;
     @Schema(description = "총 등록된 식물 수")
