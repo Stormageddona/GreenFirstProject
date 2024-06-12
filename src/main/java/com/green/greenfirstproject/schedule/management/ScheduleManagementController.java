@@ -31,15 +31,15 @@ public class ScheduleManagementController {
             int result = service.insScheduleManagement(p);
             return ResultDto.<Integer>builder().
                     code(1).
-                    message("등록에 성공했습니다.").
+                    msg("등록에 성공했습니다.").
                     data(result).
                     build();
         } catch (DataNotFoundException e){
             e.printStackTrace();
-            return ResultDto.<Integer>builder().code(-1).message("등록에 실패했습니다").build();
+            return ResultDto.<Integer>builder().code(-1).msg("등록에 실패했습니다").build();
         } catch (Exception e) {
             e.printStackTrace();
-            return ResultDto.<Integer>builder().code(-2).message("오류").build();
+            return ResultDto.<Integer>builder().code(-2).msg("오류").build();
         }
     }
 
@@ -50,15 +50,15 @@ public class ScheduleManagementController {
             int result = service.delScheduleManagement(p);
             return ResultDto.<Integer>builder().
                     code(1).
-                    message("삭제에 성공했습니다." ).
+                    msg("삭제에 성공했습니다." ).
                     data(result).
                     build();
         } catch (DataNotFoundException e){
             e.printStackTrace();
-            return ResultDto.<Integer>builder().code(-1).message("삭제에 실패했습니다").build();
+            return ResultDto.<Integer>builder().code(-1).msg("삭제에 실패했습니다").build();
         } catch (Exception e) {
             e.printStackTrace();
-            return ResultDto.<Integer>builder().code(-2).message("오류").build();
+            return ResultDto.<Integer>builder().code(-2).msg("오류").build();
         }
     }
 
@@ -69,15 +69,15 @@ public class ScheduleManagementController {
             int result = service.updateScheduleManagement(p);
             return ResultDto.<Integer>builder().
                     code(1).
-                    message("수정에 성공했습니다.").
+                    msg("수정에 성공했습니다.").
                     data(result).
                     build();
         } catch (DataNotFoundException e){
             e.printStackTrace();
-            return ResultDto.<Integer>builder().code(-1).message("수정에 실패했습니다").build();
+            return ResultDto.<Integer>builder().code(-1).msg("수정에 실패했습니다").build();
         } catch (Exception e) {
             e.printStackTrace();
-            return ResultDto.<Integer>builder().code(-1).message("오류").build();
+            return ResultDto.<Integer>builder().code(-1).msg("오류").build();
         }
     }
 
@@ -90,12 +90,12 @@ public class ScheduleManagementController {
 
             return ResultDto.<List<ScheduleManagementGetMonthRes>>builder().
                     code(1).
-                    message(HttpStatus.OK.toString()).
+                    msg(HttpStatus.OK.toString()).
                     data(result).
                     build();
         } catch (Exception e){
             e.printStackTrace();
-            return ResultDto.<List<ScheduleManagementGetMonthRes>>builder().code(-1).message("조회 오류").build();
+            return ResultDto.<List<ScheduleManagementGetMonthRes>>builder().code(-1).msg("조회 오류").build();
         }
     }
     @GetMapping("/day")
@@ -107,12 +107,12 @@ public class ScheduleManagementController {
 
             return ResultDto.<ResponseDTO2>builder().
                     code(1).
-                    message(HttpStatus.OK.toString()).
+                    msg(HttpStatus.OK.toString()).
                     data(dto).
                     build();
         } catch (Exception e){
             e.printStackTrace();
-            return ResultDto.<ResponseDTO2>builder().code(-1).message("조회 오류").build();
+            return ResultDto.<ResponseDTO2>builder().code(-1).msg("조회 오류").build();
         }
     }
 
@@ -124,12 +124,12 @@ public class ScheduleManagementController {
 
             return ResultDto.<ScheduleManagementGetDayDetailRes>builder().
                     code(1).
-                    message(HttpStatus.OK.toString()).
+                    msg(HttpStatus.OK.toString()).
                     data(result).
                     build();
         } catch (Exception e){
             e.printStackTrace();
-            return ResultDto.<ScheduleManagementGetDayDetailRes>builder().code(-1).message("조회 오류").build();
+            return ResultDto.<ScheduleManagementGetDayDetailRes>builder().code(-1).msg("조회 오류").build();
         }
     }
 }
