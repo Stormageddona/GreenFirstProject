@@ -22,7 +22,7 @@ public class PlantDataController {
 
     @GetMapping
     @Operation(summary = "식물 검색")
-    public ResultDto<List<PlantData>> getPlantData(@RequestParam("plantGnrlNm") String plantGnrlNm) {
+    public ResultDto<List<PlantData>> getPlantData(@RequestParam(value = "plantGnrlNm", required = false) String plantGnrlNm) {
         List<PlantData> res = service.getPlantData(plantGnrlNm);
         return ResultDto.resultDto(SUCCESS_CODE, "검색 완료", res);
     }
