@@ -25,4 +25,12 @@
         ORDER BY odata_name
         LIMIT #{startIdx}, #{size}
     </select>
+
+    <select id="getTotalElements">
+        SELECT COUNT(*) as totalElements
+        FROM opendata
+        <if test="keyword != null and keyword != ''">
+            WHERE trim(odata_name) LIKE CONCAT('%',#{keyword},'%')
+        </if>
+    </select>
 </mapper>
