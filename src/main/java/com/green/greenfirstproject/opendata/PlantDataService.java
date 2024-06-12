@@ -1,6 +1,6 @@
 package com.green.greenfirstproject.opendata;
 
-import com.green.greenfirstproject.opendata.model.PlantData;
+import com.green.greenfirstproject.opendata.model.PlantDataGetPage;
 import com.green.greenfirstproject.opendata.model.PlantDataGetReq;
 import com.green.greenfirstproject.opendata.model.PlantDataGetRes;
 import lombok.RequiredArgsConstructor;
@@ -15,8 +15,12 @@ import java.util.List;
 public class PlantDataService {
     private final PlantDataMapper mapper;
 
-    public List<PlantDataGetRes> getPlantData(PlantDataGetReq p) {
+    public PlantDataGetPage getPlantData(PlantDataGetReq p) {
         List<PlantDataGetRes> res = mapper.getPlantData(p);
-        return res;
+        PlantDataGetPage page = new PlantDataGetPage(
+                mapper.getTotalElements(p.getKeyword())
+                , p.getSize()
+                , res);
+        return page;
     }
 }
