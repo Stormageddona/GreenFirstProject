@@ -51,10 +51,12 @@ public class BoardMasterService {
     }
 
     public BoardGetRes getCommunityData(long boardSeq) {
-
         BoardGetRes res = mapper.getCommunityData(boardSeq);
         if(res != null){
             mapper.patchBoardHits(res.getBoardSeq());
+        }else {
+
+            throw  new NullPointerException();
         }
         return res;
     }

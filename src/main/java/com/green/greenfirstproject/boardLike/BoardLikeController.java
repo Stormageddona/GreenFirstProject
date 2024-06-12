@@ -3,6 +3,8 @@ package com.green.greenfirstproject.boardLike;
 import com.green.greenfirstproject.boardLike.model.FeedLike;
 import com.green.greenfirstproject.common.ResultDto;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springdoc.core.annotations.ParameterObject;
@@ -16,6 +18,7 @@ import static com.green.greenfirstproject.common.GlobalConst.SUCCESS_CODE;
 
 @RequiredArgsConstructor
 @Slf4j
+@Tag(name = "피드 좋아요 기능 ")
 @RequestMapping("api/community/like")
 @RestController
 public class BoardLikeController {
@@ -23,6 +26,7 @@ public class BoardLikeController {
 
     @GetMapping
     @Operation(summary = "피드 좋아요 ")
+    @ApiResponse(description = "1: 성공 -1 : 실패  ")
     public ResultDto<Integer> postCommunityFavorite(@ParameterObject @ModelAttribute FeedLike p){
 
         try {

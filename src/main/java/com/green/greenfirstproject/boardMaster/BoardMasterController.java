@@ -4,6 +4,8 @@ import com.green.greenfirstproject.boardMaster.model.*;
 import com.green.greenfirstproject.common.ResultDto;
 import com.green.greenfirstproject.common.model.CustomException;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import io.swagger.v3.oas.models.security.SecurityScheme;
 import jakarta.annotation.Nullable;
 import lombok.RequiredArgsConstructor;
@@ -20,6 +22,7 @@ import java.util.List;
 import static com.green.greenfirstproject.common.GlobalConst.*;
 
 @RestController
+@Tag(name = "커뮤기능")
 @RequestMapping("api/community/")
 @RequiredArgsConstructor
 @Slf4j
@@ -28,6 +31,7 @@ public class BoardMasterController {
 
     @PostMapping
     @Operation(summary = "게시글 등록")
+    @ApiResponse(description = "1: 성공 -2: 제목이없음 -1 : 실패  ")
     public ResultDto<Long> postCommunity(@RequestBody BoardReq p) {
         try {
             long res = service.postCommunity(p);
@@ -42,6 +46,7 @@ public class BoardMasterController {
     }
     @DeleteMapping
     @Operation(summary = "게시글 삭제")
+    @ApiResponse(description = "1: 성공  -1 : 실패  ")
     public ResultDto<Integer> deleteCommunity(@ParameterObject @ModelAttribute  BoardDel p) {
         int res = service.deleteCommunity(p);
         return  ResultDto.resultDto1(res , res == -1 ? "삭제가 안됐습니다" : "삭제가 완료됨");
@@ -49,20 +54,22 @@ public class BoardMasterController {
 
     @PatchMapping
     @Operation(summary = "게시글 업데이트")
+    @ApiResponse(description = "1: 성공 -2: 게시글 수정실패 -1 : 실패  ")
     public ResultDto<Integer> patchCommunity(@RequestBody BoardUpd p){
         try{
             int res = service.patchCommunity(p);
             return ResultDto.resultDto(SUCCESS_CODE,"게시글 수정 성공 ",res);
         }catch (CustomException e){
             e.printStackTrace();
-            return ResultDto.resultDto1(ERROR_CODE,"게시글 수정 실패 ");
+            return ResultDto.resultDto1(ALL_ERROR,"게시글 수정 실패 ");
         }catch (Exception e ){
             e.printStackTrace();
-            return ResultDto.resultDto1(ALL_ERROR,"알 수 없는 오류 ");
+            return ResultDto.resultDto1(ERROR_CODE,"알 수 없는 오류 ");
         }
     }
     @GetMapping("list")
     @Operation(summary =  "게시글 리스트")
+    @ApiResponse(description = "1: 성공 -1 : 실패  ")
     public ResultDto<BoardGetPage>getCommunityList(@ParameterObject @ModelAttribute BoardGetReq p){
         try {
             Pair<BoardGetPage,Integer> data = service.getCommunityList(p);
@@ -78,12 +85,15 @@ public class BoardMasterController {
         }
     }
     @GetMapping("detail")
-    @Operation(summary = "게시글 디테일 ")
+    @Operation(summary = "게시글 디테일")
+    @ApiResponse(description = "1: 성공 -2: 게시글없음 -1 : 실패  ")
     public ResultDto<BoardGetRes> getCommunityData(@RequestParam(name= "boardSeq") long boardSeq){
         try {
             BoardGetRes list = service.getCommunityData(boardSeq);
             return ResultDto.resultDto(SUCCESS_CODE, "게시글 불러오기 성공",list);
-        }catch (Exception e){
+        }catch (NullPointerException e) {
+            return ResultDto.resultDto1(-2, "게시글이 없습니다");
+        } catch (Exception e){
             return ResultDto.resultDto1(ERROR_CODE , "알수없는오류");
         }
 
