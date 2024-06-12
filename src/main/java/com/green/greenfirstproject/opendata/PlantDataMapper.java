@@ -8,6 +8,7 @@ import java.util.List;
 @Mapper
 public interface PlantDataMapper
 {
-    void insertPlantData(List<PlantData> data) ;
-    void deleteAllPlantData() ;
+    void insertPlantData(List<PlantData> data);
+    void deleteAllPlantData();
+    List<PlantData> getPlantData(String plantGnrlNm);
 }

@@ -13,4 +13,12 @@
     <delete id="deleteAllPlantData">
         delete from opendata
     </delete>
+
+    <select id="getPlantData">
+        SELECT odata_seq as plantPilbkNo
+        , odata_name as plantGnrlNm
+        , odata_image as imgUrl
+        FROM opendata
+        WHERE trim(odata_name) LIKE CONCAT('%',#{plantGnrlNm},'%')
+    </select>
 </mapper>
