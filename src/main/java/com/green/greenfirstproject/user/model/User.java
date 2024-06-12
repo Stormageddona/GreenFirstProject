@@ -1,23 +1,50 @@
 package com.green.greenfirstproject.user.model;
 
+import com.green.greenfirstproject.user.dto.UserInsertDto;
+import com.green.greenfirstproject.user.dto.UserUpdateDto;
+import lombok.*;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import java.time.LocalDateTime;
 
-@Getter
-@Setter
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class User {
-    @JsonIgnore
-    private long user_seq;
 
-    private String userId;
-    private String userPw;
-    private String user_nm;
-    private String user_email;
-    private String user_login_gb;
-    private String user_input_dt;
-    private String user_update_dt;
+    private Long seq;
+    private String id;
+    private String pwd;
+    private String name;
+    private String email;
+    private Integer gb;
+    private Integer loginType;
+    private String role ;
+    private LocalDateTime inputDt;
+    private LocalDateTime updateDt;
+
+    public User(UserInsertDto data) {
+        this.id = data.getId();
+        this.pwd = data.getPw() ;
+        this.name = data.getName();
+        this.email = data.getEmail();
+        this.gb = 1 ;
+        this.loginType = data.getLoginType() ;
+        this.role = "ROLE_USER" ;
+        this.inputDt = LocalDateTime.now();
+        this.updateDt = null ;
+    }
+
+    public void userDataChange(UserUpdateDto data) {
+        if (data.getPw() != null) {
+            this.pwd = data.getPw();
+        }
+        if (data.getName() != null) {
+            this.name = data.getName();
+        }
+    }
+
+
 
 }

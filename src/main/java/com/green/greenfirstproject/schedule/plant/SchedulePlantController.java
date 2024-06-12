@@ -29,15 +29,15 @@ public class SchedulePlantController {
 
             return ResultDto.<Integer>builder().
                     code(1).
-                    message("정상적으로 등록되었습니다.").
+                    msg("정상적으로 등록되었습니다.").
                     data(result).
                     build();
         } catch (DataNotFoundException e){
             e.printStackTrace();
-            return ResultDto.<Integer>builder().code(-1).message("등록실패").build();
+            return ResultDto.<Integer>builder().code(-1).msg("등록실패").build();
         } catch (Exception e){
             e.printStackTrace();
-            return ResultDto.<Integer>builder().code(-2).message("오류발생").build();
+            return ResultDto.<Integer>builder().code(-2).msg("오류발생").build();
         }
     }
 
@@ -49,15 +49,15 @@ public class SchedulePlantController {
 
             return ResultDto.<Integer>builder().
                     code(1).
-                    message("정상적으로 수정되었습니다.").
+                    msg("정상적으로 수정되었습니다.").
                     data(result).
                     build();
         } catch (DataNotFoundException e){
             e.printStackTrace();
-            return ResultDto.<Integer>builder().code(-1).message("수정실패").build();
+            return ResultDto.<Integer>builder().code(-1).msg("수정실패").build();
         } catch (Exception e){
             e.printStackTrace();
-            return ResultDto.<Integer>builder().code(-2).message("오류발생").build();
+            return ResultDto.<Integer>builder().code(-2).msg("오류발생").build();
         }
 
     }
@@ -69,15 +69,15 @@ public class SchedulePlantController {
 
             return ResultDto.<Integer>builder().
                     code(1).
-                    message("정상적으로 삭제되었습니다.").
+                    msg("정상적으로 삭제되었습니다.").
                     data(result).
                     build();
         } catch (DataNotFoundException e){
             e.printStackTrace();
-            return ResultDto.<Integer>builder().code(-1).message("삭제실패").build();
+            return ResultDto.<Integer>builder().code(-1).msg("삭제실패").build();
         } catch (Exception e){
             e.printStackTrace();
-            return ResultDto.<Integer>builder().code(-2).message("오류발생").build();
+            return ResultDto.<Integer>builder().code(-2).msg("오류발생").build();
         }
     }
 
@@ -89,12 +89,12 @@ public class SchedulePlantController {
 
             return ResultDto.<List<SchedulePlantGetListRes>>builder().
                     code(1).
-                    message(HttpStatus.OK.toString()).
+                    msg(HttpStatus.OK.toString()).
                     data(result).
                     build();
         } catch (Exception e){
             e.printStackTrace();
-            return ResultDto.<List<SchedulePlantGetListRes>>builder().code(-1).message("오류발생").build();
+            return ResultDto.<List<SchedulePlantGetListRes>>builder().code(-1).msg("오류발생").build();
         }
     }
 
@@ -106,12 +106,12 @@ public class SchedulePlantController {
 
             return ResultDto.<SchedulePlantGetDetailRes>builder().
                     code(1).
-                    message(HttpStatus.OK.toString()).
+                    msg(HttpStatus.OK.toString()).
                     data(result).
                     build();
         } catch (Exception e){
             e.printStackTrace();
-            return ResultDto.<SchedulePlantGetDetailRes>builder().code(-1).message("오류발생").build();
+            return ResultDto.<SchedulePlantGetDetailRes>builder().code(-1).msg("오류발생").build();
         }
     }
 }

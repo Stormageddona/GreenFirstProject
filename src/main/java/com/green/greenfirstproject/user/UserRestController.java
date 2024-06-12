@@ -128,6 +128,8 @@ public class UserRestController {
     )
     public Result postUser(@RequestBody UserInsertDto data)
     {
+        if (service.duplicatedData(data.getId(),1)) return ResultError.builder().code(-8).msg("중복된 아이디").build();
+        if (service.duplicatedData(data.getName(),2)) return ResultError.builder().code(-9).msg("중복된 닉네임").build();
         //비밀번호 확인
         if (!data.getPw().equals(data.getPwCheck()))
             return ResultError.builder().code(-3).msg("비밀번호 확인이 실패하였습니다.").build();
@@ -139,14 +141,6 @@ public class UserRestController {
         regex = "^(?=.*[A-Za-z])(?=.*[0-9])[A-Za-z0-9!@#$%^&*]{8,20}$" ;
         if (!data.getPw().matches(regex))
             return ResultError.builder().code(-4).msg("비밀번호 검증에 실패하였습니다.").build();
-        try {
-            if (service.duplicatedData(data.getId(),1)) return ResultError.builder().code(-8).msg("중복된 아이디").build();
-            if (service.duplicatedData(data.getName(),2)) return ResultError.builder().code(-9).msg("중복된 닉네임").build();
-        } catch (Exception e) {
-            log.error("An error occurred: ", e);
-            return ResultError.builder().build();
-        }
-
         //토큰 검증
         try {
             data.setEmail(service.checkEmailToken(data.getToken()));
