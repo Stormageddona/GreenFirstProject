@@ -6,9 +6,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,7 +22,7 @@ public class PlantDataController {
 
     @GetMapping
     @Operation(summary = "식물 검색")
-    public ResultDto<List<PlantData>> getPlantData(String plantGnrlNm) {
+    public ResultDto<List<PlantData>> getPlantData(@RequestParam("plantGnrlNm") String plantGnrlNm) {
         List<PlantData> res = service.getPlantData(plantGnrlNm);
         return ResultDto.resultDto(SUCCESS_CODE, "검색 완료", res);
     }
