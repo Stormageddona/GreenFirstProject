@@ -1,18 +1,22 @@
 package com.green.greenfirstproject.common;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
+import lombok.Setter;
 
 @Data
 public class Paging {
-    private int page;
-    private int size;
+    @Schema(defaultValue = "1")
+    private Integer page;
+    @Schema(defaultValue = "10")
+    private Integer size;
 
-    public Paging(int page, int size) {
+    public Paging(Integer page, Integer size) {
         this.page = page == 0 ? GlobalConst.PAGE_NUM : page;
         this.size = size == 0 ? GlobalConst.SIZE_NUM : size;
         this.startIdx = this.page - 1 < 0 ? 0 : ( this.page - 1 ) * this.size;
     }
     @JsonIgnore
-    private int startIdx;
+    private Integer startIdx;
 }

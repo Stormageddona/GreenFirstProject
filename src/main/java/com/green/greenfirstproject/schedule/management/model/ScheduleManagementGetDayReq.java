@@ -11,7 +11,7 @@ import lombok.Setter;
 @EqualsAndHashCode
 public class ScheduleManagementGetDayReq extends Paging {
     private long plantManagementSeq;
-    @Schema(description = "해당 일")
+    @Schema(description = "해당 년월일")
     private String managementDate;
     public ScheduleManagementGetDayReq(int page, int size) {
         super(page, size);

@@ -6,6 +6,6 @@ import lombok.Data;
 @Data
 public class ScheduleManagementGetMonthReq {
     private long plantManagementSeq;
-    @Schema(description = "해당 월")
+    @Schema(description = "해당 년월일")
     private String managementDate;
 }

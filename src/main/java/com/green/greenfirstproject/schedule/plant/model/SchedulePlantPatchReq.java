@@ -6,6 +6,6 @@ import lombok.Data;
 public class SchedulePlantPatchReq {
     private long userSeq;
     private long plantSeq;
-    private String plantNicKName;
+    private String plantNickName;
     private String etc;
 }

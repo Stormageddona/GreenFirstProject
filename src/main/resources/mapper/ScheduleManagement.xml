@@ -46,20 +46,21 @@
                 , A.garden_gb AS gardening
                 , B.plantPic
                 , plantName
-                , CEIL(COUNT(*) OVER() / #{size}) AS totalPage
+                , CEIL(COUNT(*) OVER() / 10) AS totalPage
                 , COUNT(*) OVER() AS totalElement
-          FROM garden_master A
-         INNER JOIN (
-            SELECT A.plant_seq AS plant_seq
-                    , B.odata_image AS plantPic
-                    , B.odata_name AS plantName,
-            FROM plant_master A
-            INNER JOIN opendata B
-            ON A.plant_odata_seq = B.odata_seq
-        ) B
-           ON A.garden_user_seq = B.plant_seq
-        WHERE garden_plant_seq = #{plantSeq}
+        FROM garden_master A
+        INNER JOIN (
+                SELECT A.plant_seq AS plant_seq
+                        , B.odata_image AS plantPic
+                        , B.odata_name AS plantName
+                FROM plant_master A
+                INNER JOIN opendata B
+                ON A.plant_odata_seq = B.odata_seq
+                ) B
+        ON A.garden_plant_seq = B.plant_seq
+        WHERE garden_seq = #{plantManagementSeq}
           AND DAY(garden_dt) = #{managementDate}
+        ORDER BY A.garden_dt
     </select>
 
     <select id="selScheduleManagementDetail">
@@ -72,7 +73,7 @@
          INNER JOIN (
             SELECT A.plant_seq AS plant_seq
                     , B.odata_image AS plantPic
-                    , B.odata_name AS plantName,
+                    , B.odata_name AS plantName
             FROM plant_master A
             INNER JOIN opendata B
             ON A.plant_odata_seq = B.odata_seq

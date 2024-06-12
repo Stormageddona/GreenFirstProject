@@ -9,7 +9,6 @@ public class ScheduleManagementPostReq {
     @JsonIgnore
     private long gardenSeq;
 
-    private long userSeq;
     private long plantSeq;
     private String managementDate;
     @Schema(description = "1: 물주기, 2: 분갈이하기, 3: 가지치기, 4: 환기하기")
