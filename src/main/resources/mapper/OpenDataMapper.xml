@@ -19,8 +19,9 @@
         , odata_name as plantGnrlNm
         , odata_image as imgUrl
         FROM opendata
-        <if test="plantGnrlNm != null and plantGnrlNm != ''">
-            WHERE trim(odata_name) LIKE CONCAT('%',#{plantGnrlNm},'%')
+        <if test="keyword != null and keyword != ''">
+            WHERE trim(odata_name) LIKE CONCAT('%',#{keyword},'%')
         </if>
+        LIMIT #{startIdx}, #{size}
     </select>
 </mapper>

@@ -2,10 +2,13 @@ package com.green.greenfirstproject.opendata;
 
 import com.green.greenfirstproject.common.ResultDto;
 import com.green.greenfirstproject.opendata.model.PlantData;
+import com.green.greenfirstproject.opendata.model.PlantDataGetReq;
+import com.green.greenfirstproject.opendata.model.PlantDataGetRes;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springdoc.core.annotations.ParameterObject;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,8 +25,8 @@ public class PlantDataController {
 
     @GetMapping
     @Operation(summary = "식물 검색")
-    public ResultDto<List<PlantData>> getPlantData(@RequestParam(value = "plantGnrlNm", required = false) String plantGnrlNm) {
-        List<PlantData> res = service.getPlantData(plantGnrlNm);
+    public ResultDto<List<PlantDataGetRes>> getPlantData(@ParameterObject @ModelAttribute PlantDataGetReq p) {
+        List<PlantDataGetRes> res = service.getPlantData(p);
         return ResultDto.resultDto(SUCCESS_CODE, "검색 완료", res);
     }
 }

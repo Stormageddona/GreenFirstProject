@@ -1,6 +1,7 @@
 package com.green.greenfirstproject.opendata.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.green.greenfirstproject.common.Paging;
 import lombok.Data;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
