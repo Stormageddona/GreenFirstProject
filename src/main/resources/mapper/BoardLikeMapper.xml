@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.green.greenfirstproject.user.UserMapper">
+
+    <resultMap id="UserResultMap" type="com.green.greenfirstproject.user.model.User">
+        <result property="seq" column="user_seq"/>
+        <result property="id" column="user_id"/>
+        <result property="pwd" column="user_pw"/>
+        <result property="name" column="user_name"/>
+        <result property="email" column="user_email"/>
+        <result property="gb" column="user_gb"/>
+        <result property="loginType" column="user_login_type"/>
+        <result property="role" column="user_role"/>
+        <result property="inputDt" column="input_dt"/>
+        <result property="updateDt" column="update_dt"/>
+    </resultMap>
+
+    <select id="selectUserById" resultMap="UserResultMap">
+        select * from user_master where user_id = #{id} ;
+    </select>
+
+    <select id="selectUserByEmail" resultMap="UserResultMap">
+        select * from user_master where user_email = #{email} ;
+    </select>
+
+    <select id="selectAllUsers" resultMap="UserResultMap">
+        select * from user_master
+    </select>
+
+    <insert id="insertUserData">
+        insert into user_master
+        set user_id = #{id}
+        , user_pw = #{pwd}
+        , user_name = #{name}
+        , user_email = #{email}
+        , user_gb = #{gb}
+        , user_login_type = #{loginType}
+    </insert>
+
+    <delete id="deleteUserData">
+        <!--        delete user_master where user_id = #{id}-->
+        update user_master
+        set user_gb = 3
+        where user_seq = #{seq} ;
+    </delete>
+
+
+    <update id="updateUserData">
+        update user_master
+        set user_pw = #{pwd}
+        , user_name = #{name}
+        where user_seq = #{seq}
+    </update>
+
+    <insert id="insertEmailToken">
+        insert into email_token
+        set token_email = #{email} ,
+        token_data = #{token} ,
+        input_dt = #{inputDt},
+        end_dt = #{endDt}
+    </insert>
+
+    <delete id="deleteEmailToken">
+        delete from email_token
+        where token_email = #{email}
+    </delete>
+
+    <select id="selectToken">
+        select token_email as email , token_data as token , input_dt as inputDt, end_dt as endDt
+        from email_token
+        where token_data = #{token}
+    </select>
+
+    <select id="existsByUserName" resultType="boolean">
+        SELECT EXISTS (
+        SELECT 1
+        FROM user_master
+        WHERE user_name = #{str}
+        )
+    </select>
+
+    <select id="existsById" resultType="boolean">
+        SELECT EXISTS (
+        SELECT 1
+        FROM user_master
+        WHERE user_id = #{str}
+        )
+    </select>
+</mapper>
