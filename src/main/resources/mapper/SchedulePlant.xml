@@ -7,22 +7,22 @@
     <insert id="insSchedule" keyProperty="plantSeq" useGeneratedKeys="true">
         INSERT INTO plant_master (
         plant_user_seq
-        , plant_etc
-        , plant_nickname
-        , plant_odata_seq
+            , plant_etc
+            , plant_nickname
+            , plant_odata_seq
         )
         VALUES (
-        #{userSeq}
-        , #{etc}
-        , #{plantNickName}
-        , #{odataSeq}
+            #{userSeq}
+            , #{etc}
+            , #{plantNickName}
+            , #{odataSeq}
         )
     </insert>
 
     <update id="updateSchedule">
         UPDATE plant_master
         SET plant_nickname = #{plantNickName}
-        , plant_etc = #{etc}
+            , plant_etc = #{etc}
         WHERE plant_user_seq = #{userSeq}
         AND plant_seq = #{plantSeq}
     </update>
@@ -35,10 +35,10 @@
 
     <select id="getSchedulePlantsList">
         SELECT A.plant_nickname AS plantNickName
-        , B.odata_image AS plantPic
-        , B.odata_name AS plantName
-        , CEIL(COUNT(*) OVER() / #{size}) AS totalPage
-        , COUNT(*) OVER() AS totalElement
+                , B.odata_image AS plantPic
+                , B.odata_name AS plantName
+                , CEIL(COUNT(*) OVER() / #{size}) AS totalPage
+                , COUNT(*) OVER() AS totalElement
         FROM plant_master A
         INNER JOIN opendata B
         ON A.plant_odata_seq = B.odata_seq
@@ -49,9 +49,9 @@
 
     <select id="getSchedulePlantDetail">
         SELECT A.plant_nickname AS plantNickName
-        , B.odata_image AS plantPic
-        , B.odata_name AS plantName
-        , A.plant_etc AS etc
+                , B.odata_image AS plantPic
+                , B.odata_name AS plantName
+                , A.plant_etc AS etc
         FROM plant_master A
         INNER JOIN opendata B
         ON A.plant_odata_seq = B.odata_seq

@@ -6,12 +6,16 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Date;
+
+
 @Getter
 @Setter
 public class ScheduleManagementGetDayRes extends Paging {
     private int gardening;
     private String plantPic;
     private String plantName;
+    @Schema(description = "특정 전체 DATE")
     private String managementDate;
 
     public ScheduleManagementGetDayRes(Integer page, Integer size, int gardening, String plantPic, String plantName) {

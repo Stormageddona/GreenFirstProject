@@ -68,3 +68,1242 @@
 [0;39m
 [2024-06-12 09:36:26 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown initiated...[0;39m
 [2024-06-12 09:36:26 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown completed.[0;39m
+[2024-06-12 13:10:02 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mStarting GreenFirstProjectApplication using Java 17.0.11 with PID 5520 (D:\2024-01\backEnd\GreenFirstProject\GreenFirstProject\build\classes\java\main started by Administrator in D:\2024-01\backEnd\GreenFirstProject\GreenFirstProject)[0;39m
+[2024-06-12 13:10:02 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-06-12 13:10:02 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-06-12 13:10:02 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-06-12 13:10:03 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-06-12 13:10:03 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 13:10:03 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-06-12 13:10:03 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.24][0;39m
+[2024-06-12 13:10:03 [32mINFO [0;39m restartedMain] [org.apache.jasper.servlet.TldScanner] [36mAt least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.[0;39m
+[2024-06-12 13:10:03 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-06-12 13:10:03 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 1284 ms[0;39m
+[2024-06-12 13:10:03 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForGoogle.REDIRECT_URL[0;39m
+[2024-06-12 13:10:03 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForKakao.REDIRECT_URL[0;39m
+[2024-06-12 13:10:03 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForNaver.REDIRECT_URL[0;39m
+[2024-06-12 13:10:03 [32mINFO [0;39m restartedMain] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [36mAdding welcome page template: index[0;39m
+[2024-06-12 13:10:03 [32mINFO [0;39m restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain] [36mWill secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5d82b870, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6ec6f5d3, org.springframework.security.web.context.SecurityContextHolderFilter@6d0e3a37, org.springframework.security.web.header.HeaderWriterFilter@70ada224, org.springframework.web.filter.CorsFilter@98af5e6, org.springframework.security.web.authentication.logout.LogoutFilter@61169b31, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@2441ae61, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@13541485, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@26f343c4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1a56f5dc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2101fef9, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@427e2122, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@43653ed1, org.springframework.security.web.access.ExceptionTranslationFilter@739759a1, org.springframework.security.web.access.intercept.AuthorizationFilter@7b8a43c9][0;39m
+[2024-06-12 13:10:04 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-06-12 13:10:04 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 13:10:04 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path ''[0;39m
+[2024-06-12 13:10:04 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mStarted GreenFirstProjectApplication in 2.49 seconds (process running for 2.915)[0;39m
+[2024-06-12 13:11:21 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mStarting GreenFirstProjectApplication using Java 17.0.11 with PID 6468 (D:\2024-01\backEnd\GreenFirstProject\GreenFirstProject\build\classes\java\main started by Administrator in D:\2024-01\backEnd\GreenFirstProject\GreenFirstProject)[0;39m
+[2024-06-12 13:11:21 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-06-12 13:11:21 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-06-12 13:11:21 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-06-12 13:11:22 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-06-12 13:11:22 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 13:11:22 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-06-12 13:11:22 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.24][0;39m
+[2024-06-12 13:11:22 [32mINFO [0;39m restartedMain] [org.apache.jasper.servlet.TldScanner] [36mAt least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.[0;39m
+[2024-06-12 13:11:22 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-06-12 13:11:22 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 1122 ms[0;39m
+[2024-06-12 13:11:23 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForGoogle.REDIRECT_URL[0;39m
+[2024-06-12 13:11:23 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForKakao.REDIRECT_URL[0;39m
+[2024-06-12 13:11:23 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForNaver.REDIRECT_URL[0;39m
+[2024-06-12 13:11:23 [32mINFO [0;39m restartedMain] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [36mAdding welcome page template: index[0;39m
+[2024-06-12 13:11:23 [32mINFO [0;39m restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain] [36mWill secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@44265be9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1cf76919, org.springframework.security.web.context.SecurityContextHolderFilter@3bdb4d54, org.springframework.security.web.header.HeaderWriterFilter@27686ccc, org.springframework.web.filter.CorsFilter@47ee0c5c, org.springframework.security.web.authentication.logout.LogoutFilter@1f518bad, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@3509dd6e, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@55ea6095, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@28a0bd31, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5682a738, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@8314c6c, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@44d39b57, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5b1f2df3, org.springframework.security.web.access.ExceptionTranslationFilter@4c4716f0, org.springframework.security.web.access.intercept.AuthorizationFilter@1143fdb8][0;39m
+[2024-06-12 13:11:23 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-06-12 13:11:23 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 13:11:23 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path ''[0;39m
+[2024-06-12 13:11:23 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mStarted GreenFirstProjectApplication in 2.335 seconds (process running for 2.721)[0;39m
+[2024-06-12 13:11:24 [32mINFO [0;39m http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
+[2024-06-12 13:11:24 [32mINFO [0;39m http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
+[2024-06-12 13:11:24 [32mINFO [0;39m http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 1 ms[0;39m
+[2024-06-12 13:11:24 [32mINFO [0;39m http-nio-8080-exec-6] [org.springdoc.api.AbstractOpenApiResource] [36mInit duration for springdoc-openapi is: 258 ms[0;39m
+[2024-06-12 13:11:34 [32mINFO [0;39m http-nio-8080-exec-3] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Starting...[0;39m
+[2024-06-12 13:11:35 [32mINFO [0;39m http-nio-8080-exec-3] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@4b1d4c0a[0;39m
+[2024-06-12 13:11:35 [32mINFO [0;39m http-nio-8080-exec-3] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Start completed.[0;39m
+[2024-06-12 13:11:35 [32mDEBUG[0;39m http-nio-8080-exec-3] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT garden_dt AS managementDate
+        , garden_gb AS gardening
+        FROM garden_master AS gm1
+        WHERE garden_seq = 1
+        AND MONTH(garden_dt) = '3'
+        AND garden_dt = (
+        SELECT MIN(garden_dt)
+        FROM garden_master AS gm2
+        WHERE gm2.garden_seq = gm1.garden_seq
+        AND DATE(gm2.garden_dt) = DATE(gm1.garden_dt)
+        )
+        ORDER BY garden_dt;
+ {executed in 196 msec}[0;39m
+[2024-06-12 13:11:35 [32mINFO [0;39m http-nio-8080-exec-3] [jdbc.resultsettable] [36m
+|-----------|----------|
+|garden_dt  |garden_gb |
+|-----------|----------|
+|2024-03-31 |2         |
+|-----------|----------|
+[0;39m
+[2024-06-12 13:12:31 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown initiated...[0;39m
+[2024-06-12 13:12:31 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown completed.[0;39m
+[2024-06-12 13:12:33 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mStarting GreenFirstProjectApplication using Java 17.0.11 with PID 4248 (D:\2024-01\backEnd\GreenFirstProject\GreenFirstProject\build\classes\java\main started by Administrator in D:\2024-01\backEnd\GreenFirstProject\GreenFirstProject)[0;39m
+[2024-06-12 13:12:33 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-06-12 13:12:33 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-06-12 13:12:33 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-06-12 13:12:34 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-06-12 13:12:34 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 13:12:34 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-06-12 13:12:34 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.24][0;39m
+[2024-06-12 13:12:34 [32mINFO [0;39m restartedMain] [org.apache.jasper.servlet.TldScanner] [36mAt least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.[0;39m
+[2024-06-12 13:12:34 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-06-12 13:12:34 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 1160 ms[0;39m
+[2024-06-12 13:12:35 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForGoogle.REDIRECT_URL[0;39m
+[2024-06-12 13:12:35 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForKakao.REDIRECT_URL[0;39m
+[2024-06-12 13:12:35 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForNaver.REDIRECT_URL[0;39m
+[2024-06-12 13:12:35 [32mINFO [0;39m restartedMain] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [36mAdding welcome page template: index[0;39m
+[2024-06-12 13:12:35 [32mINFO [0;39m restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain] [36mWill secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@725d5172, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1aa62fb7, org.springframework.security.web.context.SecurityContextHolderFilter@16447e32, org.springframework.security.web.header.HeaderWriterFilter@b4c45f5, org.springframework.web.filter.CorsFilter@6fdbd6fc, org.springframework.security.web.authentication.logout.LogoutFilter@70fd721c, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@2e94b4b1, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@b6b84c7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@12c8c259, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7b067700, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1db06f57, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@84c0bed, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a9e7dac, org.springframework.security.web.access.ExceptionTranslationFilter@5fa64341, org.springframework.security.web.access.intercept.AuthorizationFilter@19165a0d][0;39m
+[2024-06-12 13:12:35 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-06-12 13:12:35 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 13:12:35 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path ''[0;39m
+[2024-06-12 13:12:35 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mStarted GreenFirstProjectApplication in 2.472 seconds (process running for 2.865)[0;39m
+[2024-06-12 13:12:36 [32mINFO [0;39m http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
+[2024-06-12 13:12:36 [32mINFO [0;39m http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
+[2024-06-12 13:12:36 [32mINFO [0;39m http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 1 ms[0;39m
+[2024-06-12 13:12:36 [32mINFO [0;39m http-nio-8080-exec-9] [org.springdoc.api.AbstractOpenApiResource] [36mInit duration for springdoc-openapi is: 262 ms[0;39m
+[2024-06-12 13:12:40 [32mINFO [0;39m http-nio-8080-exec-10] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Starting...[0;39m
+[2024-06-12 13:12:41 [32mINFO [0;39m http-nio-8080-exec-10] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@43aff482[0;39m
+[2024-06-12 13:12:41 [32mINFO [0;39m http-nio-8080-exec-10] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Start completed.[0;39m
+[2024-06-12 13:12:41 [32mDEBUG[0;39m http-nio-8080-exec-10] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT A.garden_dt AS managementDate
+        , A.garden_gb AS gardening
+        , B.plantPic
+        , B.plantName
+        , A.garden_text
+        FROM garden_master A
+        INNER JOIN (
+        SELECT A.plant_seq AS plant_seq
+        , B.odata_image AS plantPic
+        , B.odata_name AS plantName
+        FROM plant_master A
+        INNER JOIN opendata B
+        ON A.plant_odata_seq = B.odata_seq
+        ) B
+        ON A.garden_plant_seq = B.plant_seq
+        WHERE A.garden_seq = 1
+        AND DAY(garden_dt) = '31'
+ {executed in 196 msec}[0;39m
+[2024-06-12 13:12:41 [32mINFO [0;39m http-nio-8080-exec-10] [jdbc.resultsettable] [36m
+|----------|----------|---------|----------|------------|
+|garden_dt |garden_gb |plantpic |plantname |garden_text |
+|----------|----------|---------|----------|------------|
+|----------|----------|---------|----------|------------|
+[0;39m
+[2024-06-12 13:12:51 [32mDEBUG[0;39m http-nio-8080-exec-6] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT A.garden_dt AS managementDate
+        , A.garden_gb AS gardening
+        , B.plantPic
+        , B.plantName
+        , A.garden_text
+        FROM garden_master A
+        INNER JOIN (
+        SELECT A.plant_seq AS plant_seq
+        , B.odata_image AS plantPic
+        , B.odata_name AS plantName
+        FROM plant_master A
+        INNER JOIN opendata B
+        ON A.plant_odata_seq = B.odata_seq
+        ) B
+        ON A.garden_plant_seq = B.plant_seq
+        WHERE A.garden_seq = 1
+        AND DAY(garden_dt) = '20240331'
+ {executed in 195 msec}[0;39m
+[2024-06-12 13:12:51 [32mINFO [0;39m http-nio-8080-exec-6] [jdbc.resultsettable] [36m
+|----------|----------|---------|----------|------------|
+|garden_dt |garden_gb |plantpic |plantname |garden_text |
+|----------|----------|---------|----------|------------|
+|----------|----------|---------|----------|------------|
+[0;39m
+[2024-06-12 13:12:59 [32mDEBUG[0;39m http-nio-8080-exec-7] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT A.garden_dt AS managementDate
+        , A.garden_gb AS gardening
+        , B.plantPic
+        , B.plantName
+        , A.garden_text
+        FROM garden_master A
+        INNER JOIN (
+        SELECT A.plant_seq AS plant_seq
+        , B.odata_image AS plantPic
+        , B.odata_name AS plantName
+        FROM plant_master A
+        INNER JOIN opendata B
+        ON A.plant_odata_seq = B.odata_seq
+        ) B
+        ON A.garden_plant_seq = B.plant_seq
+        WHERE A.garden_seq = 1
+        AND DAY(garden_dt) = '31'
+ {executed in 205 msec}[0;39m
+[2024-06-12 13:12:59 [32mINFO [0;39m http-nio-8080-exec-7] [jdbc.resultsettable] [36m
+|----------|----------|---------|----------|------------|
+|garden_dt |garden_gb |plantpic |plantname |garden_text |
+|----------|----------|---------|----------|------------|
+|----------|----------|---------|----------|------------|
+[0;39m
+[2024-06-12 13:13:21 [32mDEBUG[0;39m http-nio-8080-exec-8] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT A.garden_dt AS managementDate
+        , A.garden_gb AS gardening
+        , B.plantPic
+        , B.plantName
+        , A.garden_text
+        FROM garden_master A
+        INNER JOIN (
+        SELECT A.plant_seq AS plant_seq
+        , B.odata_image AS plantPic
+        , B.odata_name AS plantName
+        FROM plant_master A
+        INNER JOIN opendata B
+        ON A.plant_odata_seq = B.odata_seq
+        ) B
+        ON A.garden_plant_seq = B.plant_seq
+        WHERE A.garden_seq = 1
+        AND DAY(garden_dt) = NULL
+ {executed in 197 msec}[0;39m
+[2024-06-12 13:13:21 [32mINFO [0;39m http-nio-8080-exec-8] [jdbc.resultsettable] [36m
+|----------|----------|---------|----------|------------|
+|garden_dt |garden_gb |plantpic |plantname |garden_text |
+|----------|----------|---------|----------|------------|
+|----------|----------|---------|----------|------------|
+[0;39m
+[2024-06-12 13:13:29 [32mDEBUG[0;39m http-nio-8080-exec-4] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT A.garden_dt AS managementDate
+        , A.garden_gb AS gardening
+        , B.plantPic
+        , B.plantName
+        , A.garden_text
+        FROM garden_master A
+        INNER JOIN (
+        SELECT A.plant_seq AS plant_seq
+        , B.odata_image AS plantPic
+        , B.odata_name AS plantName
+        FROM plant_master A
+        INNER JOIN opendata B
+        ON A.plant_odata_seq = B.odata_seq
+        ) B
+        ON A.garden_plant_seq = B.plant_seq
+        WHERE A.garden_seq = 1
+        AND DAY(garden_dt) = '31'
+ {executed in 194 msec}[0;39m
+[2024-06-12 13:13:29 [32mINFO [0;39m http-nio-8080-exec-4] [jdbc.resultsettable] [36m
+|----------|----------|---------|----------|------------|
+|garden_dt |garden_gb |plantpic |plantname |garden_text |
+|----------|----------|---------|----------|------------|
+|----------|----------|---------|----------|------------|
+[0;39m
+[2024-06-12 13:13:43 [32mDEBUG[0;39m http-nio-8080-exec-1] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT A.garden_dt AS managementDate
+        , A.garden_gb AS gardening
+        , B.plantPic
+        , B.plantName
+        , A.garden_text
+        FROM garden_master A
+        INNER JOIN (
+        SELECT A.plant_seq AS plant_seq
+        , B.odata_image AS plantPic
+        , B.odata_name AS plantName
+        FROM plant_master A
+        INNER JOIN opendata B
+        ON A.plant_odata_seq = B.odata_seq
+        ) B
+        ON A.garden_plant_seq = B.plant_seq
+        WHERE A.garden_seq = 1
+        AND DAY(garden_dt) = '2024-03-31'
+ {executed in 195 msec}[0;39m
+[2024-06-12 13:13:43 [32mINFO [0;39m http-nio-8080-exec-1] [jdbc.resultsettable] [36m
+|----------|----------|---------|----------|------------|
+|garden_dt |garden_gb |plantpic |plantname |garden_text |
+|----------|----------|---------|----------|------------|
+|----------|----------|---------|----------|------------|
+[0;39m
+[2024-06-12 13:19:33 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown initiated...[0;39m
+[2024-06-12 13:19:33 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown completed.[0;39m
+[2024-06-12 13:19:36 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mStarting GreenFirstProjectApplication using Java 17.0.11 with PID 3420 (D:\2024-01\backEnd\GreenFirstProject\GreenFirstProject\build\classes\java\main started by Administrator in D:\2024-01\backEnd\GreenFirstProject\GreenFirstProject)[0;39m
+[2024-06-12 13:19:36 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-06-12 13:19:36 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-06-12 13:19:36 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-06-12 13:19:37 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-06-12 13:19:37 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 13:19:37 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-06-12 13:19:37 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.24][0;39m
+[2024-06-12 13:19:37 [32mINFO [0;39m restartedMain] [org.apache.jasper.servlet.TldScanner] [36mAt least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.[0;39m
+[2024-06-12 13:19:37 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-06-12 13:19:37 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 1109 ms[0;39m
+[2024-06-12 13:19:37 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForGoogle.REDIRECT_URL[0;39m
+[2024-06-12 13:19:37 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForKakao.REDIRECT_URL[0;39m
+[2024-06-12 13:19:37 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForNaver.REDIRECT_URL[0;39m
+[2024-06-12 13:19:38 [32mINFO [0;39m restartedMain] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [36mAdding welcome page template: index[0;39m
+[2024-06-12 13:19:38 [32mINFO [0;39m restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain] [36mWill secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2b05025a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6210fceb, org.springframework.security.web.context.SecurityContextHolderFilter@21001196, org.springframework.security.web.header.HeaderWriterFilter@764344c2, org.springframework.web.filter.CorsFilter@76a82e54, org.springframework.security.web.authentication.logout.LogoutFilter@3b406198, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@6fdbd6fc, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@29a03536, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@41e1f301, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@ecee535, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@46126e1c, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@71e71776, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4600b8a2, org.springframework.security.web.access.ExceptionTranslationFilter@20e1893b, org.springframework.security.web.access.intercept.AuthorizationFilter@621f822c][0;39m
+[2024-06-12 13:19:38 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-06-12 13:19:38 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 13:19:38 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path ''[0;39m
+[2024-06-12 13:19:38 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mStarted GreenFirstProjectApplication in 2.313 seconds (process running for 2.706)[0;39m
+[2024-06-12 13:19:52 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mStarting GreenFirstProjectApplication using Java 17.0.11 with PID 12024 (D:\2024-01\backEnd\GreenFirstProject\GreenFirstProject\build\classes\java\main started by Administrator in D:\2024-01\backEnd\GreenFirstProject\GreenFirstProject)[0;39m
+[2024-06-12 13:19:52 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-06-12 13:19:52 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-06-12 13:19:52 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-06-12 13:19:53 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-06-12 13:19:53 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 13:19:53 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-06-12 13:19:53 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.24][0;39m
+[2024-06-12 13:19:53 [32mINFO [0;39m restartedMain] [org.apache.jasper.servlet.TldScanner] [36mAt least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.[0;39m
+[2024-06-12 13:19:53 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-06-12 13:19:53 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 1103 ms[0;39m
+[2024-06-12 13:19:53 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForGoogle.REDIRECT_URL[0;39m
+[2024-06-12 13:19:53 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForKakao.REDIRECT_URL[0;39m
+[2024-06-12 13:19:53 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForNaver.REDIRECT_URL[0;39m
+[2024-06-12 13:19:53 [32mINFO [0;39m restartedMain] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [36mAdding welcome page template: index[0;39m
+[2024-06-12 13:19:53 [32mINFO [0;39m restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain] [36mWill secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2493ae2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7c354cc8, org.springframework.security.web.context.SecurityContextHolderFilter@599c46c5, org.springframework.security.web.header.HeaderWriterFilter@f6ddf86, org.springframework.web.filter.CorsFilter@324104cf, org.springframework.security.web.authentication.logout.LogoutFilter@47c02263, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@31dd0be, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@69a7ff74, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4e4a058b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@45c035d2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@32ac3571, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@6ce25c07, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7a6287f4, org.springframework.security.web.access.ExceptionTranslationFilter@18044d07, org.springframework.security.web.access.intercept.AuthorizationFilter@79b2676][0;39m
+[2024-06-12 13:19:54 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-06-12 13:19:54 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 13:19:54 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path ''[0;39m
+[2024-06-12 13:19:54 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mStarted GreenFirstProjectApplication in 2.309 seconds (process running for 2.708)[0;39m
+[2024-06-12 13:21:02 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mStarting GreenFirstProjectApplication using Java 17.0.11 with PID 1348 (D:\2024-01\backEnd\GreenFirstProject\GreenFirstProject\build\classes\java\main started by Administrator in D:\2024-01\backEnd\GreenFirstProject\GreenFirstProject)[0;39m
+[2024-06-12 13:21:02 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-06-12 13:21:02 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-06-12 13:21:02 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-06-12 13:21:03 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-06-12 13:21:03 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 13:21:03 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-06-12 13:21:03 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.24][0;39m
+[2024-06-12 13:21:03 [32mINFO [0;39m restartedMain] [org.apache.jasper.servlet.TldScanner] [36mAt least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.[0;39m
+[2024-06-12 13:21:03 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-06-12 13:21:03 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 1086 ms[0;39m
+[2024-06-12 13:21:03 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForGoogle.REDIRECT_URL[0;39m
+[2024-06-12 13:21:03 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForKakao.REDIRECT_URL[0;39m
+[2024-06-12 13:21:03 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForNaver.REDIRECT_URL[0;39m
+[2024-06-12 13:21:04 [32mINFO [0;39m restartedMain] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [36mAdding welcome page template: index[0;39m
+[2024-06-12 13:21:04 [32mINFO [0;39m restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain] [36mWill secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2357e32f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6f067c1e, org.springframework.security.web.context.SecurityContextHolderFilter@2bf5a217, org.springframework.security.web.header.HeaderWriterFilter@1a0dfd00, org.springframework.web.filter.CorsFilter@53de4415, org.springframework.security.web.authentication.logout.LogoutFilter@396c27b4, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@6210fceb, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@451475ea, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7e634189, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@41561201, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@283e93fd, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@176b6edd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@65f380d3, org.springframework.security.web.access.ExceptionTranslationFilter@673f4be9, org.springframework.security.web.access.intercept.AuthorizationFilter@7befd0a][0;39m
+[2024-06-12 13:21:04 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-06-12 13:21:04 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 13:21:04 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path ''[0;39m
+[2024-06-12 13:21:04 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mStarted GreenFirstProjectApplication in 2.317 seconds (process running for 2.805)[0;39m
+[2024-06-12 13:21:16 [32mINFO [0;39m http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
+[2024-06-12 13:21:16 [32mINFO [0;39m http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
+[2024-06-12 13:21:16 [32mINFO [0;39m http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 1 ms[0;39m
+[2024-06-12 13:21:16 [32mINFO [0;39m http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Starting...[0;39m
+[2024-06-12 13:21:17 [32mINFO [0;39m http-nio-8080-exec-1] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@517e7248[0;39m
+[2024-06-12 13:21:17 [32mINFO [0;39m http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Start completed.[0;39m
+[2024-06-12 13:21:17 [32mDEBUG[0;39m http-nio-8080-exec-1] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT garden_dt AS managementDate
+                , garden_gb AS gardening
+        FROM garden_master AS gm1
+        WHERE garden_seq = 1
+        AND MONTH(garden_dt) = '3'
+        AND garden_dt = (
+            SELECT MIN(garden_dt)
+            FROM garden_master AS gm2
+            WHERE gm2.garden_seq = gm1.garden_seq
+            AND DATE(gm2.garden_dt) = DATE(gm1.garden_dt)
+        )
+        ORDER BY garden_dt;
+ {executed in 196 msec}[0;39m
+[2024-06-12 13:21:17 [32mINFO [0;39m http-nio-8080-exec-1] [jdbc.resultsettable] [36m
+|-----------|----------|
+|garden_dt  |garden_gb |
+|-----------|----------|
+|2024-03-31 |2         |
+|-----------|----------|
+[0;39m
+[2024-06-12 13:21:32 [32mDEBUG[0;39m http-nio-8080-exec-4] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT A.garden_dt AS managementDate
+                , A.garden_gb AS gardening
+                , B.plantPic
+                , B.plantName
+                , A.garden_text
+        FROM garden_master A
+        INNER JOIN (
+            SELECT A.plant_seq AS plant_seq
+                , B.odata_image AS plantPic
+                , B.odata_name AS plantName
+            FROM plant_master A
+            INNER JOIN opendata B
+            ON A.plant_odata_seq = B.odata_seq
+        ) B
+        ON A.garden_plant_seq = B.plant_seq
+        WHERE A.garden_seq = 1
+        AND DATE(garden_dt) = '20240331'
+ {executed in 195 msec}[0;39m
+[2024-06-12 13:21:32 [32mINFO [0;39m http-nio-8080-exec-4] [jdbc.resultsettable] [36m
+|----------|----------|---------|----------|------------|
+|garden_dt |garden_gb |plantpic |plantname |garden_text |
+|----------|----------|---------|----------|------------|
+|----------|----------|---------|----------|------------|
+[0;39m
+[2024-06-12 13:21:36 [32mDEBUG[0;39m http-nio-8080-exec-6] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT A.garden_dt AS managementDate
+                , A.garden_gb AS gardening
+                , B.plantPic
+                , B.plantName
+                , A.garden_text
+        FROM garden_master A
+        INNER JOIN (
+            SELECT A.plant_seq AS plant_seq
+                , B.odata_image AS plantPic
+                , B.odata_name AS plantName
+            FROM plant_master A
+            INNER JOIN opendata B
+            ON A.plant_odata_seq = B.odata_seq
+        ) B
+        ON A.garden_plant_seq = B.plant_seq
+        WHERE A.garden_seq = 1
+        AND DATE(garden_dt) = '2024-03-31'
+ {executed in 194 msec}[0;39m
+[2024-06-12 13:21:36 [32mINFO [0;39m http-nio-8080-exec-6] [jdbc.resultsettable] [36m
+|----------|----------|---------|----------|------------|
+|garden_dt |garden_gb |plantpic |plantname |garden_text |
+|----------|----------|---------|----------|------------|
+|----------|----------|---------|----------|------------|
+[0;39m
+[2024-06-12 13:21:49 [32mDEBUG[0;39m http-nio-8080-exec-10] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT A.garden_dt AS managementDate
+                , A.garden_gb AS gardening
+                , B.plantPic
+                , plantName
+                , CEIL(COUNT(*) OVER() / 10) AS totalPage
+                , COUNT(*) OVER() AS totalElement
+        FROM garden_master A
+        INNER JOIN (
+            SELECT A.plant_seq AS plant_seq
+                    , B.odata_image AS plantPic
+                    , B.odata_name AS plantName
+            FROM plant_master A
+            INNER JOIN opendata B
+            ON A.plant_odata_seq = B.odata_seq
+        ) B
+        ON A.garden_plant_seq = B.plant_seq
+        WHERE garden_seq = 1
+        AND DATE(garden_dt) = '20240331'
+        ORDER BY A.garden_dt
+ {executed in 196 msec}[0;39m
+[2024-06-12 13:21:49 [32mINFO [0;39m http-nio-8080-exec-10] [jdbc.resultsettable] [36m
+|----------|----------|---------|----------|----------|-------------|
+|garden_dt |garden_gb |plantpic |plantname |totalpage |totalelement |
+|----------|----------|---------|----------|----------|-------------|
+|----------|----------|---------|----------|----------|-------------|
+[0;39m
+[2024-06-12 13:21:55 [32mDEBUG[0;39m http-nio-8080-exec-5] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT A.garden_dt AS managementDate
+                , A.garden_gb AS gardening
+                , B.plantPic
+                , plantName
+                , CEIL(COUNT(*) OVER() / 10) AS totalPage
+                , COUNT(*) OVER() AS totalElement
+        FROM garden_master A
+        INNER JOIN (
+            SELECT A.plant_seq AS plant_seq
+                    , B.odata_image AS plantPic
+                    , B.odata_name AS plantName
+            FROM plant_master A
+            INNER JOIN opendata B
+            ON A.plant_odata_seq = B.odata_seq
+        ) B
+        ON A.garden_plant_seq = B.plant_seq
+        WHERE garden_seq = 1
+        AND DATE(garden_dt) = '2024-03-31'
+        ORDER BY A.garden_dt
+ {executed in 195 msec}[0;39m
+[2024-06-12 13:21:55 [32mINFO [0;39m http-nio-8080-exec-5] [jdbc.resultsettable] [36m
+|----------|----------|---------|----------|----------|-------------|
+|garden_dt |garden_gb |plantpic |plantname |totalpage |totalelement |
+|----------|----------|---------|----------|----------|-------------|
+|----------|----------|---------|----------|----------|-------------|
+[0;39m
+[2024-06-12 14:17:58 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown initiated...[0;39m
+[2024-06-12 14:17:59 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown completed.[0;39m
+[2024-06-12 14:18:01 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mStarting GreenFirstProjectApplication using Java 17.0.11 with PID 12256 (D:\2024-01\backEnd\GreenFirstProject\GreenFirstProject\build\classes\java\main started by Administrator in D:\2024-01\backEnd\GreenFirstProject\GreenFirstProject)[0;39m
+[2024-06-12 14:18:01 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-06-12 14:18:01 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-06-12 14:18:01 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-06-12 14:18:02 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-06-12 14:18:02 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 14:18:02 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-06-12 14:18:02 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.24][0;39m
+[2024-06-12 14:18:02 [32mINFO [0;39m restartedMain] [org.apache.jasper.servlet.TldScanner] [36mAt least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.[0;39m
+[2024-06-12 14:18:02 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-06-12 14:18:02 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 1171 ms[0;39m
+[2024-06-12 14:18:02 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForGoogle.REDIRECT_URL[0;39m
+[2024-06-12 14:18:02 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForKakao.REDIRECT_URL[0;39m
+[2024-06-12 14:18:02 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForNaver.REDIRECT_URL[0;39m
+[2024-06-12 14:18:03 [32mINFO [0;39m restartedMain] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [36mAdding welcome page template: index[0;39m
+[2024-06-12 14:18:03 [32mINFO [0;39m restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain] [36mWill secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2d078720, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5062c9d5, org.springframework.security.web.context.SecurityContextHolderFilter@49d1cc53, org.springframework.security.web.header.HeaderWriterFilter@61169b31, org.springframework.web.filter.CorsFilter@29f42ea1, org.springframework.security.web.authentication.logout.LogoutFilter@574de6d2, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@5401cac1, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@688d4134, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@13541485, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5540e0b3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@182cbd4d, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@7a80f316, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6160d36b, org.springframework.security.web.access.ExceptionTranslationFilter@7d2fafee, org.springframework.security.web.access.intercept.AuthorizationFilter@99c6a2c][0;39m
+[2024-06-12 14:18:03 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-06-12 14:18:03 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 14:18:03 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path ''[0;39m
+[2024-06-12 14:18:03 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mStarted GreenFirstProjectApplication in 2.428 seconds (process running for 2.948)[0;39m
+[2024-06-12 14:18:16 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mStarting GreenFirstProjectApplication using Java 17.0.11 with PID 7100 (D:\2024-01\backEnd\GreenFirstProject\GreenFirstProject\build\classes\java\main started by Administrator in D:\2024-01\backEnd\GreenFirstProject\GreenFirstProject)[0;39m
+[2024-06-12 14:18:16 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-06-12 14:18:16 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-06-12 14:18:16 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-06-12 14:18:17 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-06-12 14:18:17 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 14:18:17 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-06-12 14:18:17 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.24][0;39m
+[2024-06-12 14:18:17 [32mINFO [0;39m restartedMain] [org.apache.jasper.servlet.TldScanner] [36mAt least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.[0;39m
+[2024-06-12 14:18:17 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-06-12 14:18:17 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 1121 ms[0;39m
+[2024-06-12 14:18:18 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForGoogle.REDIRECT_URL[0;39m
+[2024-06-12 14:18:18 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForKakao.REDIRECT_URL[0;39m
+[2024-06-12 14:18:18 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForNaver.REDIRECT_URL[0;39m
+[2024-06-12 14:18:18 [32mINFO [0;39m restartedMain] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [36mAdding welcome page template: index[0;39m
+[2024-06-12 14:18:18 [32mINFO [0;39m restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain] [36mWill secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5861dcfc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4c37e96d, org.springframework.security.web.context.SecurityContextHolderFilter@194749c4, org.springframework.security.web.header.HeaderWriterFilter@7d6ae040, org.springframework.web.filter.CorsFilter@30314ad0, org.springframework.security.web.authentication.logout.LogoutFilter@21f1d87, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@47ee0c5c, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@a08c770, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@aaa7cf1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@b94dcaa, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77ab45c2, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@1fe16471, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7b6aee3f, org.springframework.security.web.access.ExceptionTranslationFilter@3c424a20, org.springframework.security.web.access.intercept.AuthorizationFilter@34842210][0;39m
+[2024-06-12 14:18:18 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-06-12 14:18:18 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 14:18:18 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path ''[0;39m
+[2024-06-12 14:18:18 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mStarted GreenFirstProjectApplication in 2.337 seconds (process running for 2.723)[0;39m
+[2024-06-12 14:18:21 [32mINFO [0;39m http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
+[2024-06-12 14:18:21 [32mINFO [0;39m http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
+[2024-06-12 14:18:21 [32mINFO [0;39m http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 1 ms[0;39m
+[2024-06-12 14:18:21 [32mINFO [0;39m http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Starting...[0;39m
+[2024-06-12 14:18:23 [32mINFO [0;39m http-nio-8080-exec-1] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@3afd8ed5[0;39m
+[2024-06-12 14:18:23 [32mINFO [0;39m http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Start completed.[0;39m
+[2024-06-12 14:18:23 [32mDEBUG[0;39m http-nio-8080-exec-1] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT A.garden_dt AS managementDate
+                , A.garden_gb AS gardening
+                , B.plantPic
+                , B.plantName
+                , A.garden_text
+        FROM garden_master A
+        INNER JOIN (
+            SELECT A.plant_seq AS plant_seq
+                , B.odata_image AS plantPic
+                , B.odata_name AS plantName
+            FROM plant_master A
+            LEFT JOIN opendata B
+            ON A.plant_odata_seq = B.odata_seq
+        ) B
+        ON A.garden_plant_seq = B.plant_seq
+        WHERE A.garden_seq = 1
+        AND DAY(garden_dt) = '31'
+ {executed in 196 msec}[0;39m
+[2024-06-12 14:18:23 [31mERROR[0;39m http-nio-8080-exec-1] [jdbc.sqltiming] [36m1. ResultSet.getInt(managementDate)[0;39m
+java.sql.SQLDataException: Data type DATE cannot be decoded as Integer
+	at org.mariadb.jdbc.client.column.DateColumn.decodeIntText(DateColumn.java:150)
+	at org.mariadb.jdbc.client.result.rowdecoder.TextRowDecoder.decodeInt(TextRowDecoder.java:118)
+	at org.mariadb.jdbc.client.result.Result.getInt(Result.java:499)
+	at org.mariadb.jdbc.client.result.Result.getInt(Result.java:698)
+	at net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy.getInt(ResultSetSpy.java:1514)
+	at com.zaxxer.hikari.pool.HikariProxyResultSet.getInt(HikariProxyResultSet.java)
+	at org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:36)
+	at org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:26)
+	at org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:86)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.applyColumnOrderBasedConstructorAutomapping(DefaultResultSetHandler.java:789)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.applyConstructorAutomapping(DefaultResultSetHandler.java:776)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.createByConstructorSignature(DefaultResultSetHandler.java:727)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.createResultObject(DefaultResultSetHandler.java:689)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.createResultObject(DefaultResultSetHandler.java:659)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getRowValue(DefaultResultSetHandler.java:411)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForSimpleResultMap(DefaultResultSetHandler.java:366)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValues(DefaultResultSetHandler.java:337)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSet(DefaultResultSetHandler.java:310)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSets(DefaultResultSetHandler.java:202)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:66)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:80)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:65)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:110)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:90)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:75)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	at jdk.proxy2/jdk.proxy2.$Proxy87.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:160)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy3/jdk.proxy3.$Proxy95.selScheduleManagementDetail(Unknown Source)
+	at com.green.greenfirstproject.schedule.management.ScheduleManagementService.selScheduleManagementDetail(ScheduleManagementService.java:61)
+	at com.green.greenfirstproject.schedule.management.ScheduleManagementController.selScheduleManagementDetail(ScheduleManagementController.java:118)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:619)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:716)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:145)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:181)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1148)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:636)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-06-12 14:18:23 [32mINFO [0;39m http-nio-8080-exec-1] [jdbc.resultsettable] [36m
+|----------|----------|---------|----------|------------|
+|garden_dt |garden_gb |plantpic |plantname |garden_text |
+|----------|----------|---------|----------|------------|
+|----------|----------|---------|----------|------------|
+[0;39m
+[2024-06-12 14:18:48 [32mINFO [0;39m File Watcher] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [36mRestarting due to 6 class path changes (0 additions, 0 deletions, 6 modifications)[0;39m
+[2024-06-12 14:18:48 [32mINFO [0;39m Thread-5] [org.apache.coyote.http11.Http11NioProtocol] [36mStopping ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 14:18:48 [32mINFO [0;39m Thread-5] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown initiated...[0;39m
+[2024-06-12 14:18:48 [32mINFO [0;39m Thread-5] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown completed.[0;39m
+[2024-06-12 14:18:48 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mStarting GreenFirstProjectApplication using Java 17.0.11 with PID 7100 (D:\2024-01\backEnd\GreenFirstProject\GreenFirstProject\build\classes\java\main started by Administrator in D:\2024-01\backEnd\GreenFirstProject\GreenFirstProject)[0;39m
+[2024-06-12 14:18:48 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-06-12 14:18:49 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-06-12 14:18:49 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 14:18:49 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-06-12 14:18:49 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.24][0;39m
+[2024-06-12 14:18:49 [32mINFO [0;39m restartedMain] [org.apache.jasper.servlet.TldScanner] [36mAt least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.[0;39m
+[2024-06-12 14:18:49 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-06-12 14:18:49 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 358 ms[0;39m
+[2024-06-12 14:18:49 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForGoogle.REDIRECT_URL[0;39m
+[2024-06-12 14:18:49 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForKakao.REDIRECT_URL[0;39m
+[2024-06-12 14:18:49 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForNaver.REDIRECT_URL[0;39m
+[2024-06-12 14:18:49 [32mINFO [0;39m restartedMain] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [36mAdding welcome page template: index[0;39m
+[2024-06-12 14:18:49 [32mINFO [0;39m restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain] [36mWill secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2b3d71f4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@18d86c2, org.springframework.security.web.context.SecurityContextHolderFilter@7bccfc96, org.springframework.security.web.header.HeaderWriterFilter@45de229c, org.springframework.web.filter.CorsFilter@73b7d0e4, org.springframework.security.web.authentication.logout.LogoutFilter@7ac44195, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@731b3029, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@10fc4699, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2b8b0424, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2a2ea58, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@520e3b9e, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@5864f4f8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@c0b295e, org.springframework.security.web.access.ExceptionTranslationFilter@7e55c52f, org.springframework.security.web.access.intercept.AuthorizationFilter@4c50901e][0;39m
+[2024-06-12 14:18:49 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-06-12 14:18:49 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 14:18:49 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path ''[0;39m
+[2024-06-12 14:18:49 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mStarted GreenFirstProjectApplication in 0.682 seconds (process running for 33.642)[0;39m
+[2024-06-12 14:18:49 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [36mCondition evaluation unchanged[0;39m
+[2024-06-12 14:20:22 [32mINFO [0;39m http-nio-8080-exec-2] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
+[2024-06-12 14:20:22 [32mINFO [0;39m http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
+[2024-06-12 14:20:22 [32mINFO [0;39m http-nio-8080-exec-2] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 0 ms[0;39m
+[2024-06-12 14:20:22 [32mINFO [0;39m http-nio-8080-exec-2] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-2 - Starting...[0;39m
+[2024-06-12 14:20:23 [32mINFO [0;39m http-nio-8080-exec-2] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-2 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@1a61300c[0;39m
+[2024-06-12 14:20:23 [32mINFO [0;39m http-nio-8080-exec-2] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-2 - Start completed.[0;39m
+[2024-06-12 14:20:23 [32mDEBUG[0;39m http-nio-8080-exec-2] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT A.garden_dt AS managementDate
+                , A.garden_gb AS gardening
+                , B.plantPic
+                , plantName
+                , CEIL(COUNT(*) OVER() / 10) AS totalPage
+                , COUNT(*) OVER() AS totalElement
+        FROM garden_master A
+        INNER JOIN (
+            SELECT A.plant_seq AS plant_seq
+                    , B.odata_image AS plantPic
+                    , B.odata_name AS plantName
+            FROM plant_master A
+            LEFT JOIN opendata B
+            ON A.plant_odata_seq = B.odata_seq
+        ) B
+        ON A.garden_plant_seq = B.plant_seq
+        WHERE garden_seq = 1
+        AND DAY(garden_dt) = '31'
+        ORDER BY A.garden_dt
+ {executed in 197 msec}[0;39m
+[2024-06-12 14:20:23 [31mERROR[0;39m http-nio-8080-exec-2] [jdbc.sqltiming] [36m11. ResultSet.getInt(managementDate)[0;39m
+java.sql.SQLDataException: Data type DATE cannot be decoded as Integer
+	at org.mariadb.jdbc.client.column.DateColumn.decodeIntText(DateColumn.java:150)
+	at org.mariadb.jdbc.client.result.rowdecoder.TextRowDecoder.decodeInt(TextRowDecoder.java:118)
+	at org.mariadb.jdbc.client.result.Result.getInt(Result.java:499)
+	at org.mariadb.jdbc.client.result.Result.getInt(Result.java:698)
+	at net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy.getInt(ResultSetSpy.java:1514)
+	at com.zaxxer.hikari.pool.HikariProxyResultSet.getInt(HikariProxyResultSet.java)
+	at org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:36)
+	at org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:26)
+	at org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:86)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.applyColumnOrderBasedConstructorAutomapping(DefaultResultSetHandler.java:789)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.applyConstructorAutomapping(DefaultResultSetHandler.java:776)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.createByConstructorSignature(DefaultResultSetHandler.java:727)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.createResultObject(DefaultResultSetHandler.java:689)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.createResultObject(DefaultResultSetHandler.java:659)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getRowValue(DefaultResultSetHandler.java:411)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForSimpleResultMap(DefaultResultSetHandler.java:366)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValues(DefaultResultSetHandler.java:337)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSet(DefaultResultSetHandler.java:310)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSets(DefaultResultSetHandler.java:202)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:66)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:80)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:65)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:110)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:90)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	at jdk.proxy2/jdk.proxy2.$Proxy87.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy5/jdk.proxy5.$Proxy112.selScheduleManagementDay(Unknown Source)
+	at com.green.greenfirstproject.schedule.management.ScheduleManagementService.selScheduleManagementDay(ScheduleManagementService.java:40)
+	at com.green.greenfirstproject.schedule.management.ScheduleManagementController.selScheduleManagementDay(ScheduleManagementController.java:101)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:619)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:716)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:145)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:181)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1148)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:636)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-06-12 14:20:23 [32mINFO [0;39m http-nio-8080-exec-2] [jdbc.resultsettable] [36m
+|----------|----------|---------|----------|----------|-------------|
+|garden_dt |garden_gb |plantpic |plantname |totalpage |totalelement |
+|----------|----------|---------|----------|----------|-------------|
+|----------|----------|---------|----------|----------|-------------|
+[0;39m
+[2024-06-12 14:20:29 [32mDEBUG[0;39m http-nio-8080-exec-1] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT A.garden_dt AS managementDate
+                , A.garden_gb AS gardening
+                , B.plantPic
+                , plantName
+                , CEIL(COUNT(*) OVER() / 10) AS totalPage
+                , COUNT(*) OVER() AS totalElement
+        FROM garden_master A
+        INNER JOIN (
+            SELECT A.plant_seq AS plant_seq
+                    , B.odata_image AS plantPic
+                    , B.odata_name AS plantName
+            FROM plant_master A
+            LEFT JOIN opendata B
+            ON A.plant_odata_seq = B.odata_seq
+        ) B
+        ON A.garden_plant_seq = B.plant_seq
+        WHERE garden_seq = 1
+        AND DAY(garden_dt) = '31'
+        ORDER BY A.garden_dt
+ {executed in 203 msec}[0;39m
+[2024-06-12 14:20:29 [31mERROR[0;39m http-nio-8080-exec-1] [jdbc.sqltiming] [36m11. ResultSet.getInt(managementDate)[0;39m
+java.sql.SQLDataException: Data type DATE cannot be decoded as Integer
+	at org.mariadb.jdbc.client.column.DateColumn.decodeIntText(DateColumn.java:150)
+	at org.mariadb.jdbc.client.result.rowdecoder.TextRowDecoder.decodeInt(TextRowDecoder.java:118)
+	at org.mariadb.jdbc.client.result.Result.getInt(Result.java:499)
+	at org.mariadb.jdbc.client.result.Result.getInt(Result.java:698)
+	at net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy.getInt(ResultSetSpy.java:1514)
+	at com.zaxxer.hikari.pool.HikariProxyResultSet.getInt(HikariProxyResultSet.java)
+	at org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:36)
+	at org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:26)
+	at org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:86)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.applyColumnOrderBasedConstructorAutomapping(DefaultResultSetHandler.java:789)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.applyConstructorAutomapping(DefaultResultSetHandler.java:776)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.createByConstructorSignature(DefaultResultSetHandler.java:727)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.createResultObject(DefaultResultSetHandler.java:689)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.createResultObject(DefaultResultSetHandler.java:659)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getRowValue(DefaultResultSetHandler.java:411)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForSimpleResultMap(DefaultResultSetHandler.java:366)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValues(DefaultResultSetHandler.java:337)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSet(DefaultResultSetHandler.java:310)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSets(DefaultResultSetHandler.java:202)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:66)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:80)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:65)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:110)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:90)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	at jdk.proxy2/jdk.proxy2.$Proxy87.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy5/jdk.proxy5.$Proxy112.selScheduleManagementDay(Unknown Source)
+	at com.green.greenfirstproject.schedule.management.ScheduleManagementService.selScheduleManagementDay(ScheduleManagementService.java:40)
+	at com.green.greenfirstproject.schedule.management.ScheduleManagementController.selScheduleManagementDay(ScheduleManagementController.java:101)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:619)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:716)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:145)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:227)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:221)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:181)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1148)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:636)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2024-06-12 14:20:29 [32mINFO [0;39m http-nio-8080-exec-1] [jdbc.resultsettable] [36m
+|----------|----------|---------|----------|----------|-------------|
+|garden_dt |garden_gb |plantpic |plantname |totalpage |totalelement |
+|----------|----------|---------|----------|----------|-------------|
+|----------|----------|---------|----------|----------|-------------|
+[0;39m
+[2024-06-12 14:21:24 [32mINFO [0;39m File Watcher] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [36mRestarting due to 6 class path changes (0 additions, 0 deletions, 6 modifications)[0;39m
+[2024-06-12 14:21:24 [32mINFO [0;39m Thread-7] [org.apache.coyote.http11.Http11NioProtocol] [36mStopping ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 14:21:24 [32mINFO [0;39m Thread-7] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-2 - Shutdown initiated...[0;39m
+[2024-06-12 14:21:24 [32mINFO [0;39m Thread-7] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-2 - Shutdown completed.[0;39m
+[2024-06-12 14:21:24 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mStarting GreenFirstProjectApplication using Java 17.0.11 with PID 7100 (D:\2024-01\backEnd\GreenFirstProject\GreenFirstProject\build\classes\java\main started by Administrator in D:\2024-01\backEnd\GreenFirstProject\GreenFirstProject)[0;39m
+[2024-06-12 14:21:24 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-06-12 14:21:25 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-06-12 14:21:25 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 14:21:25 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-06-12 14:21:25 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.24][0;39m
+[2024-06-12 14:21:25 [32mINFO [0;39m restartedMain] [org.apache.jasper.servlet.TldScanner] [36mAt least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.[0;39m
+[2024-06-12 14:21:25 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-06-12 14:21:25 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 277 ms[0;39m
+[2024-06-12 14:21:25 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForGoogle.REDIRECT_URL[0;39m
+[2024-06-12 14:21:25 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForKakao.REDIRECT_URL[0;39m
+[2024-06-12 14:21:25 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForNaver.REDIRECT_URL[0;39m
+[2024-06-12 14:21:25 [32mINFO [0;39m restartedMain] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [36mAdding welcome page template: index[0;39m
+[2024-06-12 14:21:25 [32mINFO [0;39m restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain] [36mWill secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5c74da36, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2b07c221, org.springframework.security.web.context.SecurityContextHolderFilter@1f095434, org.springframework.security.web.header.HeaderWriterFilter@15703038, org.springframework.web.filter.CorsFilter@3c0ce0d6, org.springframework.security.web.authentication.logout.LogoutFilter@6c7a0c76, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@143c771e, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@1dc15bac, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2899c7c7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@67f3e254, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2de243f2, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@3ab59558, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2a05ad5a, org.springframework.security.web.access.ExceptionTranslationFilter@3aee16be, org.springframework.security.web.access.intercept.AuthorizationFilter@2ba18e52][0;39m
+[2024-06-12 14:21:25 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-06-12 14:21:25 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 14:21:25 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path ''[0;39m
+[2024-06-12 14:21:25 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mStarted GreenFirstProjectApplication in 0.485 seconds (process running for 189.441)[0;39m
+[2024-06-12 14:21:25 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [36mCondition evaluation unchanged[0;39m
+[2024-06-12 14:24:22 [32mINFO [0;39m File Watcher] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [36mRestarting due to 4 class path changes (0 additions, 0 deletions, 4 modifications)[0;39m
+[2024-06-12 14:24:22 [32mINFO [0;39m Thread-11] [org.apache.coyote.http11.Http11NioProtocol] [36mStopping ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 14:24:22 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mStarting GreenFirstProjectApplication using Java 17.0.11 with PID 7100 (D:\2024-01\backEnd\GreenFirstProject\GreenFirstProject\build\classes\java\main started by Administrator in D:\2024-01\backEnd\GreenFirstProject\GreenFirstProject)[0;39m
+[2024-06-12 14:24:22 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-06-12 14:24:22 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-06-12 14:24:22 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 14:24:22 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-06-12 14:24:22 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.24][0;39m
+[2024-06-12 14:24:22 [32mINFO [0;39m restartedMain] [org.apache.jasper.servlet.TldScanner] [36mAt least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.[0;39m
+[2024-06-12 14:24:22 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-06-12 14:24:22 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 249 ms[0;39m
+[2024-06-12 14:24:22 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForGoogle.REDIRECT_URL[0;39m
+[2024-06-12 14:24:22 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForKakao.REDIRECT_URL[0;39m
+[2024-06-12 14:24:22 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForNaver.REDIRECT_URL[0;39m
+[2024-06-12 14:24:22 [32mINFO [0;39m restartedMain] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [36mAdding welcome page template: index[0;39m
+[2024-06-12 14:24:22 [32mINFO [0;39m restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain] [36mWill secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2019b53, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4425434c, org.springframework.security.web.context.SecurityContextHolderFilter@4152a0dd, org.springframework.security.web.header.HeaderWriterFilter@342385db, org.springframework.web.filter.CorsFilter@7ea53f88, org.springframework.security.web.authentication.logout.LogoutFilter@7c24d951, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@4e711265, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@6f4aae1e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1445bfed, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d22e15e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@19046, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@3b02e109, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@520393fc, org.springframework.security.web.access.ExceptionTranslationFilter@fde401c, org.springframework.security.web.access.intercept.AuthorizationFilter@1a69ceb0][0;39m
+[2024-06-12 14:24:22 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-06-12 14:24:22 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 14:24:22 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path ''[0;39m
+[2024-06-12 14:24:22 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mStarted GreenFirstProjectApplication in 0.436 seconds (process running for 366.791)[0;39m
+[2024-06-12 14:24:22 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [36mCondition evaluation unchanged[0;39m
+[2024-06-12 14:25:29 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mStarting GreenFirstProjectApplication using Java 17.0.11 with PID 9952 (D:\2024-01\backEnd\GreenFirstProject\GreenFirstProject\build\classes\java\main started by Administrator in D:\2024-01\backEnd\GreenFirstProject\GreenFirstProject)[0;39m
+[2024-06-12 14:25:29 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-06-12 14:25:29 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-06-12 14:25:29 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-06-12 14:25:30 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-06-12 14:25:30 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 14:25:30 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-06-12 14:25:30 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.24][0;39m
+[2024-06-12 14:25:30 [32mINFO [0;39m restartedMain] [org.apache.jasper.servlet.TldScanner] [36mAt least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.[0;39m
+[2024-06-12 14:25:30 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-06-12 14:25:30 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 1192 ms[0;39m
+[2024-06-12 14:25:30 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForGoogle.REDIRECT_URL[0;39m
+[2024-06-12 14:25:30 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForKakao.REDIRECT_URL[0;39m
+[2024-06-12 14:25:30 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForNaver.REDIRECT_URL[0;39m
+[2024-06-12 14:25:30 [32mINFO [0;39m restartedMain] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [36mAdding welcome page template: index[0;39m
+[2024-06-12 14:25:30 [32mINFO [0;39m restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain] [36mWill secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5d06e983, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@786d83a, org.springframework.security.web.context.SecurityContextHolderFilter@1a0eb8be, org.springframework.security.web.header.HeaderWriterFilter@382fd491, org.springframework.web.filter.CorsFilter@55ea6095, org.springframework.security.web.authentication.logout.LogoutFilter@1c6097f, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@425557b0, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@588b39ef, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@425314bf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4c4716f0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@484ce633, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@13993869, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2e7335eb, org.springframework.security.web.access.ExceptionTranslationFilter@1eb653ae, org.springframework.security.web.access.intercept.AuthorizationFilter@4ba54015][0;39m
+[2024-06-12 14:25:31 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-06-12 14:25:31 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 14:25:31 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path ''[0;39m
+[2024-06-12 14:25:31 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mStarted GreenFirstProjectApplication in 2.344 seconds (process running for 2.736)[0;39m
+[2024-06-12 14:25:33 [32mINFO [0;39m http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
+[2024-06-12 14:25:33 [32mINFO [0;39m http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
+[2024-06-12 14:25:33 [32mINFO [0;39m http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 1 ms[0;39m
+[2024-06-12 14:25:33 [33mWARN [0;39m http-nio-8080-exec-1] [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver] [36mResolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.green.greenfirstproject.common.dto.ResultDto<java.util.List<com.green.greenfirstproject.schedule.management.model.ScheduleManagementGetDayRes>> com.green.greenfirstproject.schedule.management.ScheduleManagementController.selScheduleManagementDay(com.green.greenfirstproject.schedule.management.model.ScheduleManagementGetDayReq): [Field error in object 'scheduleManagementGetDayReq' on field 'managementDate': rejected value [31]; codes [typeMismatch.scheduleManagementGetDayReq.managementDate,typeMismatch.managementDate,typeMismatch.java.util.Date,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [scheduleManagementGetDayReq.managementDate,managementDate]; arguments []; default message [managementDate]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.util.Date' for property 'managementDate'; Failed to convert from type [java.lang.String] to type [@io.swagger.v3.oas.annotations.media.Schema java.util.Date] for value [31]]] ][0;39m
+[2024-06-12 14:26:31 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mStarting GreenFirstProjectApplication using Java 17.0.11 with PID 14068 (D:\2024-01\backEnd\GreenFirstProject\GreenFirstProject\build\classes\java\main started by Administrator in D:\2024-01\backEnd\GreenFirstProject\GreenFirstProject)[0;39m
+[2024-06-12 14:26:31 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-06-12 14:26:31 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-06-12 14:26:31 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-06-12 14:26:32 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-06-12 14:26:32 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 14:26:32 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-06-12 14:26:32 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.24][0;39m
+[2024-06-12 14:26:32 [32mINFO [0;39m restartedMain] [org.apache.jasper.servlet.TldScanner] [36mAt least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.[0;39m
+[2024-06-12 14:26:32 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-06-12 14:26:32 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 1143 ms[0;39m
+[2024-06-12 14:26:32 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForGoogle.REDIRECT_URL[0;39m
+[2024-06-12 14:26:32 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForKakao.REDIRECT_URL[0;39m
+[2024-06-12 14:26:32 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForNaver.REDIRECT_URL[0;39m
+[2024-06-12 14:26:33 [32mINFO [0;39m restartedMain] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [36mAdding welcome page template: index[0;39m
+[2024-06-12 14:26:33 [32mINFO [0;39m restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain] [36mWill secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@70cf76e0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3625354d, org.springframework.security.web.context.SecurityContextHolderFilter@5f58494f, org.springframework.security.web.header.HeaderWriterFilter@1c4b194b, org.springframework.web.filter.CorsFilter@3eac840e, org.springframework.security.web.authentication.logout.LogoutFilter@7008b496, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@3280d926, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@197a34c0, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1b9a37f9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@490abc16, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3431b6af, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@5062c9d5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@59b0e33b, org.springframework.security.web.access.ExceptionTranslationFilter@4a10e630, org.springframework.security.web.access.intercept.AuthorizationFilter@2859fe4b][0;39m
+[2024-06-12 14:26:33 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-06-12 14:26:33 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 14:26:33 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path ''[0;39m
+[2024-06-12 14:26:33 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mStarted GreenFirstProjectApplication in 2.333 seconds (process running for 2.723)[0;39m
+[2024-06-12 14:26:36 [32mINFO [0;39m http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
+[2024-06-12 14:26:36 [32mINFO [0;39m http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
+[2024-06-12 14:26:36 [32mINFO [0;39m http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 1 ms[0;39m
+[2024-06-12 14:26:36 [33mWARN [0;39m http-nio-8080-exec-1] [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver] [36mResolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.green.greenfirstproject.common.dto.ResultDto<java.util.List<com.green.greenfirstproject.schedule.management.model.ScheduleManagementGetDayRes>> com.green.greenfirstproject.schedule.management.ScheduleManagementController.selScheduleManagementDay(com.green.greenfirstproject.schedule.management.model.ScheduleManagementGetDayReq): [Field error in object 'scheduleManagementGetDayReq' on field 'managementDate': rejected value [31]; codes [typeMismatch.scheduleManagementGetDayReq.managementDate,typeMismatch.managementDate,typeMismatch.java.util.Date,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [scheduleManagementGetDayReq.managementDate,managementDate]; arguments []; default message [managementDate]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.util.Date' for property 'managementDate'; Failed to convert from type [java.lang.String] to type [@io.swagger.v3.oas.annotations.media.Schema java.util.Date] for value [31]]] ][0;39m
+[2024-06-12 14:26:53 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mStarting GreenFirstProjectApplication using Java 17.0.11 with PID 6116 (D:\2024-01\backEnd\GreenFirstProject\GreenFirstProject\build\classes\java\main started by Administrator in D:\2024-01\backEnd\GreenFirstProject\GreenFirstProject)[0;39m
+[2024-06-12 14:26:53 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-06-12 14:26:54 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-06-12 14:26:54 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-06-12 14:26:55 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-06-12 14:26:55 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 14:26:55 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-06-12 14:26:55 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.24][0;39m
+[2024-06-12 14:26:55 [32mINFO [0;39m restartedMain] [org.apache.jasper.servlet.TldScanner] [36mAt least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.[0;39m
+[2024-06-12 14:26:55 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-06-12 14:26:55 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 1160 ms[0;39m
+[2024-06-12 14:26:55 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForGoogle.REDIRECT_URL[0;39m
+[2024-06-12 14:26:55 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForKakao.REDIRECT_URL[0;39m
+[2024-06-12 14:26:55 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForNaver.REDIRECT_URL[0;39m
+[2024-06-12 14:26:55 [32mINFO [0;39m restartedMain] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [36mAdding welcome page template: index[0;39m
+[2024-06-12 14:26:55 [32mINFO [0;39m restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain] [36mWill secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2b05025a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6210fceb, org.springframework.security.web.context.SecurityContextHolderFilter@21001196, org.springframework.security.web.header.HeaderWriterFilter@764344c2, org.springframework.web.filter.CorsFilter@76a82e54, org.springframework.security.web.authentication.logout.LogoutFilter@3b406198, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@6fdbd6fc, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@29a03536, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@41e1f301, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@ecee535, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@46126e1c, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@71e71776, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4600b8a2, org.springframework.security.web.access.ExceptionTranslationFilter@20e1893b, org.springframework.security.web.access.intercept.AuthorizationFilter@621f822c][0;39m
+[2024-06-12 14:26:56 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-06-12 14:26:56 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 14:26:56 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path ''[0;39m
+[2024-06-12 14:26:56 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mStarted GreenFirstProjectApplication in 2.417 seconds (process running for 2.817)[0;39m
+[2024-06-12 14:26:57 [32mINFO [0;39m http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
+[2024-06-12 14:26:57 [32mINFO [0;39m http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
+[2024-06-12 14:26:57 [32mINFO [0;39m http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 1 ms[0;39m
+[2024-06-12 14:26:57 [33mWARN [0;39m http-nio-8080-exec-1] [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver] [36mResolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.green.greenfirstproject.common.dto.ResultDto<java.util.List<com.green.greenfirstproject.schedule.management.model.ScheduleManagementGetDayRes>> com.green.greenfirstproject.schedule.management.ScheduleManagementController.selScheduleManagementDay(com.green.greenfirstproject.schedule.management.model.ScheduleManagementGetDayReq): [Field error in object 'scheduleManagementGetDayReq' on field 'managementDate': rejected value [31]; codes [typeMismatch.scheduleManagementGetDayReq.managementDate,typeMismatch.managementDate,typeMismatch.java.util.Date,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [scheduleManagementGetDayReq.managementDate,managementDate]; arguments []; default message [managementDate]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'java.util.Date' for property 'managementDate'; Failed to convert from type [java.lang.String] to type [@io.swagger.v3.oas.annotations.media.Schema java.util.Date] for value [31]]] ][0;39m
+[2024-06-12 14:27:51 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mStarting GreenFirstProjectApplication using Java 17.0.11 with PID 14712 (D:\2024-01\backEnd\GreenFirstProject\GreenFirstProject\build\classes\java\main started by Administrator in D:\2024-01\backEnd\GreenFirstProject\GreenFirstProject)[0;39m
+[2024-06-12 14:27:51 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mNo active profile set, falling back to 1 default profile: "default"[0;39m
+[2024-06-12 14:27:51 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mDevtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable[0;39m
+[2024-06-12 14:27:51 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [36mFor additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'[0;39m
+[2024-06-12 14:27:52 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat initialized with port 8080 (http)[0;39m
+[2024-06-12 14:27:52 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mInitializing ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 14:27:52 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardService] [36mStarting service [Tomcat][0;39m
+[2024-06-12 14:27:52 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.StandardEngine] [36mStarting Servlet engine: [Apache Tomcat/10.1.24][0;39m
+[2024-06-12 14:27:52 [32mINFO [0;39m restartedMain] [org.apache.jasper.servlet.TldScanner] [36mAt least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.[0;39m
+[2024-06-12 14:27:52 [32mINFO [0;39m restartedMain] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring embedded WebApplicationContext[0;39m
+[2024-06-12 14:27:52 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [36mRoot WebApplicationContext: initialization completed in 1127 ms[0;39m
+[2024-06-12 14:27:52 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForGoogle.REDIRECT_URL[0;39m
+[2024-06-12 14:27:52 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForKakao.REDIRECT_URL[0;39m
+[2024-06-12 14:27:52 [32mINFO [0;39m restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [36mAutowired annotation is not supported on static fields: public static java.lang.String com.green.greenfirstproject.user.socialservice.LoginServiceForNaver.REDIRECT_URL[0;39m
+[2024-06-12 14:27:52 [32mINFO [0;39m restartedMain] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] [36mAdding welcome page template: index[0;39m
+[2024-06-12 14:27:52 [32mINFO [0;39m restartedMain] [org.springframework.security.web.DefaultSecurityFilterChain] [36mWill secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@451475ea, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@20062e07, org.springframework.security.web.context.SecurityContextHolderFilter@673f4be9, org.springframework.security.web.header.HeaderWriterFilter@4d893420, org.springframework.web.filter.CorsFilter@176b6edd, org.springframework.security.web.authentication.logout.LogoutFilter@19165a0d, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@187d6ac8, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@585d08b3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7eb6ad6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1a0dfd00, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4fba12d3, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@6210fceb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@54ed013a, org.springframework.security.web.access.ExceptionTranslationFilter@73e77e7e, org.springframework.security.web.access.intercept.AuthorizationFilter@495ce107][0;39m
+[2024-06-12 14:27:53 [32mINFO [0;39m restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [36mLiveReload server is running on port 35729[0;39m
+[2024-06-12 14:27:53 [32mINFO [0;39m restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [36mStarting ProtocolHandler ["http-nio-8080"][0;39m
+[2024-06-12 14:27:53 [32mINFO [0;39m restartedMain] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [36mTomcat started on port 8080 (http) with context path ''[0;39m
+[2024-06-12 14:27:53 [32mINFO [0;39m restartedMain] [com.green.greenfirstproject.GreenFirstProjectApplication] [36mStarted GreenFirstProjectApplication in 2.333 seconds (process running for 2.75)[0;39m
+[2024-06-12 14:27:54 [32mINFO [0;39m http-nio-8080-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [36mInitializing Spring DispatcherServlet 'dispatcherServlet'[0;39m
+[2024-06-12 14:27:54 [32mINFO [0;39m http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mInitializing Servlet 'dispatcherServlet'[0;39m
+[2024-06-12 14:27:54 [32mINFO [0;39m http-nio-8080-exec-1] [org.springframework.web.servlet.DispatcherServlet] [36mCompleted initialization in 1 ms[0;39m
+[2024-06-12 14:27:54 [32mINFO [0;39m http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Starting...[0;39m
+[2024-06-12 14:27:56 [32mINFO [0;39m http-nio-8080-exec-1] [com.zaxxer.hikari.pool.HikariPool] [36mHikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@3e54798a[0;39m
+[2024-06-12 14:27:56 [32mINFO [0;39m http-nio-8080-exec-1] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Start completed.[0;39m
+[2024-06-12 14:27:56 [32mDEBUG[0;39m http-nio-8080-exec-1] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT garden_dt AS managementDate
+                , garden_gb AS gardening
+        FROM garden_master AS gm1
+        WHERE garden_seq = 1
+        AND MONTH(garden_dt) = '3'
+        AND garden_dt = (
+            SELECT MIN(garden_dt)
+            FROM garden_master AS gm2
+            WHERE gm2.garden_seq = gm1.garden_seq
+            AND DATE(gm2.garden_dt) = DATE(gm1.garden_dt)
+        )
+        ORDER BY garden_dt;
+ {executed in 195 msec}[0;39m
+[2024-06-12 14:27:56 [32mINFO [0;39m http-nio-8080-exec-1] [jdbc.resultsettable] [36m
+|-----------|----------|
+|garden_dt  |garden_gb |
+|-----------|----------|
+|2024-03-31 |2         |
+|-----------|----------|
+[0;39m
+[2024-06-12 14:28:00 [32mDEBUG[0;39m http-nio-8080-exec-4] [jdbc.sqltiming] [36m com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT A.garden_dt AS managementDate
+                , A.garden_gb AS gardening
+                , B.plantPic
+                , B.plantName
+                , A.garden_text
+        FROM garden_master A
+        INNER JOIN (
+            SELECT A.plant_seq AS plant_seq
+                , B.odata_image AS plantPic
+                , B.odata_name AS plantName
+            FROM plant_master A
+            LEFT JOIN opendata B
+            ON A.plant_odata_seq = B.odata_seq
+        ) B
+        ON A.garden_plant_seq = B.plant_seq
+        WHERE A.garden_seq = '1'
+        AND DATE(garden_dt) = '31'
+ {executed in 195 msec}[0;39m
+[2024-06-12 14:28:00 [32mINFO [0;39m http-nio-8080-exec-4] [jdbc.resultsettable] [36m
+|----------|----------|---------|----------|------------|
+|garden_dt |garden_gb |plantpic |plantname |garden_text |
+|----------|----------|---------|----------|------------|
+|----------|----------|---------|----------|------------|
+[0;39m
+[2024-06-12 14:29:39 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown initiated...[0;39m
+[2024-06-12 14:29:39 [32mINFO [0;39m SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] [36mHikariPool-1 - Shutdown completed.[0;39m

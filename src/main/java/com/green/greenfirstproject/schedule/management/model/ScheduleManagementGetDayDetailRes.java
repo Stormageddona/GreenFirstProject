@@ -7,9 +7,12 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.sql.Date;
+
 @Getter
 @Setter
 public class ScheduleManagementGetDayDetailRes extends Paging {
+    @Schema(description = "특정 전체 DATE")
     private String managementDate;
     private int gardening;
     private String plantPic;
