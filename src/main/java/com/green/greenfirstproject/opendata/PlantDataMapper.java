@@ -1,6 +1,8 @@
 package com.green.greenfirstproject.opendata;
 
 import com.green.greenfirstproject.opendata.model.PlantData;
+import com.green.greenfirstproject.opendata.model.PlantDataGetReq;
+import com.green.greenfirstproject.opendata.model.PlantDataGetRes;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -10,5 +12,5 @@ public interface PlantDataMapper
 {
     void insertPlantData(List<PlantData> data);
     void deleteAllPlantData();
-    List<PlantData> getPlantData(String plantGnrlNm);
+    List<PlantDataGetRes> getPlantData(PlantDataGetReq p);
 }
