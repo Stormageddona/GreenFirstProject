@@ -12,6 +12,7 @@
         </rollingPolicy>
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <pattern>${LOG_PATTERN}</pattern>
+            <timeZone>Asia/Seoul</timeZone>
         </encoder>
     </appender>
 

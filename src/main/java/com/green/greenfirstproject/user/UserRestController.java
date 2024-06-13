@@ -11,6 +11,8 @@ import com.green.greenfirstproject.user.dto.UserUpdateDto;
 import com.green.greenfirstproject.user.model.User;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
@@ -35,7 +37,7 @@ public class UserRestController {
 
     @PostMapping("login")
     @Operation(summary = "유저 로그인" , description = "유저 로그인을 담당하는 API. FormData 형식으로 보내야함.")
-    @ApiResponse(description =
+    @ApiResponse(content = @Content(schema = @Schema(implementation = ResultDto.class)) ,description =
             "<p>ResponseCode 응답 코드 </p> " +
                     "<p>  1 : 정상 </p> " +
                     "<p> -1 : 실패(의도하지 않은 오류)</p>" +
@@ -51,7 +53,7 @@ public class UserRestController {
 
     @GetMapping("auth/email")
     @Operation(summary = "유저 회원가입 이메일 인증 절차", description = "유저 회원가입을 위한 이메일 체크용 인증 절차.")
-    @ApiResponse(description =
+    @ApiResponse(content = @Content(schema = @Schema(implementation = ResultError.class)) ,description =
             "<p>ResponseCode 응답 코드 </p> " +
             "<p>  1 : 정상 </p> " +
             "<p> -1 : 실패(의도하지 않은 오류)</p>" +
@@ -88,7 +90,7 @@ public class UserRestController {
 
     @GetMapping("auth/email/token")
     @Operation(summary = "이메일 토큰 검증", description = "이메일 토큰 검증")
-    @ApiResponse(description =
+    @ApiResponse(content = @Content(schema = @Schema(implementation = ResultError.class)) ,description =
             "<p>ResponseCode 응답 코드 </p> " +
                     "<p>  1 : 정상 </p> " +
                     "<p> -1 : 실패(의도하지 않은 오류)</p>" +
@@ -113,7 +115,7 @@ public class UserRestController {
 
     @PostMapping("sign_up")
     @Operation(summary = "유저 회원가입", description = "유저 회원가입 API. 링크로 첨부된 Token 값을 같이 보내야함.")
-    @ApiResponse(description =
+    @ApiResponse(content = @Content(schema = @Schema(implementation = ResultError.class)) ,description =
             "<p>ResponseCode 응답 코드 </p> " +
                     "<p>  1 : 정상 </p> " +
                     "<p> -1 : 실패(의도하지 않은 오류)</p>" +
@@ -167,7 +169,7 @@ public class UserRestController {
 
     @DeleteMapping
     @Operation(summary = "유저 회원탈퇴", description = "실제 탈퇴되는것은 아니고, 상태값을 3으로 변경. 스케줄러로 6개월뒤의 데이터를 삭제할 예정")
-    @ApiResponse(description =
+    @ApiResponse(content = @Content(schema = @Schema(implementation = ResultError.class)) ,description =
             "<p>ResponseCode 응답 코드 </p> " +
                     "<p>  1 : 정상 </p> " +
                     "<p> -1 : 실패(의도하지 않은 오류)</p>" +
@@ -190,7 +192,7 @@ public class UserRestController {
 
     @PatchMapping
     @Operation(summary = "유저 정보 수정", description = "")
-    @ApiResponse(description =
+    @ApiResponse(content = @Content(schema = @Schema(implementation = ResultError.class)) ,description =
             "<p>ResponseCode 응답 코드 </p> " +
                     "<p>  1 : 정상 </p> " +
                     "<p> -1 : 실패(의도하지 않은 오류)</p>" +
@@ -221,7 +223,7 @@ public class UserRestController {
 
     @GetMapping("duplicated")
     @Operation(summary = "유저 닉네임, 아이디 중복 확인", description = "중복 확인 메소드.")
-    @ApiResponse(description =
+    @ApiResponse(content = @Content(schema = @Schema(implementation = ResultDto.class)) ,description =
             "<p>ResponseCode 응답 코드 </p> " +
                     "<p>  1 : 정상. 중복된 코드가 없음(false) </p> " +
                     "<p>  2 : 정상. 중복된 코드가 있음(true) </p> " +

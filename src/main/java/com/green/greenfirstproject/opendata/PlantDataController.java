@@ -19,6 +19,7 @@ import static com.green.greenfirstproject.common.GlobalConst.SUCCESS_CODE;
 @RequiredArgsConstructor
 @Tag(name = "식물 검색", description = "식물 공공데이터 Read")
 public class PlantDataController {
+    private final OpenDataWebClientService webClientService;
     private final PlantDataService service;
 
     @GetMapping
@@ -26,5 +27,20 @@ public class PlantDataController {
     public ResultDto<PlantDataGetPage> getPlantData(@ParameterObject @ModelAttribute PlantDataGetReq p) {
         PlantDataGetPage res = service.getPlantData(p);
         return ResultDto.resultDto(SUCCESS_CODE, "검색 완료", res);
+    }
+
+    @GetMapping("manual")
+    @Operation(summary = "공공데이터 수동 업데이트(테스트용)")
+    public Boolean manualPlantData()
+    {
+        try {
+            webClientService.deleteAllPlantData();
+            webClientService.getOpenData();
+
+        } catch (Exception e) {
+            log.error("An error occurred: ", e);
+            return false;
+        }
+        return true ;
     }
 }
