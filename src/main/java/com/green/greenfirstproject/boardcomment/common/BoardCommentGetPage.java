@@ -1,5 +1,6 @@
-package com.green.greenfirstproject.boardcomment.common;
+package com.green.greenfirstproject.boardComment.common;
 
+import com.green.greenfirstproject.boardComment.common.BoardCommentGetRes;
 import lombok.Getter;
 import lombok.Setter;
 
