@@ -1,6 +1,5 @@
 package com.green.greenfirstproject.boardcomment.common;
 
-import com.green.greenfirstproject.common.Paging;
 import lombok.Getter;
 import lombok.Setter;
 
