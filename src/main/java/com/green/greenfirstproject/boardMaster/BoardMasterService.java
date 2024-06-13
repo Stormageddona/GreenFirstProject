@@ -9,8 +9,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-import static com.green.greenfirstproject.common.GlobalConst.PAGING_SIZE;
-
 @Service
 @Slf4j
 @RequiredArgsConstructor
@@ -42,7 +40,7 @@ public class BoardMasterService {
     }
 
     public Pair<BoardGetPage,Integer> getCommunityList(BoardGetReq p) {
-        List<BoardGetRes> res1 = mapper.getCommunityList(p);
+        List<BoardGetResList> res1 = mapper.getCommunityList(p);
         BoardGetPage res2 = new BoardGetPage();
         res2.setList(res1);
         Integer totalElements = mapper.totalCount(p.getKeyword()) ;
@@ -50,8 +48,8 @@ public class BoardMasterService {
         return Pair.of(res2,totalElements);
     }
 
-    public BoardGetRes getCommunityData(long boardSeq) {
-        BoardGetRes res = mapper.getCommunityData(boardSeq);
+    public BoardGetResDetail getCommunityData(long boardSeq) {
+        BoardGetResDetail res = mapper.getCommunityData(boardSeq);
         if(res != null){
             mapper.patchBoardHits(res.getBoardSeq());
         }else {

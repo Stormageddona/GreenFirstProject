@@ -6,18 +6,11 @@ import com.green.greenfirstproject.common.model.CustomException;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import io.swagger.v3.oas.models.security.SecurityScheme;
-import jakarta.annotation.Nullable;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.tuple.Pair;
-import org.apache.ibatis.annotations.Delete;
 import org.springdoc.core.annotations.ParameterObject;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
-
-import java.util.List;
 
 import static com.green.greenfirstproject.common.GlobalConst.*;
 
@@ -87,9 +80,9 @@ public class BoardMasterController {
     @GetMapping("detail")
     @Operation(summary = "게시글 디테일")
     @ApiResponse(description = "1: 성공 -2: 게시글없음 -1 : 실패  ")
-    public ResultDto<BoardGetRes> getCommunityData(@RequestParam(name= "boardSeq") long boardSeq){
+    public ResultDto<BoardGetResDetail> getCommunityData(@RequestParam(name= "boardSeq") long boardSeq){
         try {
-            BoardGetRes list = service.getCommunityData(boardSeq);
+            BoardGetResDetail list = service.getCommunityData(boardSeq);
             return ResultDto.resultDto(SUCCESS_CODE, "게시글 불러오기 성공",list);
         }catch (NullPointerException e) {
             return ResultDto.resultDto1(-2, "게시글이 없습니다");
