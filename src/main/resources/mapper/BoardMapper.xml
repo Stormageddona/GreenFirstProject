@@ -24,8 +24,8 @@
         SELECT
         board_seq AS boardSeq
         ,board_title AS title
-        ,user_nickname AS writerName
         ,input_dt AS inputDt
+        ,user_nickname AS writerName
         ,like_count AS fav
         ,board_hit AS hit
         FROM board_detail_view
@@ -72,8 +72,9 @@
         SELECT
         board_seq AS boardSeq
         ,board_title AS title
-        ,user_nickname AS nickname
+        ,board_text AS contents
         ,input_dt AS inputDt
+        ,user_nickname AS nickname
         ,like_count AS fav
         ,board_hit AS hit
         FROM board_detail_view

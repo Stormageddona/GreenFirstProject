@@ -13,9 +13,9 @@ public interface BoardMasterMapper {
 
     int patchCommunity(BoardUpd p);
 
-    List<BoardGetRes> getCommunityList(BoardGetReq p);
+    List<BoardGetResList> getCommunityList(BoardGetReq p);
 
-    BoardGetRes getCommunityData(long boardSeq);
+    BoardGetResDetail getCommunityData(long boardSeq);
 
     int patchBoardHits(long boardSeq);
 
