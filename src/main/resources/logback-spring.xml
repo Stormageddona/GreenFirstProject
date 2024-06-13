@@ -21,13 +21,23 @@
             <pattern>${LOG_PATTERN}</pattern>
         </encoder>
     </appender>
+    <!-- Define a property from the environment variable -->
+    <springProperty name="osConfig" source="SPRING_PROFILES_ACTIVE"/>
+
+    <!-- Default log level for all environments -->
+    <logger name="jdbc.sqltiming" level="DEBUG"/>
+    <logger name="jdbc.resultsettable" level="DEBUG"/>
+
+    <!-- Conditional log levels based on the environment variable -->
+    <springProfile name="linux">
+        <logger name="jdbc.sqltiming" level="INFO"/>
+        <logger name="jdbc.resultsettable" level="INFO"/>
+    </springProfile>
 
     <logger name="jdbc" level="OFF"/>
     <logger name="jdbc.sqlonly" level="OFF" />
-    <logger name="jdbc.sqltiming" level="DEBUG" />
     <logger name="jdbc.audit" level="OFF" />
     <logger name="jdbc.resultset" level="OFF" />
-    <logger name="jdbc.resultsettable" level="DEBUG" />
     <logger name="jdbc.connection" level="OFF" />
 
     <root level="INFO">
