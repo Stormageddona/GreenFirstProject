@@ -14,8 +14,6 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Objects;
 
 @Component
@@ -31,9 +29,9 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
         Result result = null ;
         UserLoginResponse userLoginResponse = new UserLoginResponse(user) ;
         result = switch (user.getGb()) {
-            case 1 -> ResultDto.builder().Data(userLoginResponse).build();
-            case 2 -> ResultError.builder().code(-3).message("정지된 유저 입니다.").build();
-            case 3 -> ResultError.builder().code(-4).message("탈퇴된 유저 입니다.").build();
+            case 1 -> ResultDto.builder().data(userLoginResponse).build();
+            case 2 -> ResultError.builder().code(-3).msg("정지된 유저 입니다.").build();
+            case 3 -> ResultError.builder().code(-4).msg("탈퇴된 유저 입니다.").build();
             default -> null;
         };
 

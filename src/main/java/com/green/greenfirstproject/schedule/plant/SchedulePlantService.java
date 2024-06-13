@@ -2,6 +2,7 @@ package com.green.greenfirstproject.schedule.plant;
 
 import com.green.greenfirstproject.common.exception.DataNotFoundException;
 import com.green.greenfirstproject.common.page.ResponseDTO;
+import com.green.greenfirstproject.schedule.management.model.ScheduleManagementGetDayRes;
 import com.green.greenfirstproject.schedule.plant.model.*;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

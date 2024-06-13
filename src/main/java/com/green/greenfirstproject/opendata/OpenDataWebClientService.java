@@ -46,10 +46,11 @@ public class OpenDataWebClientService
             try {
                 Map<String, Object> info = mono.block();
 
-                JSONObject elem = new JSONObject(Objects.requireNonNull(info));
 
                 ObjectMapper objectMapper = new ObjectMapper();
-                JsonNode rootNode = objectMapper.readTree(elem.toString());
+                String elem = (objectMapper.writeValueAsString(info));
+
+                JsonNode rootNode = objectMapper.readTree(elem);
                 JsonNode itemsNode = rootNode.path("response").path("body").path("items").path("item");
                 List<PlantData> list = objectMapper.convertValue(
                         itemsNode, objectMapper.getTypeFactory().constructCollectionType(List.class, PlantData.class));

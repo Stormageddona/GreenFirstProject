@@ -8,7 +8,7 @@ import lombok.Data;
 public class UserInsertDto {
     @JsonIgnore
     private Long seq ;
-    @Schema(description = "아이디")
+    @Schema(description = "아이디 (영어 및 숫자만, 4~20자 사이만 허용)")
     private String id ;
     @Schema(description = "패스워드 (영어, 숫자, !@#$%^&*의 특수문자만 통과, 8~20자사이만 통과 ,영어와 숫자가 최소 1개씩 들어가야만 통과)")
     private String pw ;

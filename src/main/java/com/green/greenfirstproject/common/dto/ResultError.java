@@ -13,6 +13,6 @@ public class ResultError implements Result {
     @Builder.Default
     private Integer code = -1;
     @Builder.Default
-    private String message = "에러가 발생했습니다.";
+    private String msg = "에러가 발생했습니다.";
 
 }

@@ -30,7 +30,7 @@ public class LoginServiceForNaver {
     private final UserMapper mapper  ;
 
     private final UserService userService  ;
-    private final WebClient webClient = WebClient.builder().baseUrl("https://openapi.naver.com").build();;
+    private final WebClient webClient = WebClient.builder().baseUrl("https://openapi.naver.com").build();
 
     @Value("${naver.client.id}")
     private String CLIENT_ID  ;
@@ -54,7 +54,7 @@ public class LoginServiceForNaver {
         snsId = "naver_" + snsId ;
         User user = mapper.selectUserById(snsId) ;
 
-        if (user == null) user = userService.socialUserJoin(snsId,3); ;
+        if (user == null) user = userService.socialUserJoin(snsId,3);
 
         return user ;
 

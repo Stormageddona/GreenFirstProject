@@ -1,10 +1,14 @@
 package com.green.greenfirstproject.schedule.management.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.green.greenfirstproject.common.page.Paging;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 
 @Getter

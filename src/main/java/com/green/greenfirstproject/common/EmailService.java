@@ -64,7 +64,7 @@ public class EmailService {
             message.setFrom(new InternetAddress(fromEmail,fromName));
             message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(toEmail));
             message.setSubject(name);
-            message.setText(content);
+            message.setContent(content,"text/html; charset=utf-8");
 
             // 메일 전송
             Transport.send(message);

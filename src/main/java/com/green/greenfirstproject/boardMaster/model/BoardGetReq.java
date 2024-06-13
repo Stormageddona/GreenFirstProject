@@ -1,6 +1,9 @@
 package com.green.greenfirstproject.boardMaster.model;
 
+import com.green.greenfirstproject.common.GlobalConst;
 import com.green.greenfirstproject.common.model.Paging;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 

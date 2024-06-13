@@ -80,9 +80,9 @@ public class BoardMasterController {
     @GetMapping("detail")
     @Operation(summary = "게시글 디테일")
     @ApiResponse(description = "1: 성공 -2: 게시글없음 -1 : 실패  ")
-    public ResultDto<BoardGetRes> getCommunityData(@RequestParam(name= "boardSeq") long boardSeq){
+    public ResultDto<BoardGetResDetail> getCommunityData(@RequestParam(name= "boardSeq") long boardSeq){
         try {
-            BoardGetRes list = service.getCommunityData(boardSeq);
+            BoardGetResDetail list = service.getCommunityData(boardSeq);
             return ResultDto.resultDto(SUCCESS_CODE, "게시글 불러오기 성공",list);
         }catch (NullPointerException e) {
             return ResultDto.resultDto1(-2, "게시글이 없습니다");
