@@ -14,9 +14,8 @@ public class BoardGetResDetail {
     @JsonIgnore
     private  int boardSeq;
 
-    private List<BoardGetResList> list;
+    private List<BoardGetDetailPage> list;
 
-    private String contents;
 
     private Integer totalPage;
     private Integer totalElements;
