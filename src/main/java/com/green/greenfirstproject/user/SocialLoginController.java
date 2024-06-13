@@ -1,7 +1,6 @@
 package com.green.greenfirstproject.user;
 
 import com.green.greenfirstproject.auth.principal.PrincipalUtil;
-import com.green.greenfirstproject.common.dto.Result;
 import com.green.greenfirstproject.common.dto.ResultDto;
 import com.green.greenfirstproject.common.dto.ResultError;
 import com.green.greenfirstproject.user.dto.UserLoginResponse;

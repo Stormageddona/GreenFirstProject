@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.green.greenfirstproject.boardMaster.BoardMasterMapper">
+    <insert id="postCommunity" keyProperty="boardSeq" useGeneratedKeys="true">
+        INSERT INTO board_master
+        SET board_user_seq = #{writerSeq}
+        ,board_title = #{title}
+        ,board_text = #{content}
+    </insert>
+
+    <delete id="deleteCommunity" >
+        DELETE FROM board_master
+        WHERE board_seq = #{boardSeq}
+    </delete>
+
+    <update id="patchCommunity">
+        UPDATE board_master
+        SET board_title = #{title}
+        ,board_text = #{content}
+        WHERE board_seq = #{boardSeq} AND board_user_seq = #{writerSeq}
+    </update>
+    
+    <select id="getCommunityList">
+        SELECT
+        board_seq AS boardSeq
+        ,board_title AS title
+        ,input_dt AS inputDt
+        ,user_nickname AS writerName
+        ,like_count AS fav
+        ,board_hit AS hit
+        FROM board_detail_view
+        <where>
+            <if test="search == 1">
+                TRIM(board_title) LIKE '%${keyword}%'
+            </if>
+            <if test="search == 2">
+                 TRIM(board_text) LIKE '%${keyword}%' OR  TRIM(board_title) LIKE '%${keyword}%'
+            </if>
+            <if test="search == 3">
+                 TRIM(user_nickname) LIKE '%${keyword}%'
+            </if>
+        </where>
+        <if test="order == 1">
+            ORDER BY like_count DESC
+        </if>
+        <if test="order == 2">
+            ORDER BY like_count ASC
+        </if>
+        <if test="order == 3">
+            ORDER BY board_seq DESC
+        </if>
+        LIMIT #{startIdx}, #{size}
+    </select>
+
+    <select id="totalCount" resultType="int">
+        SELECT COUNT(*)
+        FROM board_detail_view
+        <where>
+            <if test="search == 1">
+                TRIM(board_title) LIKE '%${keyword}%'
+            </if>
+            <if test="search == 2">
+                TRIM(board_text) LIKE '%${keyword}%' OR  TRIM(board_title) LIKE '%${keyword}%'
+            </if>
+            <if test="search == 3">
+                TRIM(user_nickname) LIKE '%${keyword}%'
+            </if>
+        </where>
+    </select>
+    
+    <select id="getCommunityData">
+        SELECT
+        board_seq AS boardSeq
+        ,board_title AS title
+        ,board_text AS contents
+        ,input_dt AS inputDt
+        ,user_nickname AS nickname
+        ,like_count AS fav
+        ,board_hit AS hit
+        FROM board_detail_view
+        WHERE board_seq = #{boardSeq}
+    </select>
+
+    <update id="patchBoardHits">
+        UPDATE board_master
+        SET board_hit = board_hit +1
+        WHERE board_seq =#{boardSeq}
+    </update>
+</mapper>

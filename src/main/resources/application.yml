@@ -99,6 +99,11 @@ naver:
     secret: HuZUCY1u1P
   redirect:
     uri: http://localhost:8080/api/auth/client-naver-login
+
+open-data:
+    service-key: itEl6LSiEOPU5ovHAme9%2FmYu1422g4YTMDrPv2Ul%2BGpwLOfnH8Ck7ALiL60wbjB0q1TvGJKlxfo%2FMAOZR6gcpA%3D%3D
+
+
 ---
 
 spring:
