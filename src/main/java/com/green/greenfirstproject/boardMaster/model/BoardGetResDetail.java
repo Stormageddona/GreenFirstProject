@@ -1,6 +1,7 @@
 package com.green.greenfirstproject.boardMaster.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.green.greenfirstproject.boardComment.common.BoardCommentGetPage;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -27,5 +28,7 @@ public class BoardGetResDetail {
     private  int fav;
 
     private int hit;
+
+    private BoardCommentGetPage commentList ;
 
 }

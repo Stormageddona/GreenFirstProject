@@ -19,9 +19,8 @@ public class Paging {
 
     @ConstructorProperties({"page", "size"})
     public Paging(Integer page,Integer size ){
-        System.out.println(size);
-        this.page = page == null ||  page < 1 ? PAGING_LIST : page;
+        this.page = page == null ||  page < 1 ? PAGING_LIST  : page -1;
         this.size = size == null ||  size < 1 ? PAGING_SIZE : size;
-        this.startIdx =this.page;
+        this.startIdx =this.page * this.size;
     }
 }

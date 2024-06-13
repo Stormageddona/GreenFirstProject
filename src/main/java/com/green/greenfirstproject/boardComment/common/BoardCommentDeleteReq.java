@@ -1,4 +1,4 @@
-package com.green.greenfirstproject.boardcomment.common;
+package com.green.greenfirstproject.boardComment.common;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;

@@ -1,21 +1,26 @@
-package com.green.greenfirstproject.boardcomment.common;
+package com.green.greenfirstproject.boardComment.common;
 
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 @Getter
 @Setter
-
-
 public class BoardCommentGetRes {
     private long cmtSeq;
     private long cmtBoardSeq;
-    private long cmtUserSeq;
     private String cmtText;
     private String inputDt;
-    private String updateDt;
-    private String content;
     private long writerSeq;
     private String writerName;
+
+    public void setInputDt(LocalDateTime inputDt)
+    {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        this.inputDt = inputDt.format(formatter);
+
+    }
 }

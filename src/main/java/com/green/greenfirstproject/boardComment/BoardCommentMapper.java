@@ -1,9 +1,6 @@
-package com.green.greenfirstproject.boardcomment;
+package com.green.greenfirstproject.boardComment;
 
-import com.green.greenfirstproject.boardcomment.common.BoardCommentDeleteReq;
-import com.green.greenfirstproject.boardcomment.common.BoardCommentGetRes;
-import com.green.greenfirstproject.boardcomment.common.BoardCommentPatchReq;
-import com.green.greenfirstproject.boardcomment.common.BoardCommentPostReq;
+import com.green.greenfirstproject.boardComment.common.*;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -12,7 +9,8 @@ import java.util.List;
 public interface BoardCommentMapper {
     int delBoardComment(BoardCommentDeleteReq p);
     long postBoardComment(BoardCommentPostReq p);
-    List<BoardCommentGetRes> getBoardComment(long boardSeq);
+    List<BoardCommentGetRes> getBoardComment(BoardCommentGetReq data);
     int patchBoardComment(BoardCommentPatchReq p);
+    long getTotalCount(long boardSeq) ;
 
 }

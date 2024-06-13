@@ -1,6 +1,7 @@
-package com.green.greenfirstproject.boardcomment;
+package com.green.greenfirstproject.boardComment;
 
-import com.green.greenfirstproject.boardcomment.common.*;
+import com.green.greenfirstproject.boardComment.common.*;
+import com.green.greenfirstproject.common.GlobalConst;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -37,9 +38,11 @@ public class BoardCommentService {
         return res;
     }
 
-    public List<BoardCommentGetRes> getBoardComment(long boardSeq) {
-        List<BoardCommentGetRes> list = mapper.getBoardComment(boardSeq);
-        return list;
+    public BoardCommentGetPage getBoardComment(BoardCommentGetReq data) {
+        List<BoardCommentGetRes> list = mapper.getBoardComment(data);
+        long totalElements = mapper.getTotalCount(data.getBoardSeq()) ;
+
+        return new BoardCommentGetPage(list, GlobalConst.COMMENT_PAGING_SIZE, totalElements);
     }
 
 }
