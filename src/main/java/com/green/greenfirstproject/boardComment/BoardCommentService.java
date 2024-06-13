@@ -1,6 +1,7 @@
 package com.green.greenfirstproject.boardComment;
 
 import com.green.greenfirstproject.boardComment.common.*;
+import com.green.greenfirstproject.boardComment.common.BoardCommentGetPage;
 import com.green.greenfirstproject.common.GlobalConst;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
