@@ -3,20 +3,29 @@ package com.green.greenfirstproject.boardMaster.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.time.LocalDate;
 import java.util.List;
 
 @Getter
 @Setter
+@ToString
 public class BoardGetResDetail {
 
-    @JsonIgnore
+
     private  int boardSeq;
 
-    private List<BoardGetDetailPage> list;
+    private String title;
 
+    private String contents;
 
-    private Integer totalPage;
-    private Integer totalElements;
+    private LocalDate inputDt;
+
+    private  String writerName;
+
+    private  int fav;
+
+    private int hit;
+
 }

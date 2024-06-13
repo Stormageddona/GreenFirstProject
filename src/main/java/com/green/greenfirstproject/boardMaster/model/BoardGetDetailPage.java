@@ -5,11 +5,13 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Getter
 @Setter
 @Builder
-public class BoardGetDetailPage {private  int boardSeq;
+public class BoardGetDetailPage {
+    private  int boardSeq;
 
     private String title;
 

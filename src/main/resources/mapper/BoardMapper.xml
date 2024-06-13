@@ -74,7 +74,7 @@
         ,board_title AS title
         ,board_text AS contents
         ,input_dt AS inputDt
-        ,user_nickname AS nickname
+        ,user_nickname AS writerName
         ,like_count AS fav
         ,board_hit AS hit
         FROM board_detail_view

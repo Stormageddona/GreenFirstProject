@@ -16,7 +16,6 @@ public class BoardGetResList {
 
     private String title;
 
-
     private  LocalDate inputDt;
 
     private  String writerName;
