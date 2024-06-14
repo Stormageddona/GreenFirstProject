@@ -9,7 +9,8 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @Builder
-public class BoardGetDetailPage {private  int boardSeq;
+public class BoardGetDetailPage {
+    private  int boardSeq;
 
     private String title;
 

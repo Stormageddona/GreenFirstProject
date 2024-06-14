@@ -10,12 +10,10 @@ import java.util.List;
 @Getter
 @Setter
 public class BoardGetResDetail {
-
     @JsonIgnore
     private  int boardSeq;
 
     private List<BoardGetDetailPage> list;
-
 
     private Integer totalPage;
     private Integer totalElements;
