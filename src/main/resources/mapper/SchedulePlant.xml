@@ -34,9 +34,10 @@
     </delete>
 
     <select id="getSchedulePlantsList">
-        SELECT A.plant_nickname AS plantNickName
+        SELECT  A.plant_seq AS plantSeq
                 , B.odata_image AS plantPic
                 , B.odata_name AS plantName
+                , A.plant_nickname AS plantNickName
         FROM plant_master A
         INNER JOIN opendata B
         ON A.plant_odata_seq = B.odata_seq

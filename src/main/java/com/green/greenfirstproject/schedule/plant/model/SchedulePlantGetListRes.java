@@ -11,6 +11,6 @@ public class SchedulePlantGetListRes {
     private String plantNickName;
     private String plantPic;
     private String plantName;
-
+    private long plantSeq;
     private int isMorePage;
 }
