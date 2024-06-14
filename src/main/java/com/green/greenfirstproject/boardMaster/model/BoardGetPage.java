@@ -14,9 +14,9 @@ public class BoardGetPage {
 
    private List<BoardGetResList> list;
 
-   private String contents;
 
    private Integer totalPage;
+
    private Integer totalElements;
 
 

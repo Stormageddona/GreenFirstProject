@@ -126,7 +126,8 @@ public class UserRestController {
                     "<p> -6 : 토큰 유효기간 초과</p>" +
                     "<p> -7 : 중복된 이메일</p>" +
                     "<p> -8 : 중복된 아이디</p>" +
-                    "<p> -9 : 중복된 닉네임</p>"
+                    "<p> -9 : 중복된 닉네임</p>" +
+                    "<p> -10 : 닉네임 검증 실패</p>"
     )
     public Result postUser(@RequestBody UserInsertDto data)
     {
@@ -143,6 +144,10 @@ public class UserRestController {
         regex = "^(?=.*[A-Za-z])(?=.*[0-9])[A-Za-z0-9!@#$%^&*]{8,20}$" ;
         if (!data.getPw().matches(regex))
             return ResultError.builder().code(-4).msg("비밀번호 검증에 실패하였습니다.").build();
+        //닉네임 검증(영어, 숫자, 한글, 2,10자만 통과
+        regex = "^[A-Za-z0-9가-힣ㄱ-ㅎㅏ-ㅣ]{2,10}$" ;
+        if (!data.getName().matches(regex))
+            return ResultError.builder().code(-10).msg("닉네임 검증에 실패하였습니다.").build();
         //토큰 검증
         try {
             data.setEmail(service.checkEmailToken(data.getToken()));

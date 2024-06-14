@@ -1,5 +1,7 @@
 package com.green.greenfirstproject.boardMaster;
 
+import com.green.greenfirstproject.boardComment.BoardCommentService;
+import com.green.greenfirstproject.boardComment.common.BoardCommentGetReq;
 import com.green.greenfirstproject.boardMaster.model.*;
 import com.green.greenfirstproject.common.ResultDto;
 import com.green.greenfirstproject.common.model.CustomException;
@@ -21,6 +23,7 @@ import static com.green.greenfirstproject.common.GlobalConst.*;
 @Slf4j
 public class BoardMasterController {
     private final BoardMasterService service;
+    private final BoardCommentService commentService;
 
     @PostMapping
     @Operation(summary = "게시글 등록")
@@ -83,6 +86,7 @@ public class BoardMasterController {
     public ResultDto<BoardGetResDetail> getCommunityData(@RequestParam(name= "boardSeq") long boardSeq){
         try {
             BoardGetResDetail list = service.getCommunityData(boardSeq);
+            list.setCommentList(commentService.getBoardComment(new BoardCommentGetReq(boardSeq,1,COMMENT_PAGING_SIZE)));
             return ResultDto.resultDto(SUCCESS_CODE, "게시글 불러오기 성공",list);
         }catch (NullPointerException e) {
             return ResultDto.resultDto1(-2, "게시글이 없습니다");
