@@ -1,5 +1,6 @@
 package com.green.greenfirstproject.schedule.management;
 
+import com.green.greenfirstproject.common.GlobalConst;
 import com.green.greenfirstproject.common.exception.DataNotFoundException;
 import com.green.greenfirstproject.common.page.ResponseDTO;
 import com.green.greenfirstproject.common.page.ResponseDTO2;
@@ -41,8 +42,13 @@ public class ScheduleManagementService {
 
     public ResponseDTO2 selScheduleManagementDay(ScheduleManagementGetDayReq p){
         List<ScheduleManagementGetDayRes> list = mapper.selScheduleManagementDay(p);
+        int hasMorePage = mapper.getTotalElement(p);
         ResponseDTO2 dto = new ResponseDTO2(list, p.getSize(), mapper.getTotalElement(p));
-
+        boolean hasNextPage = (p.getPage() * GlobalConst.MORE_PAGE_SIZE < hasMorePage);
+        for(ScheduleManagementGetDayRes r : list){
+            boolean isMorePaging = (p.getPage() % GlobalConst.MORE_PAGE_SIZE == 0) && hasNextPage;
+            r.setIsMorePaging( isMorePaging ? 1 : 0 );
+        }
         return dto;
     }
 

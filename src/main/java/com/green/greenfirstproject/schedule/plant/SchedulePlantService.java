@@ -40,8 +40,8 @@ public class SchedulePlantService {
         ResponseDTO2 dto = new ResponseDTO2(list, p.getSize(), mapper.getTotal(p));
         boolean hasNextPage = ( p.getPage() * GlobalConst.SIZE_NUM < total);
         for(SchedulePlantGetListRes res : list){
-            boolean inMorePage = (p.getPage() % 5 == 0) && hasNextPage ;
-            res.setIsMorePage( inMorePage ? 1 : 0 );
+            boolean isMorePage = (p.getPage() % 5 == 0) && hasNextPage ;
+            res.setIsMorePage( isMorePage ? 1 : 0 );
         }
 
         return dto;
