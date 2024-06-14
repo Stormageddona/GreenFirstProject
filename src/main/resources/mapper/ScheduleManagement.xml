@@ -46,6 +46,7 @@
         SELECT A.garden_gb AS gardening
                 , B.plantPic
                 , plantName
+                , garden_seq AS gardenSeq
                 , DATE_FORMAT(A.garden_dt, '%Y-%m-%d') AS managementDate
         FROM garden_master A
         INNER JOIN (

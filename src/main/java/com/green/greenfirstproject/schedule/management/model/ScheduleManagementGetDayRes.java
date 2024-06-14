@@ -11,6 +11,7 @@ import java.time.LocalDate;
 @Getter
 @Setter
 public class ScheduleManagementGetDayRes {
+    private long gardenSeq;
     private int gardening;
     private String plantPic;
     private String plantName;
