@@ -2,6 +2,7 @@ package com.green.greenfirstproject.schedule.plant;
 
 import com.green.greenfirstproject.common.exception.DataNotFoundException;
 import com.green.greenfirstproject.common.page.ResponseDTO;
+import com.green.greenfirstproject.common.page.ResponseDTO2;
 import com.green.greenfirstproject.schedule.management.model.ScheduleManagementGetDayRes;
 import com.green.greenfirstproject.schedule.plant.model.*;
 import lombok.RequiredArgsConstructor;
@@ -32,15 +33,12 @@ public class SchedulePlantService {
         if(result == 0) throw new DataNotFoundException();
         return result;
     }
-    public Pair<ResponseDTO, Integer> selSchedulePlantList(SchedulePlantGetListReq p){
+    public ResponseDTO2 selSchedulePlantList(SchedulePlantGetListReq p){
         List<SchedulePlantGetListRes> list = mapper.getSchedulePlantsList(p);
-        ResponseDTO dto = new ResponseDTO();
-        dto.setList(list);
-
-        Integer totalElements = mapper.findPageInfo(p.getUserSeq());
+        ResponseDTO2 dto = new ResponseDTO2(list, p.getSize(), mapper.getTotal(p));
 
 
-        return Pair.of(dto, totalElements);
+        return dto;
     }
     public SchedulePlantGetDetailRes selSchedulePlant(SchedulePlantGetDetailReq p){
         return mapper.getSchedulePlantDetail(p);

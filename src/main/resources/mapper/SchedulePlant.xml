@@ -58,10 +58,16 @@
     </select>
 
     <select id="findPageInfo">
-        SELECT CEIL(COUNT(*) / #{size}) AS totalPage
+        SELECT CEIL(COUNT(*) / 10) AS totalPage
                 , COUNT(*) AS totalElement
         FROM plant_master A
         WHERE plant_user_seq = #{userSeq};
+    </select>
+
+    <select id="getTotal">
+        SELECT COUNT(*) AS totalElement
+        FROM plant_master A
+        WHERE plant_user_seq = #{userSeq}
     </select>
 
 </mapper>

@@ -13,5 +13,6 @@ public interface SchedulePlantMapper {
     List<SchedulePlantGetListRes> getSchedulePlantsList(SchedulePlantGetListReq p);
     SchedulePlantGetDetailRes getSchedulePlantDetail(SchedulePlantGetDetailReq p);
 
-    Integer findPageInfo(long p);
+    Integer findPageInfo(SchedulePlantGetListReq p);
+    int getTotal(SchedulePlantGetListReq p);
 }

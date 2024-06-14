@@ -4,6 +4,7 @@ import com.green.greenfirstproject.common.GlobalConst;
 import com.green.greenfirstproject.common.dto.ResultDto;
 import com.green.greenfirstproject.common.exception.DataNotFoundException;
 import com.green.greenfirstproject.common.page.ResponseDTO;
+import com.green.greenfirstproject.common.page.ResponseDTO2;
 import com.green.greenfirstproject.schedule.plant.model.*;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -86,23 +87,19 @@ public class SchedulePlantController {
 
     @GetMapping("/list")
     @Operation(summary = "식물등록리스트 조회", description = "식물등록관련 ListGet")
-    public ResultDto<ResponseDTO> selSchedulePlantList(@ParameterObject
+    public ResultDto<ResponseDTO2> selSchedulePlantList(@ParameterObject
                                                            @ModelAttribute SchedulePlantGetListReq p) {
         try {
-            Pair<ResponseDTO, Integer> dto = service.selSchedulePlantList(p);
-            ResponseDTO list = dto.getLeft();
-            Integer totalElements = dto.getRight();
-            Integer totalPages = (totalElements + GlobalConst.SIZE_NUM - 1) / GlobalConst.SIZE_NUM;
-            list.setTotalPage(totalPages);
-            list.setTotalElement(totalElements);
-            return ResultDto.<ResponseDTO>builder().
+            ResponseDTO2 dto = service.selSchedulePlantList(p);
+
+            return ResultDto.<ResponseDTO2>builder().
                     code(1).
                     msg(HttpStatus.OK.toString()).
-                    data(list).
+                    data(dto).
                     build();
         } catch (Exception e){
             e.printStackTrace();
-            return ResultDto.<ResponseDTO>builder().code(-1).msg("오류발생").build();
+            return ResultDto.<ResponseDTO2>builder().code(-1).msg("오류발생").build();
         }
     }
 
