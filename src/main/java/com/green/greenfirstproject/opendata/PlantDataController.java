@@ -36,7 +36,6 @@ public class PlantDataController {
         try {
             webClientService.deleteAllPlantData();
             webClientService.getOpenData();
-
         } catch (Exception e) {
             log.error("An error occurred: ", e);
             return false;
