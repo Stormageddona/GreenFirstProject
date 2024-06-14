@@ -1,5 +1,6 @@
 package com.green.greenfirstproject.schedule.plant;
 
+import com.green.greenfirstproject.common.GlobalConst;
 import com.green.greenfirstproject.common.exception.DataNotFoundException;
 import com.green.greenfirstproject.common.page.ResponseDTO;
 import com.green.greenfirstproject.common.page.ResponseDTO2;
@@ -37,6 +38,10 @@ public class SchedulePlantService {
         List<SchedulePlantGetListRes> list = mapper.getSchedulePlantsList(p);
         ResponseDTO2 dto = new ResponseDTO2(list, p.getSize(), mapper.getTotal(p));
 
+        for(SchedulePlantGetListRes res : list){
+            boolean inMorePage = (p.getPage() % 5 == 0) ;
+            res.setIsMorePage( inMorePage ? 1 : 0 );
+        }
 
         return dto;
     }

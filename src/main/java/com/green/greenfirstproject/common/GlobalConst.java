@@ -2,6 +2,7 @@ package com.green.greenfirstproject.common;
 
 public class GlobalConst {
     public final static int COMMENT_PAGING_SIZE = 15;
+    public final static int MORE_PAGE_SIZE = 5 ;
     public final static int FEED_PAGE_ITEM_LEN= 15;
     public final static int COMMENT_SIZE_PER_FEED  = 4;
     public final static int SUCCESS_CODE = 1;
