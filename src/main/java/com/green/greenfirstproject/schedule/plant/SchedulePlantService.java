@@ -36,10 +36,11 @@ public class SchedulePlantService {
     }
     public ResponseDTO2 selSchedulePlantList(SchedulePlantGetListReq p){
         List<SchedulePlantGetListRes> list = mapper.getSchedulePlantsList(p);
+        int total = mapper.getTotal(p);
         ResponseDTO2 dto = new ResponseDTO2(list, p.getSize(), mapper.getTotal(p));
-
+        boolean hasNextPage = ( p.getPage() * GlobalConst.SIZE_NUM < total);
         for(SchedulePlantGetListRes res : list){
-            boolean inMorePage = (p.getPage() % 5 == 0) ;
+            boolean inMorePage = (p.getPage() % 5 == 0) && hasNextPage ;
             res.setIsMorePage( inMorePage ? 1 : 0 );
         }
 
