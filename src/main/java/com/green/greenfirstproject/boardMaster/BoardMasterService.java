@@ -43,7 +43,7 @@ public class BoardMasterService {
         List<BoardGetResList> res1 = mapper.getCommunityList(p);
         BoardGetPage res2 = new BoardGetPage();
         res2.setList(res1);
-        Integer totalElements = mapper.totalCount(p.getKeyword()) ;
+        Integer totalElements = mapper.totalCount(p) ;
 
         return Pair.of(res2,totalElements);
     }
