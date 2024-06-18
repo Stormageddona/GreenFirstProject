@@ -30,6 +30,8 @@
         SELECT garden_dt AS managementDate
                 , garden_gb AS gardening
         FROM garden_master AS gm1
+        INNER JOIN plant_master A
+        ON gm1.garden_plant_seq = A.plant_seq
         WHERE YEAR(garden_dt) = YEAR(STR_TO_DATE(#{managementDate}, '%Y%m%d'))
         AND MONTH(garden_dt) = MONTH(STR_TO_DATE(#{managementDate}, '%Y%m%d'))
         AND garden_dt = (
@@ -38,6 +40,7 @@
             WHERE gm2.garden_seq = gm1.garden_seq
             AND DATE(gm2.garden_dt) = DATE(gm1.garden_dt)
         )
+        AND A.plant_user_seq = #{userSeq}
         GROUP BY garden_dt
         ORDER BY garden_dt;
     </select>
@@ -45,12 +48,13 @@
     <select id="selScheduleManagementDay">
         SELECT A.garden_gb AS gardening
                 , B.plantPic
+                , B.plantSeq
                 , plantName
                 , garden_seq AS gardenSeq
                 , DATE_FORMAT(A.garden_dt, '%Y-%m-%d') AS managementDate
         FROM garden_master A
         INNER JOIN (
-            SELECT A.plant_seq AS plant_seq
+            SELECT A.plant_seq AS plantSeq
                     , B.odata_image AS plantPic
                     , B.odata_name AS plantName
                     , A.plant_user_seq AS userSeq
@@ -58,7 +62,7 @@
             LEFT JOIN opendata B
             ON A.plant_odata_seq = B.odata_seq
         ) B
-        ON A.garden_plant_seq = B.plant_seq
+        ON A.garden_plant_seq = B.plantSeq
         WHERE DATE(garden_dt) = #{managementDate}
         AND B.userSeq = #{userSeq}
         ORDER BY A.garden_dt
