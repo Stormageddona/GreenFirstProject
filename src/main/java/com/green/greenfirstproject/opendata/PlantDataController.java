@@ -4,6 +4,7 @@ import com.green.greenfirstproject.common.ResultDto;
 import com.green.greenfirstproject.opendata.model.PlantDataGetPage;
 import com.green.greenfirstproject.opendata.model.PlantDataGetReq;
 import com.green.greenfirstproject.opendata.model.PlantDataGetRes;
+import io.swagger.v3.oas.annotations.Hidden;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
@@ -29,17 +30,18 @@ public class PlantDataController {
         return ResultDto.resultDto(SUCCESS_CODE, "검색 완료", res);
     }
 
-    @GetMapping("manual")
-    @Operation(summary = "공공데이터 수동 업데이트(테스트용)")
-    public Boolean manualPlantData()
-    {
-        try {
-            webClientService.deleteAllPlantData();
-            webClientService.getOpenData();
-        } catch (Exception e) {
-            log.error("An error occurred: ", e);
-            return false;
-        }
-        return true ;
-    }
+//    @GetMapping("manual")
+//    @Operation(summary = "공공데이터 백엔드 수동 업데이트(누르지 마세요.)")
+//    public Boolean manualPlantData()
+//    {
+//        log.info("수동 업데이트 실행");
+//        try {
+//            webClientService.deleteAllPlantData();
+//            webClientService.getOpenData();
+//        } catch (Exception e) {
+//            log.error("An error occurred: ", e);
+//            return false;
+//        }
+//        return true ;
+//    }
 }

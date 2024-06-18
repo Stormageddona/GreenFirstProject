@@ -195,6 +195,17 @@ public class UserRestController {
         return ResultDto.builder().build();
     }
 
+//    @GetMapping
+//    @Operation(summary = "유저 정보 패스워드 확인")
+//    @ApiResponse(content = @Content(schema = @Schema(implementation = ResultDto.class)) ,description =
+//            "<p>ResponseCode 응답 코드 </p> " +
+//                    "<p>  1 : 정상 </p> " +
+//                    "<p> -1 : 실패(의도하지 않은 오류)</p>" +
+//                    "<p> -2 : 세션 체크 실패(로그인 정보 없음)</p>" +
+//                    "<p> -3 : 중복된 닉네임</p>"
+//    )
+//    public Result passwordCheck
+//
     @PatchMapping
     @Operation(summary = "유저 정보 수정", description = "")
     @ApiResponse(content = @Content(schema = @Schema(implementation = ResultError.class)) ,description =
@@ -247,5 +258,7 @@ public class UserRestController {
             return ResultError.builder().build();
         }
     }
+
+
 
 }
