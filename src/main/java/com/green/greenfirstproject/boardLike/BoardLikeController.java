@@ -18,7 +18,7 @@ import static com.green.greenfirstproject.common.GlobalConst.SUCCESS_CODE;
 
 @RequiredArgsConstructor
 @Slf4j
-@Tag(name = "피드 좋아요 기능 ")
+@Tag(name = "게시글 좋아요 관리", description = "게시글 좋아요 CRUD")
 @RequestMapping("api/community/like")
 @RestController
 public class BoardLikeController {

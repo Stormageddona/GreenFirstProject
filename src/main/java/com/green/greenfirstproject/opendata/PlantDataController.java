@@ -18,7 +18,7 @@ import static com.green.greenfirstproject.common.GlobalConst.SUCCESS_CODE;
 @RestController
 @RequestMapping("api/opendata/")
 @RequiredArgsConstructor
-@Tag(name = "식물 검색", description = "식물 공공데이터 Read")
+@Tag(name = "식물검색", description = "식물 공공데이터 Read")
 public class PlantDataController {
     private final OpenDataWebClientService webClientService;
     private final PlantDataService service;

@@ -73,7 +73,7 @@
                 , A.garden_gb AS gardening
                 , B.plantPic
                 , B.plantName
-                , A.garden_text
+                , A.garden_text AS content
         FROM garden_master A
         INNER JOIN (
             SELECT A.plant_seq AS plant_seq

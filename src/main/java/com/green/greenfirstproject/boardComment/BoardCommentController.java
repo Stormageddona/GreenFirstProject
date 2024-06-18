@@ -19,7 +19,7 @@ import static com.green.greenfirstproject.common.GlobalConst.SUCCESS_CODE;
 @AllArgsConstructor
 @RestController
 @RequestMapping("api/community/comment")
-@Tag(name = "댓글 컨트롤러")
+@Tag(name = "커뮤니티 댓글 관리", description = "커뮤니티 댓글 CRUD")
 public class BoardCommentController {
     private final BoardCommentService service;
 

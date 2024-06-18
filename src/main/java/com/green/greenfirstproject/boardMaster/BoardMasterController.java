@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 import static com.green.greenfirstproject.common.GlobalConst.*;
 
 @RestController
-@Tag(name = "커뮤기능")
+@Tag(name = "커뮤니티 관리", description = "커뮤니티관련 CRUD")
 @RequestMapping("api/community/")
 @RequiredArgsConstructor
 @Slf4j

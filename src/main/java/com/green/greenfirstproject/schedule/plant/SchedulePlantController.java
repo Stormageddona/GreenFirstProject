@@ -21,12 +21,12 @@ import java.util.List;
 @Slf4j
 @RequiredArgsConstructor
 @RequestMapping("api/schedule/plant")
-@Tag(name = "식물등록관련", description = "식물등록관련 CRUD")
+@Tag(name = "식물관리", description = "식물등록관련 CRUD")
 public class SchedulePlantController {
     private final SchedulePlantService service;
 
     @PostMapping
-    @Operation(summary = "식물등록", description = "식물등록관련 Post")
+    @Operation(summary = "식물 등록", description = "식물등록관련 Post")
     public ResultDto<Integer> insSchedulePlant(@RequestBody SchedulePlantPostReq p){
         try {
             int result = service.insSchedule(p);
@@ -46,7 +46,7 @@ public class SchedulePlantController {
     }
 
     @PatchMapping
-    @Operation(summary = "식물등록 수정", description = "식물등록관련 Patch")
+    @Operation(summary = "식물 등록 수정", description = "식물등록관련 Patch")
     public ResultDto<Integer> updSchedulePlant(@RequestBody SchedulePlantPatchReq p){
         try {
             int result = service.updateSchedule(p);
@@ -66,7 +66,7 @@ public class SchedulePlantController {
 
     }
     @DeleteMapping
-    @Operation(summary = "식물등록 삭제", description = "식물등록관련 Delete")
+    @Operation(summary = "식물 등록 삭제", description = "식물등록관련 Delete")
     public ResultDto<Integer> deleteSchedulePlant(@ParameterObject @ModelAttribute SchedulePlantDeleteReq p){
         try {
             int result = service.deleteSchedule(p);

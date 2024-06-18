@@ -27,7 +27,7 @@ import java.util.concurrent.TimeoutException;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("api/user")
-@Tag(name = "유저 정보 컨트롤러")
+@Tag(name = "유저 관리")
 public class UserRestController {
 
     private final UserService service;
