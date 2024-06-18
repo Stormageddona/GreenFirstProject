@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메일인증 페이지</title>
+    <link rel="stylesheet" href="./css/common/reset.css" />
+    <link rel="stylesheet" href="./css/common/common.css" />
+    <link rel="stylesheet" href="./css/register.css" />
+    <script src="./js/register.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="inner">
+        <header>
+          <button class="back-btn"><</button>
+          <!-- 뒤로가기 버튼 클릭시 로그인 화면으로 이동 -->
+          <h2>회원가입</h2>
+          <hr />
+        </header>
+
+        <main>
+          <div class="register">
+            <div class="register-wrap">
+              <label for="useremail">이메일</label>
+              <form>
+                <input
+                  type="email"
+                  id="useremail"
+                  name="email"
+                  required
+                  placeholder="메일 주소를 입력해주세요."
+                />
+                <input type="submit" value="전송" class="send-btn" />
+              </form>
+              <p class="prompt">발송된 메일에서 링크를 클릭해주세요.</p>
+              <!-- 메일 전송 후 나타날 것 -->
+            </div>
+          </div>
+        </main>
+
+        <footer class="footer"></footer>
+      </div>
+    </div>
+  </body>
+</html>

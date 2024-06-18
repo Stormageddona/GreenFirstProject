@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>커뮤니티 글쓰기</title>
+    <link rel="stylesheet" href="./css/common/reset.css" />
+    <link rel="stylesheet" href="./css/common/common.css" />
+    <link rel="stylesheet" href="./css/addpost.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="inner">
+        <header class="header"></header>
+        <main>
+          <form class="post-add" action="글을_저장할_서버_주소" method="POST">
+            <header>
+              <button type="button" onclick="history.back()">&lt;</button>
+              <h2>글쓰기</h2>
+              <div></div>
+            </header>
+            <div class="main">
+              <div class="category">
+                <label for="category">카테고리:</label>
+                <select id="category" name="category">
+                  <option value="자유">자유</option>
+                  <option value="질문">질문</option>
+                  <option value="정보">정보</option>
+                </select>
+              </div>
+              <input
+                class="title"
+                type="text"
+                name="title"
+                placeholder="제목(필수) - 식물명을 언급하면 인기가 많아요."
+                required
+              />
+              <textarea
+                class="content"
+                name="content"
+                placeholder="본문(필수)"
+                required
+              ></textarea>
+            </div>
+            <button type="submit">저장</button>
+          </form>
+        </main>
+        <footer class="footer"></footer>
+      </div>
+    </div>
+  </body>
+</html>
