@@ -45,7 +45,7 @@ public class ScheduleManagementController {
 
     @DeleteMapping
     @Operation(summary = "식물일정등록 삭제", description = "식물일정등록 Delete")
-    public ResultDto<Integer> delScheduleManagement(@ModelAttribute ScheduleManagementDeleteReq p) {
+    public ResultDto<Integer> delScheduleManagement(@ParameterObject @ModelAttribute ScheduleManagementDeleteReq p) {
         try {
             int result = service.delScheduleManagement(p);
             return ResultDto.<Integer>builder().

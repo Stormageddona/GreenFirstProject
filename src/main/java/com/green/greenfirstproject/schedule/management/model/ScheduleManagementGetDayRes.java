@@ -13,6 +13,7 @@ import java.time.LocalDate;
 public class ScheduleManagementGetDayRes {
     private long gardenSeq;
     private int gardening;
+    private long plantSeq;
     private String plantPic;
     private String plantName;
     @Schema(description = "특정 전체 DATE")

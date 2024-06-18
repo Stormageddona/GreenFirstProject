@@ -35,7 +35,10 @@ public class SchedulePlantService {
         return result;
     }
     public ResponseDTO2 selSchedulePlantList(SchedulePlantGetListReq p){
+        System.out.println("Request Parameters: " + p.toString());
         List<SchedulePlantGetListRes> list = mapper.getSchedulePlantsList(p);
+        System.out.println("SQL Query Result: " + list);
+
         int total = mapper.getTotal(p);
         ResponseDTO2 dto = new ResponseDTO2(list, p.getSize(), mapper.getTotal(p));
         boolean hasNextPage = ( p.getPage() * GlobalConst.SIZE_NUM < total);

@@ -8,7 +8,7 @@ import java.time.LocalDate;
 
 @Data
 public class ScheduleManagementGetMonthReq {
-    private long plantManagementSeq;
+    private long userSeq;
     @Schema(description = "해당 년월일")
     private String managementDate;
 }
