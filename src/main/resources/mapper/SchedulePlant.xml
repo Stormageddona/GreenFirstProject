@@ -39,7 +39,7 @@
                 , B.odata_name AS plantName
                 , A.plant_nickname AS plantNickName
         FROM plant_master A
-        INNER JOIN opendata B
+        LEFT JOIN opendata B
         ON A.plant_odata_seq = B.odata_seq
         WHERE plant_user_seq = #{userSeq}
         ORDER BY A.plant_seq
@@ -52,7 +52,7 @@
                 , B.odata_name AS plantName
                 , A.plant_etc AS etc
         FROM plant_master A
-        INNER JOIN opendata B
+        LEFT JOIN opendata B
         ON A.plant_odata_seq = B.odata_seq
         WHERE A.plant_user_seq = #{userSeq}
         AND A.plant_seq = #{plantSeq}
