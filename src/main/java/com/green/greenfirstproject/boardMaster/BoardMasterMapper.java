@@ -2,6 +2,7 @@ package com.green.greenfirstproject.boardMaster;
 
 import com.green.greenfirstproject.boardMaster.model.*;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -20,6 +21,9 @@ public interface BoardMasterMapper {
     int patchBoardHits(long boardSeq);
 
     Integer totalCount(BoardGetReq keyword);
+
+
+
 
 //    List<BoardGetRes> getCommunityListTitle(BoardGetReq p);
 //

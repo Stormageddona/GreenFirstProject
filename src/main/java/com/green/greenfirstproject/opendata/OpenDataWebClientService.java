@@ -33,7 +33,7 @@ public class OpenDataWebClientService
         while (true)
         {
             Mono<Map<String, Object>> mono = webClient.get()
-                    .uri("http://openapi.nature.go.kr/openapi/service/rest/PlantService/plntIlstrSearch" +
+                    .uri("openapi/service/rest/PlantService/plntIlstrSearch" +
                             "?serviceKey=" + serviceKey +
                             "&st=1" +
                             "&numOfRows=300" +

@@ -57,13 +57,13 @@
         FROM board_detail_view
         <where>
             <if test="search == 1">
-                TRIM(board_title) LIKE '%${keyword}%'
+                TRIM(board_title) LIKE CONCAT('%', #{keyword}, '%')
             </if>
             <if test="search == 2">
-                TRIM(board_text) LIKE '%${keyword}%' OR  TRIM(board_title) LIKE '%${keyword}%'
+                (TRIM(board_text) LIKE CONCAT('%', #{keyword}, '%') OR TRIM(board_title) LIKE CONCAT('%', #{keyword}, '%'))
             </if>
             <if test="search == 3">
-                TRIM(user_nickname) LIKE '%${keyword}%'
+                TRIM(user_nickname) LIKE CONCAT('%', #{keyword}, '%')
             </if>
         </where>
     </select>

@@ -39,15 +39,14 @@ public class BoardMasterService {
         return res;
     }
 
-    public Pair<BoardGetPage, Integer> getCommunityList(BoardGetReq p) {
+    public Pair<BoardGetPage,Integer> getCommunityList(BoardGetReq p) {
         List<BoardGetResList> res1 = mapper.getCommunityList(p);
         BoardGetPage res2 = new BoardGetPage();
         res2.setList(res1);
-        Integer totalElements = mapper.totalCount(p);  // p 객체 전체를 전달
+        Integer totalElements = mapper.totalCount(p) ;
 
-        return Pair.of(res2, totalElements);
+        return Pair.of(res2,totalElements);
     }
-
 
     public BoardGetResDetail getCommunityData(long boardSeq) {
         BoardGetResDetail res = mapper.getCommunityData(boardSeq);
