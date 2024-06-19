@@ -4,12 +4,14 @@ spring:
     view:
       prefix: /WEB-INF/views/
       suffix: .jsp
+  profiles:
+    active: ${ENV_PROFILE:default}
 #
   application:
     name: GreengramVer3
   datasource:
     driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
-    url: jdbc:log4jdbc:mariadb://34.70.113.56:3306/greenfirst
+    url: jdbc:log4jdbc:mariadb://localhost:3306/greenfirst
     username: root
     password: green502
   servlet:
@@ -104,12 +106,5 @@ open-data:
     service-key: itEl6LSiEOPU5ovHAme9%2FmYu1422g4YTMDrPv2Ul%2BGpwLOfnH8Ck7ALiL60wbjB0q1TvGJKlxfo%2FMAOZR6gcpA%3D%3D
 
 
----
 
-spring:
-  config:
-    activate:
-      on-profile: test
 
-file:
-  directory: D:\Students\FirstProject\BackEnd\media\greengramver3\

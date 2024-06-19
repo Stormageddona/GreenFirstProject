@@ -23,16 +23,19 @@
     </appender>
     <!-- Define a property from the environment variable -->
     <springProperty name="osConfig" source="SPRING_PROFILES_ACTIVE"/>
-
-    <!-- Default log level for all environments -->
-    <logger name="jdbc.sqltiming" level="DEBUG"/>
-    <logger name="jdbc.resultsettable" level="DEBUG"/>
-
     <!-- Conditional log levels based on the environment variable -->
-    <springProfile name="linux">
-        <logger name="jdbc.sqltiming" level="INFO"/>
-        <logger name="jdbc.resultsettable" level="INFO"/>
+
+    <springProfile name="default">
+        <logger name="jdbc.sqltiming" level="OFF"/>
+        <logger name="jdbc.resultsettable" level="OFF"/>
     </springProfile>
+    <!-- Default log level for all environments -->
+    <springProfile name="windows">
+        <logger name="jdbc.sqltiming" level="DEBUG"/>
+        <logger name="jdbc.resultsettable" level="DEBUG"/>
+    </springProfile>
+
+
 
     <logger name="jdbc" level="OFF"/>
     <logger name="jdbc.sqlonly" level="OFF" />

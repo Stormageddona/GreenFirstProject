@@ -1,0 +1,3 @@
+spring:
+  datasource:
+    url: jdbc:log4jdbc:mariadb://localhost:3306/greenfirst

@@ -69,7 +69,7 @@ public class BoardMasterController {
     public ResultDto<BoardGetPage>getCommunityList(@ParameterObject @ModelAttribute BoardGetReq p){
         try {
             //order 값 벗어날시 강제로 3 으로 설정
-            if (p.getOrder() < 1 || p.getOrder() > 3) {p.setOrder(3);}
+            if (p.getOrder() == null || p.getOrder() < 1 || p.getOrder() > 3) {p.setOrder(3);}
             Pair<BoardGetPage,Integer> data = service.getCommunityList(p);
             BoardGetPage list = data.getLeft() ;
             Integer totalElements = data.getRight();

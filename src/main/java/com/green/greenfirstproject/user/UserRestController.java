@@ -213,7 +213,8 @@ public class UserRestController {
                     "<p>  1 : 정상 </p> " +
                     "<p> -1 : 실패(의도하지 않은 오류)</p>" +
                     "<p> -2 : 세션 체크 실패(로그인 정보 없음)</p>" +
-                    "<p> -3 : 중복된 닉네임</p>"
+                    "<p> -3 : 중복된 닉네임</p>" +
+                    "<p> -4 : 비밀번호 확인 실패</p>"
     )
     public Result patchUser(@RequestBody UserUpdateDto data)
     {
@@ -225,7 +226,7 @@ public class UserRestController {
 
         try {
             if(data.getPw() != null)
-                if (!data.getPw().equals(data.getPwCheck())) return ResultError.builder().code(-3).msg("비밀번호 확인이 실패하였습니다.").build();
+                if (!data.getPw().equals(data.getPwCheck())) return ResultError.builder().code(-4).msg("비밀번호 확인이 실패하였습니다.").build();
 
             service.updateUser(user,data);
         } catch (Exception e) {
@@ -257,6 +258,18 @@ public class UserRestController {
             log.error("An error occurred: ", e);
             return ResultError.builder().build();
         }
+    }
+
+    @GetMapping("logout")
+    @Operation(summary = "유저 로그아웃", description = "백엔드 유저 정보 소각")
+    @ApiResponse(content = @Content(schema = @Schema(implementation = ResultDto.class)) ,description =
+            "<p>ResponseCode 응답 코드 </p> " +
+                    "<p>  1 : 정상 </p> " +
+                    "<p> -1 : 실패(의도하지 않은 오류)</p>"
+    )
+    public Result logout()
+    {
+        return null ;
     }
 
 

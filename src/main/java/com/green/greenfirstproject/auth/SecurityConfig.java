@@ -7,6 +7,7 @@ import com.green.greenfirstproject.auth.principal.PrincipalOauthDetailService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
@@ -16,6 +17,7 @@ import org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest;
 import org.springframework.security.oauth2.client.userinfo.OAuth2UserService;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.logout.HttpStatusReturningLogoutSuccessHandler;
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 
@@ -53,12 +55,14 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(authorize -> authorize
 //                        .requestMatchers("/swagger").hasAnyRole("ADMIN","USER")
-                        .requestMatchers("/**").permitAll()
-                        .anyRequest().hasAnyRole("USER", "ADMIN")
+                        .requestMatchers("/notice/**").authenticated()
+                        .requestMatchers("/reactCalendar/**").authenticated()
+                        .requestMatchers("/plantResisterList/**").authenticated()
+                        .anyRequest().permitAll()
                 )
                 .formLogin(
                         login -> login
-                        .loginPage("/login")
+                        .loginPage("/")
                         .loginProcessingUrl("/api/user/login")
                         .usernameParameter("id")
                         .passwordParameter("pwd")
@@ -78,9 +82,9 @@ public class SecurityConfig {
                         .tokenRepository(tokenRepository())
                 )
                 .logout(logout -> logout
-                        .logoutUrl("/logout")
-                        .logoutSuccessUrl("/login")
+                        .logoutUrl("/api/user/logout")
                         .invalidateHttpSession(true)
+                        .logoutSuccessHandler(new HttpStatusReturningLogoutSuccessHandler(HttpStatus.OK))
                 );
         return http.build();
 
