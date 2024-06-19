@@ -12,6 +12,7 @@ import static com.green.greenfirstproject.common.GlobalConst.PAGING_SIZE;
 @Getter
 @Setter
 public class Paging {
+    @JsonIgnore
     private Integer size;
     private Integer page;
     @JsonIgnore

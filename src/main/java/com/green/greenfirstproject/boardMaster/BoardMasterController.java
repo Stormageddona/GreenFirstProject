@@ -68,6 +68,8 @@ public class BoardMasterController {
     @ApiResponse(description = "1: 성공 -1 : 실패  ")
     public ResultDto<BoardGetPage>getCommunityList(@ParameterObject @ModelAttribute BoardGetReq p){
         try {
+            //order 값 벗어날시 강제로 3 으로 설정
+            if (p.getOrder() < 1 || p.getOrder() > 3) {p.setOrder(3);}
             Pair<BoardGetPage,Integer> data = service.getCommunityList(p);
             BoardGetPage list = data.getLeft() ;
             Integer totalElements = data.getRight();
