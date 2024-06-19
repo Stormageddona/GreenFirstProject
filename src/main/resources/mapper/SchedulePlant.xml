@@ -42,7 +42,7 @@
         LEFT JOIN opendata B
         ON A.plant_odata_seq = B.odata_seq
         WHERE plant_user_seq = #{userSeq}
-        ORDER BY A.plant_seq
+        ORDER BY A.plant_seq DESC
         LIMIT #{startIdx}, #{size}
     </select>
 
