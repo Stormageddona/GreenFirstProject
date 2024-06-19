@@ -42,7 +42,7 @@
         )
         AND A.plant_user_seq = #{userSeq}
         GROUP BY garden_dt
-        ORDER BY garden_dt;
+        ORDER BY garden_dt DESC ;
     </select>
 
     <select id="selScheduleManagementDay">
@@ -65,7 +65,7 @@
         ON A.garden_plant_seq = B.plantSeq
         WHERE DATE(garden_dt) = #{managementDate}
         AND B.userSeq = #{userSeq}
-        ORDER BY A.garden_dt
+        ORDER BY A.garden_seq DESC
     </select>
 
     <select id="selScheduleManagementDetail">
