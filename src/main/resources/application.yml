@@ -11,9 +11,9 @@ spring:
     name: GreengramVer3
   datasource:
     driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
-    url: jdbc:log4jdbc:mariadb://localhost:3306/greenfirst
-    username: root
-    password: green502
+    url: ${DEFAULT.DB.URL}
+    username: ${DEFAULT.DB.USERNAME}
+    password: ${DEFAULT.DB.PASSWORD}
   servlet:
     multipart:
       max-file-size: 5MB
@@ -23,21 +23,21 @@ spring:
       client:
         registration:
           google:
-            client-id: 873909366016-aj06hqodpd0co5f520qo6knns44j6i4b.apps.googleusercontent.com
-            client-secret: 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
+            client-id: ${GOOGLE.CLIENT_ID}
+            client-secret: ${GOOGLE.CLIENT_SECRET}
             redirect-uri: "http://localhost:8080/api/user/social"
             scope:
               - email
           naver:
-            client-id: o0cYXLLCqN1s_eXjOmc7
-            client-secret: HuZUCY1u1P
+            client-id: ${NAVER.CLIENT_ID}
+            client-secret: ${NAVER.CLIENT_SECRET}
             scope:
               - email
             client-name: Naver
             authorization-grant-type: authorization_code
             redirect-uri: http%3A%2F%2Flocalhost%3A8080%2Fapi%2Fuser%2Fsocial
           kakao:
-            client-id: e6860ebb151f4e90a443a315755febab
+            client-id: ${KAKAO.CLIENT_ID}
             client-secret:
             scope:
               - id
@@ -78,32 +78,31 @@ page:
   default-size : 10
 
 email:
-  host: smtp.gmail.com
-  port: 587
-  username: mailtestgyb
-  password: kzbczatbpdekyjkv
+  host: ${MAIL.HOST}
+  port: ${MAIL.PORT}
+  username: ${MAIL.USERNAME}
+  password: ${MAIL.PASSWORD}
 
 google:
   client:
-    id: 873909366016-aj06hqodpd0co5f520qo6knns44j6i4b.apps.googleusercontent.com
-    secret: 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
+    id: ${GOOGLE.CLIENT_ID}
+    secret: ${GOOGLE.CLIENT_SECRET}
   redirect:
     uri: http://localhost:8080/api/auth/client-google-login
 kakao:
   client:
-    id: e6860ebb151f4e90a443a315755febab
-#    secret: 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
+    id: ${KAKAO.CLIENT_ID}
   redirect:
     uri: http://localhost:8080/api/auth/client-kakao-login
 naver:
   client:
-    id: o0cYXLLCqN1s_eXjOmc7
-    secret: HuZUCY1u1P
+    id: ${NAVER.CLIENT_ID}
+    secret: ${NAVER.CLIENT_SECRET}
   redirect:
     uri: http://localhost:8080/api/auth/client-naver-login
 
 open-data:
-    service-key: itEl6LSiEOPU5ovHAme9%2FmYu1422g4YTMDrPv2Ul%2BGpwLOfnH8Ck7ALiL60wbjB0q1TvGJKlxfo%2FMAOZR6gcpA%3D%3D
+    service-key: ${OPENDATA.SERVICE_KEY}
 
 
 

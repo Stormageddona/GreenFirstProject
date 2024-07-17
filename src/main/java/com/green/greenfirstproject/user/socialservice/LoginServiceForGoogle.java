@@ -42,6 +42,7 @@ public class LoginServiceForGoogle {
     public static String REDIRECT_URL = "http://localhost:8080/api/auth/google" ;
 
 
+    //컨트롤러에서 받는부분
     public User clientGoogleOauth(String code) throws Exception {
 
 		if (code == null) return null;
@@ -59,6 +60,7 @@ public class LoginServiceForGoogle {
 
     }
 
+    //토큰을 받는 부분
     public String getToken(String code) throws Exception {
         // 인가코드로 토큰받기
         String host = "https://oauth2.googleapis.com/token";
