@@ -12,7 +12,7 @@ public class SpringScheduledConfig
 
     private final OpenDataWebClientService service ;
 
-    @Scheduled(cron = "0 0 10 * * ?")
+    @Scheduled(cron = "0 0 3 * * ?")
     public void getOpenData()
     {
         System.out.println("call Delete OpenData");
