@@ -1,19 +1,21 @@
 spring:
-#  테스트
+  config:
+    #optional: .env 파일이 없어도 컴파일 에러가 발생 X
+    #file: 파일을 import하겠다
+    #.env: 파일명
+    import: optional:file:.env
   mvc:
     view:
       prefix: /WEB-INF/views/
       suffix: .jsp
-  profiles:
-    active: ${ENV_PROFILE:default}
 #
   application:
-    name: GreengramVer3
+    name: GreenFirstProject
   datasource:
-    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    driver-class-name: org.mariadb.jdbc.Driver
     url: ${DEFAULT.DB.URL}
-    username: ${DEFAULT.DB.USERNAME}
-    password: ${DEFAULT.DB.PASSWORD}
+    username: ${DB.USERNAME}
+    password: ${DB.PASSWORD}
   servlet:
     multipart:
       max-file-size: 5MB
@@ -82,6 +84,7 @@ email:
   port: ${MAIL.PORT}
   username: ${MAIL.USERNAME}
   password: ${MAIL.PASSWORD}
+  credentials: ${DEFAULT.CREDENTIALS.PATH}
 
 google:
   client:
@@ -104,6 +107,17 @@ naver:
 open-data:
     service-key: ${OPENDATA.SERVICE_KEY}
 
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+  datasource:
+    url: ${PROD.DB.URL}
+email:
+  credentials: ${PROD.CREDENTIALS.PATH}
 
 
 

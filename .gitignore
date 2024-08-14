@@ -6,6 +6,7 @@ build/
 !**/src/test/**/build/
 logs/
 .env
+src/main/resources/credentials.json
 
 ### STS ###
 .apt_generated

@@ -1,6 +1,8 @@
+
+
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '3.2.6'
+    id 'org.springframework.boot' version '3.3.1'
     id 'io.spring.dependency-management' version '1.1.5'
 }
 
@@ -8,7 +10,9 @@ group = 'com.green'
 version = '0.0.1-SNAPSHOT'
 
 java {
-    sourceCompatibility = '17'
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
 }
 
 configurations {
@@ -23,12 +27,14 @@ repositories {
 
 
 dependencies {
-    //test
+
     implementation 'org.apache.tomcat:tomcat-jasper:11.0.0-M20'
     implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.0'
-// https://mvnrepository.com/artifact/io.github.cdimascio/dotenv-java
-    implementation group: 'io.github.cdimascio', name: 'dotenv-java', version: '3.0.1'
+    implementation 'me.paulschwarz:spring-dotenv:4.0.0'
 
+    implementation 'com.google.api-client:google-api-client:2.6.0'
+    implementation 'com.google.oauth-client:google-oauth-client-jetty:1.36.0'
+    implementation 'com.google.apis:google-api-services-gmail:v1-rev20220404-2.0.0'
 
 
     implementation 'com.sun.mail:jakarta.mail:2.0.1'
@@ -45,6 +51,7 @@ dependencies {
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -57,7 +64,6 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
-bootJar {
-    mainClass = 'com.green.greenfirstproject.GreenFirstProjectApplication'
+tasks.named('bootJar') {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }

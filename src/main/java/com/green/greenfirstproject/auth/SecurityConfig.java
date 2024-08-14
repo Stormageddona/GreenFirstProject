@@ -28,7 +28,7 @@ import javax.sql.DataSource;
 @RequiredArgsConstructor
 public class SecurityConfig {
 
-    private final DataSource dataSource;
+//    private final DataSource dataSource;
     private final LoginSuccessHandler loginSuccessHandler ;
     private final LoginFailedHandler loginFailedHandler ;
     private final PrincipalDetailService principalDetailService ;
@@ -40,12 +40,12 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
-    @Bean
-    PersistentTokenRepository tokenRepository() {
-        JdbcTokenRepositoryImpl jdbcTokenRepository = new JdbcTokenRepositoryImpl();
-        jdbcTokenRepository.setDataSource(dataSource);
-        return jdbcTokenRepository;
-    }
+//    @Bean
+//    PersistentTokenRepository tokenRepository() {
+//        JdbcTokenRepositoryImpl jdbcTokenRepository = new JdbcTokenRepositoryImpl();
+//        jdbcTokenRepository.setDataSource(dataSource);
+//        return jdbcTokenRepository;
+//    }
 
 
 
@@ -77,10 +77,10 @@ public class SecurityConfig {
                                 .userInfoEndpoint(userInfoEndpointConfig -> userInfoEndpointConfig.userService(principalOauthDetailService))
                 )
                 .exceptionHandling(exception -> exception.accessDeniedPage("/"))
-                .rememberMe(rememberMe -> rememberMe
-                        .userDetailsService(principalDetailService)
-                        .tokenRepository(tokenRepository())
-                )
+//                .rememberMe(rememberMe -> rememberMe
+//                        .userDetailsService(principalDetailService)
+//                        .tokenRepository(tokenRepository())
+//                )
                 .logout(logout -> logout
                         .logoutUrl("/api/user/logout")
                         .invalidateHttpSession(true)

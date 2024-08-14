@@ -1,8 +1,12 @@
 package com.green.greenfirstproject.user;
 
+import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
+import com.google.api.client.http.javanet.NetHttpTransport;
+import com.google.api.services.gmail.Gmail;
 import com.green.greenfirstproject.auth.principal.PrincipalDetail;
 import com.green.greenfirstproject.auth.principal.PrincipalUtil;
 import com.green.greenfirstproject.common.EmailService;
+import com.green.greenfirstproject.common.EmailServiceLagacy;
 import com.green.greenfirstproject.common.dto.Result;
 import com.green.greenfirstproject.common.dto.ResultDto;
 import com.green.greenfirstproject.common.dto.ResultError;
@@ -15,10 +19,12 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.mail.internet.MimeMessage;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.web.bind.annotation.*;
+import static com.green.greenfirstproject.common.EmailService.* ;
 
 import java.util.UUID;
 import java.util.concurrent.TimeoutException;
@@ -32,7 +38,7 @@ public class UserRestController {
 
     private final UserService service;
 
-    private final EmailService emailService;
+    private final EmailServiceLagacy emailServiceLagacy;
 
 
     @PostMapping("login")
@@ -72,12 +78,28 @@ public class UserRestController {
         }
 
         String code = UUID.randomUUID().toString() ;
-        String title = "[GreenFirstProject 이메일 인증]" ;
-        String content = "<p>해당 코드를 인증창에 입력하여 진행해 주세요.</p> " +
-                "<p>" + code + "</p>";
+
 
         try {
-            emailService.sendEmail(email,title, content, "project@gmail.com", "프로젝트 명");
+            // Gmail 서비스 객체를 생성합니다.
+            final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
+            Gmail mail = new Gmail.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT))
+                    .setApplicationName(APPLICATION_NAME)
+                    .build();
+
+            // 메일 보내기 예제
+            String user = "me";
+            String from = "project@gmail.com";  // 발신자 이메일 주소
+            String title = "[GreenFirstProject 이메일 인증]" ;
+            String content = "<p>해당 코드를 인증창에 입력하여 진행해 주세요.</p> " +
+                    "<p>" + code + "</p>";
+
+            MimeMessage sendMail = createEmail(email, from, title, content);
+            sendMessage(mail, user, sendMail);
+            System.out.println("메일이 성공적으로 전송되었습니다!");
+
+
+//            emailServiceLagacy.sendEmail(email,title, content, "project@gmail.com", "프로젝트 명");
             service.deleteEmailToken(email);
             service.insertEmailToken(email,code);
 
@@ -87,6 +109,19 @@ public class UserRestController {
         }
         return ResultDto.builder().build();
     }
+
+//
+//        // 메일 보내기 예제
+//        String user = "me";
+//        String to = "recipient@example.com";  // 수신자 이메일 주소
+//        String from = "your-email@example.com";  // 발신자 이메일 주소
+//        String subject = "Test Email from Gmail API";
+//        String bodyText = "This is a test email using Gmail API.";
+//
+//        MimeMessage email = createEmail(to, from, subject, bodyText);
+//        sendMessage(service, user, email);
+//        System.out.println("메일이 성공적으로 전송되었습니다!");
+//    }
 
     @GetMapping("auth/email/token")
     @Operation(summary = "이메일 토큰 검증", description = "이메일 토큰 검증")

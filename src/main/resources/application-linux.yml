@@ -1,3 +1,0 @@
-spring:
-  datasource:
-    url: ${DEFAULT.DB.URL}
